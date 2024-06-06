@@ -27,9 +27,13 @@ gini <- left_join(gini_sucia, paises, by = "Codigo")
 
 gini <- gini[!is.na(gini$indicadora), ]
 
+sum(esperanza_de_vida$`Location type`!= "Country")
+codigo_paises <- esperanza_de_vida$SpatialDimValueCode
+
 #grafico de series por pais para demostrar por que tomar el valor de 2019 o mas reciente
 #hasta 2010
 
+<<<<<<< HEAD
 # Transformar los datos de formato ancho a formato largo
 gini_long <- gini_sucia %>% pivot_longer(
   cols = starts_with("20"), # Selecciona las columnas que representan los años
@@ -67,3 +71,8 @@ gini <- gini[, -(ncol(gini)-1):ncol(gini)]
 
 # Crear data que tenga al ultimo indice de gini y el codigo del pais solamente
 indicegini <- subset(gini, select = c(Codigo, gini))
+=======
+#filtro_paisesifelse(gini_sucia$Codigo codigo_paises,1,0)
+
+datos_mersheados <- merge(gini_sucia, esperanza_de_vida, by.x="Codigo", by.y = "SpatialDimValueCode")
+>>>>>>> 5957b9a60771108dc4e4fec85eb48f25228872fa
