@@ -1,0 +1,32 @@
+---
+title: "Trabajo Práctico Final"
+author: "Econometría"
+fontsize: 12pt  # Cambiando el tamaño de letra a 12pt
+linestretch: "1.5"  # Cambiando el interlineado a 1.5 (puedes ajustarlo según tus preferencias)
+output: pdf_document
+header-includes:
+  - \usepackage{setspace}
+  - \onehalfspacing  # Cambiando a interlineado de 1.5
+lang: es-ES
+---
+
+```{=tex}
+\begin{center}
+    \vspace*{0.5cm}
+    \Huge\textbf{Modificaciones para el índice de desarrollo humano}
+    
+    \vspace{4cm}
+    \includegraphics[width=0.2\textwidth]{logo_fceye.png}
+  
+    \vspace{0cm}
+    \large{Facultad de Ciencias Económicas y Estadística, Universidad Nacional de Rosario}
+    
+    \vspace{0.5cm}
+    \large{Alfonsina Badin, Ailen Salas, Augusto Raynaudo, Camila Matelicani, Julián L'heureux, Sofia Giaquinta}
+    
+    \vspace{0.5cm}
+    \large{Junio 2024}
+    
+\end{center}
+```
+\clearpage
