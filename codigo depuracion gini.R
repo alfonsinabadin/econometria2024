@@ -8,6 +8,9 @@ gini_sucia <- read_excel("Bases/Indice de GINI por país.xls",
 names(gini_sucia)[names(gini_sucia) == "Country Name"] <- "Pais"
 names(gini_sucia)[names(gini_sucia) == "Country Code"] <- "Codigo"
 
+#goty de la 81 a la 160
+
+
 
 #grafico de series por pais para demostrar por que tomar el valor de 2019 o mas reciente
 #hasta 2010
