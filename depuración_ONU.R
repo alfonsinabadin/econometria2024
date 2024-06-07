@@ -46,3 +46,6 @@ cat("Hay", sum(datos_filtrados_2019$DIF, na.rm = TRUE),
     "paises que dieron diferencias entre los IDH calculados y",
     sum(is.na(datos_filtrados_2019$DIF)),
     "en los que no se pudo calcular el IDH.")
+
+datos_filtrados_2019 <- datos_filtrados_2019 |> 
+  select(-DIF)
