@@ -22,7 +22,7 @@ lang: es-ES
     \large{Facultad de Ciencias Económicas y Estadística, Universidad Nacional de Rosario}
     
     \vspace{0.5cm}
-    \large{Alfonsina Badin, Ailen Salas, Augusto Raynaudo, Camila Matelicani, Julián L'heureux, Sofia Giaquinta}
+    \large{Alfonsina Badin, Ailen Salas, Augusto Raynaudo, Camila Matellicani, Julián L'heureux, Sofia Giaquinta}
     
     \vspace{0.5cm}
     \large{Junio 2024}
