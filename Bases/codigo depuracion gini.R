@@ -62,13 +62,19 @@ gini <- gini[, -c(13:ncol(gini))]
 # Paso 1: Encuentra el año más reciente con datos disponibles para cada país
 gini$last_year <- apply(gini[, -1], 1, function(x) max(which(!is.na(x))+1))
 
+for (i in 1:nrow(gini)){
+  if(gini[i, 13] < 3){
+    gini[i, 13] <- NA
+  }
+}
+
 # Paso 2: Selecciona los valores de Gini de acuerdo al año encontrado
-gini$gini <- apply(gini[, -c(1, ncol(gini))], 1, function(x) {
-  ifelse(all(is.na(x)), NA, ifelse(!is.na(x[gini$last_year]), x[gini$last_year], x[10]))
+gini$gini <- apply(gini[], 1, function(row) {
+  columna <- as.numeric(row["last_year"])
+  return(row[columna])
 })
 
-# Elimina las columnas auxiliares
-gini <- gini[, -(ncol(gini)-1):ncol(gini)]
+gini <- gini[!is.na(gini$gini),]
 
 # Crear data que tenga al ultimo indice de gini y el codigo del pais solamente
 indicegini <- subset(gini, select = c(Codigo, gini))
