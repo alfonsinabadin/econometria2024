@@ -52,4 +52,12 @@ datos_filtrados_2019 <- datos_filtrados_2019 |>
 
 datos_salud <- read.csv("Bases/Datos Salud Completa.csv", stringsAsFactors=TRUE)
 
+datos_juntos_sinNA <- merge(datos_filtrados_2019, datos_salud, by = "codigo")
 datos_juntos <- merge(datos_filtrados_2019, datos_salud, by = "codigo", all.x = TRUE)
+
+datos_gini <- read.csv("Bases/indicegini.csv", stringsAsFactors=TRUE)
+datos_gini <- datos_gini[,-1]
+colnames(datos_gini) <- c("codigo", "gini")
+
+datos_juntos_sinNA <- merge(datos_juntos_sinNA, datos_gini, by = "codigo")
+datos_juntos <- merge(datos_juntos, datos_gini, by = "codigo", all.x = TRUE)
