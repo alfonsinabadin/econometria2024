@@ -10,4 +10,5 @@ Bibliografía:
 - Índice de Gini https://datos.bancomundial.org/indicator/SI.POV.GINI
 - OMS esperanza de vida al nacer y los 60, esperanza de salud al nacer y los 60 https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/life-expectancy-and-healthy-life-expectancy
 - https://www.verywellhealth.com/understanding-healthy-life-expectancy-2223919#toc-how-hale-is-calculated
-- https://reves.site.ined.fr/fichier/s_rubrique/20182/sullivan.guide.pre.final.oct2014.en.pdf
+- Archivo explicación índice de Salud https://reves.site.ined.fr/fichier/s_rubrique/20182/sullivan.guide.pre.final.oct2014.en.pdf
+- Metadata HALE (OMS) https://cdn.who.int/media/docs/default-source/gho-documents/metadata/hale-metadata.pdf?sfvrsn=4f47fd43_1&download=true
