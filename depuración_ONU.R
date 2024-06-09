@@ -48,4 +48,8 @@ cat("Hay", sum(datos_filtrados_2019$DIF, na.rm = TRUE),
     "en los que no se pudo calcular el IDH.")
 
 datos_filtrados_2019 <- datos_filtrados_2019 |> 
-  select(-DIF)
+  select(-DIF) |> mutate(codigo = iso3)
+
+datos_salud <- read.csv("Bases/Datos Salud Completa.csv", stringsAsFactors=TRUE)
+
+datos_juntos <- merge(datos_filtrados_2019, datos_salud, by = "codigo", all.x = TRUE)
