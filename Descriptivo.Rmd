@@ -1,0 +1,77 @@
+---
+title: "Descriptiva comparacion indices"
+output: html_document
+---
+
+```{r}
+#Carga de librerias
+library("ggplot2")
+library("gridExtra")
+library("tidyverse")
+library("tidyr")
+source("depuración_ONU.R")
+
+#Carga data frame para analisis descriptivo
+bbdd_descrip <- datos_juntos_sinNA %>%
+  select(codigo, Pais,dim_econ,gnipc2_2019,gini)
+
+colnames(bbdd_descrip) <- c("Codigo","Pais","Dim_Econ","PBIPC","G")
+
+```
+
+# Indice Economico
+
+PBIPC = PBI Per capita (Acotado en maximo y minimo seleccionados)
+G = Indice de Gini
+
+## Calculo actual 
+$$\frac{\ln(PBIPC)-\ln(100)}{\ln(75000)-\ln(100)}$$
+
+## Opcion 1) 
+
+PBIPCA = PBI Per cápita ajustado por Gini
+$$PBIPCA = PBIPC * (1-G/100)$$
+
+$$\frac{\ln(PBIPCA)-\ln(100)}{\ln(75000)-\ln(100)}$$
+
+
+
+```{r}
+#Creacion nuevo indice economico1
+bbdd_descrip$PBIPCA <- bbdd_descrip$PBIPC * (1- bbdd_descrip$G / 100)
+bbdd_descrip$Dim_Econ1 <- (log(bbdd_descrip$PBIPCA)-log(100))/(log(75000)-log(100))
+
+
+#Boxplot
+
+#Formato largo
+bbddescrip_nuevo <- data.frame(
+  idpais = rep(bbdd_descrip$Codigo, 2),
+  valor = c(bbdd_descrip$Dim_Econ, bbdd_descrip$Dim_Econ1),
+  tipo_variable = rep(c("indice0", "indice1"), each = nrow(bbdd_descrip)) 
+)
+
+boxecon_1 <- ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
+  labs(title = "Comparación indice económico original y opción 1", x = "Indice", y = "Valor") + scale_fill_manual(values = c("blue", "red")) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))  
+#Si no corre, correr en consola para ver
+
+boxexon_1
+
+# Histograma
+# Original
+histindice0_1 <- ggplot(bbdd_descrip, aes(x = Dim_Econ)) +
+  geom_histogram(binwidth = 1, fill = "blue", alpha = 0.5) + 
+  labs(title = "Original", x = "Valor", y = "Frecuencia")
+
+# Opcion1
+histindice1_1 <- ggplot(bbdd_descrip, aes(x = Dim_Econ1)) +
+  geom_histogram(binwidth = 1, fill = "red", alpha = 0.5) + 
+  labs(title = "Opcion 1", x = "Valor", y = "Frecuencia")
+
+# Hist
+grid.arrange(histindice0_1, histindice1_1, ncol = 2)
+```
+
+
