@@ -5,7 +5,7 @@ fontsize: 10pt  # Cambiando el tamaño de letra a 12pt
 output: pdf_document
 header-includes:
   - \usepackage{setspace}
-  - \onehalfspacing  # Cambiando a interlineado de 1.5
+  - \doublespacing  # Cambiando a interlineado de 1.5
 lang: es-ES
 ---
 
@@ -33,6 +33,8 @@ lang: es-ES
 # Introducción
 
 El Índice de Desarrollo Humano (IDH) es un indicador compuesto, extensamente utilizado a nivel internacional, que relaciona tres dimensiones para dar cuenta del grado de oportunidad efectiva que tienen las personas de expandir sus capacidades: salud, educación e ingresos. Es una forma de obtener el promedio de los logros de un área geográfica específica.
+
+![](diagrama1.png)
 
 El objetivo principal del informe es presentar una modificación para el IDH de forma que explique correctamente la naturaleza de cada país en relación al desarrollo humano. La Organización de las Naciones Unidas (ONU) considera al desarrollo humano como la ampliación de la riqueza de la vida humana, más que ampliar la riqueza de la economía en la que viven los seres humanos. Es un enfoque que se centra en las personas y sus oportunidades. Se propone tener en cuenta también aspectos sobre la sociedad, la discriminación, los derechos y las libertades civiles.
 
