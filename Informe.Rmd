@@ -1,12 +1,14 @@
 ---
 title: "Trabajo Práctico Final"
 author: "Econometría"
-fontsize: 10pt  # Cambiando el tamaño de letra a 12pt
-output: pdf_document
+fontsize: 10pt
+output:
+  html_document:
+    df_print: paged
 header-includes:
-  - \usepackage{setspace}
-  - \doublespacing  # Cambiando a interlineado de 1.5
-lang: es-ES
+- \usepackage{setspace}
+- \doublespacing
+lang: "es-ES"
 ---
 
 ```{=tex}
@@ -42,9 +44,11 @@ El objetivo principal del informe es presentar una modificación para el IDH de 
 
 # Índice de desarrollo humano actual
 
-El índice de desarrollo humano se calcula como
+El índice de desarrollo humano se calcula como la media geométrica de los índices de las tres dimensiones que se tienen en cuenta.
+**índice compuesto que mide  el  resultado  promedio  en  tres  dimensiones  básicas del  desarrollo  humano:  una  vida  larga  y  saludable,  el conocimiento  y  un  nivel  de  vida  decente.**
 
 $$IDH = \Bigl(\text{Índice de salud}\times\text{Índice de conocimiento}\times\text{Índice de ingreso}\Bigl)^{1/3}$$
+
 
 donde cada índice se calcula con el índice de dimensión
 
@@ -57,6 +61,7 @@ Durante la investigación se debate cada uno de estos índices que componen el I
 \pagebreak
 
 # Índice de Salud
+
 
 \pagebreak
 
@@ -76,3 +81,40 @@ $$\sum_{i=5}^{17} \frac{\text{Asistencia a la educación de personas con edad i}
 \pagebreak
 
 # Índice de Ingreso
+
+
+
+
+# COSAS QUE SE ME VAN OCURRIENDO QUE TIENEN QUE ESTAR
+
+- Antes de nombrar la modificación que proponemos deberíamos nombrar algo de críticas al IDH y otras modificaciones que ya se hicieron (Informe ver en Documentos) y por qué buscamos una distinta que queremos mostrar.
+
+- Orden posible:
+    - Intro + objetivo
+    - Definición del IDH actual y calculo de cada dimensión
+    - Críticas / Otas modificaciones que ya se hicieron + Por qué proponemos igual hacer uno nuevo
+    - Explicación de modificaciones en cada dimensión (incluyendo posibilidades que se nos ocurrieron pero no hicimos o que descartamos o que estarían bueno hacer). Explicar tmb la de Derechos y libertades.
+    - Cálculo final IDH modif (1 o los que sean) Aclarar acá o arriba de donde se obtuvieron los datos
+    - Resultados (ver abajo opciones)
+    - Conclusiones
+    - En algún lado un apartado con cosas que quedan propuestas si es necesario.
+    - Bibliografía
+    
+    
+- Acordarnos de explicar para las variables que lo hayamos hecho que tomamos valores 2019 o más cercano
+
+
+
+# Resultados
+
+- Rankear los países con IDH modificado y comparar (2 graficos países colores)
+
+- Corr entre los IDH y el/los modificados
+
+-	Resulta diferente o no al IDH ventajas y desventajas
+
+- Idea mirando las tablas del informe del idh compara la clasificación de IDH con IDH modif por desigualdad viendo la diferencia. Ver si se podría y valdría la pena hacer lo mismo con el nuestro
+
+
+#Bibliografia
+De donde sacamos los datos y lugares con info, informe idh...
