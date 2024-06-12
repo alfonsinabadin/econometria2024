@@ -36,7 +36,7 @@ El Índice de Desarrollo Humano (IDH) es un indicador compuesto, extensamente ut
 
 Para calcularlo, se toman las variables esperanza de vida, años esperados de escolarización, años promedio de escolarización y PBI per cápita de cada país. Se propone cuestionar el uso de estas variables o si es necesario incluir nuevas en el cálculo, ya que gracias a la facilidad que internet ofrece, podrían ser accesibles nuevas medidas a tener en cuenta.
 
-El objetivo principal de la presente investigación es presentar una modificación para el IDH de forma que explique correctamente la naturaleza de cada país en relación al desarrollo humano. La Organización de las Naciones Unidas (ONU) considera al desarrollo humano como la ampliación de la riqueza de la vida humana, más que ampliar la riqueza de la economía en la que viven los seres humanos. Es un enfoque que se centra en las personas y sus oportunidades. Se propone tener en cuenta también aspectos sobre la sociedad, la discriminación, los derechos y las libertades civiles.
+El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que explique correctamente la naturaleza de cada país en relación al desarrollo humano. La Organización de las Naciones Unidas (ONU) considera al desarrollo humano como la ampliación de la riqueza de la vida humana, más que ampliar la riqueza de la economía en la que viven los seres humanos. Es un enfoque que se centra en las personas y sus oportunidades. Se propone tener en cuenta también aspectos sobre la sociedad, la discriminación, los derechos y las libertades civiles.
 
 \pagebreak
 
@@ -51,35 +51,41 @@ donde cada índice se calcula con el índice de dimensión
 
 $$\text{Índice de dimensión}=\frac{\text{valor actual - valor mínimo}}{\text{valor máximo - valor mínimo}}$$
 
-tomando como variables la esperanza de vida al nacer para el índice de salud, la esperanza de años de escolarización para el índice de educación y el PBI per cápita para el índice de ingreso.
-
 ![](diagrama1.png)
 
-Durante la investigación se debate cada uno de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren, ya que hoy en día se tiene acceso fácilmente a nuevas variables.
+Durante la investigación se debate cada una de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
 
-\pagebreak
+## Vida larga y saludable
 
-# Vida larga y saludable
-
-Como primera componente del IDH se considera el tener una vida larga y saludable, que sin dudas promueve el desarrollo humano y es primordial para mantener un buen estilo de vida. Actualmente, el indicador que representa este aspecto es el Índice de esperanza de vida o Índice de salud, que se calcula para cada país como
+Como primera componente del IDH se tiene una vida larga y saludable, que sin dudas promueve el desarrollo humano y es primordial para mantener un buen estilo de vida. Actualmente, el indicador que representa este aspecto es el Índice de esperanza de vida o Índice de salud, que se calcula para cada país como
 
 $$\text{Índice de salud} = \frac{\text{Esperanza de vida al nacer}-20}{85-20}$$
 
-Los datos de esperanza de vida al nacer se obtienen del Departamento de Asuntos Económicos y Sociales de las Naciones Unidas y se calculan como el promedio de años que tiene un recién nacido de vivir, siempre y cuando los patrones de mortalidad se mantengan constantes en su vida. Los valores mínimo y máximo están definidos para transformar la variable en un indicador con valores de 0 a 1 y se llaman "ceros naturales" y "objetivos aspiracionales", respectivamente.
+Los datos de esperanza de vida al nacer se obtienen del Departamento de Asuntos Económicos y Sociales de las Naciones Unidas y se calculan como el promedio de años que tiene un recién nacido de vivir, siempre y cuando los patrones de mortalidad se mantengan constantes en su vida. Los valores mínimo y máximo están definidos para transformar la variable en un indicador con valores de 0 a 1 y se llaman "cero natural" y "objetivo aspiracional", respectivamente.
 
 La elección del cero natural en los 20 años para la esperanza de vida está basada en evidencia histórica que muestra que ningún país en el siglo 20 ha tenido una esperanza de vida menor a los 20 años. El valor máximo u objetivo aspiracional está definido a los 85 años ya que es un objetivo realista al que muchos países pueden aspirar, especialmente por las constantes mejoras en las condiciones de vida y los avances médicos.
 
-Tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la _Esperanza de vida sana_ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+### Debate
+
+Tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
 
 Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida en buena salud al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan (tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).
 
-_nota Alfon: explicamos eso del método sullivan o ya fue?_
+El método de Sullivan es un método estadístico que combina la información de las tablas de mortalidad con datos sobre la prevalencia de morbilidades o limitaciones en la actividad. Ajustando las tablas de mortalidad con la prevalencia de morbilidad, se calcula la esperanza de vida libre de limitaciones, sumando los años de vida ajustados para obtener una medida integral de salud poblacional. Este método proporciona una visión clara de los años que se espera que una persona viva en buena salud, combinando la cantidad y calidad de vida.
 
-\pagebreak
+### Modificación en el cálculo del IDH
 
-# Índice de Conocimiento
+La esperanza de vida en buena salud al nacer es una variable que contiene más información e identifica mejor a la dimensión "tener una vida larga y saludable". Ahora bien, ¿cómo incluirla al cálculo de IDH? Se han barajado algunas opciones:
 
-Para el calculó del Índice de Conocimiento, se incluyen los siguientes indicadores: años esperados de escolaridad y años promedio de escolaridad.
+- Reemplazar la esperanza de vida al nacer por la esperanza de vida en buena salud al nacer directamente en el cálculo del índice de salud. Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. De esta forma, se estaría subestimando el valor del IDH para aquellos países que no tienen la posibilidad de aportar un índice de salud, aún así teniendo un resultado alto en la esperanza de vida al nacer.
+
+- Tomar ambas variables y promediarlas previo al cálculo del índice. Esta opción fue rápidamente descartada por el hecho de que ambas variables resumen aspectos muy similares, están muy relacionadas.
+
+- Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida en buena salud al nacer es notablemente menor. La determinación de la penalización propuesta y la elección de valores mínimo y máximo involucraría pensamientos subjetivos.
+
+## Índice de Conocimiento
+
+En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de conocimiento, que se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
 
 Los años esperados de escolaridad se refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de la vida del niño. El valor se obtiene con la estimación del coeficiente que acompaña al país en el modelo lineal $y=\alpha+\beta \text{ año}+\varepsilon$
 
@@ -88,12 +94,53 @@ es la siguiente:
 
 $$\sum_{i=5}^{17} \frac{\text{Asistencia a la educación de personas con edad i}}{\text{Total de personas con la edad i}}$$
 
+Societies can subsist without formal education, justifying the
+education minimum of 0 years. The maximum for expected
+years of schooling, 18, is equivalent to achieving a master’s
+degree in most countries. The maximum for mean years of
+schooling, 15, is the projected maximum of this indicator for
+2025.
 
+For the education dimension, equation 1 is first applied to
+each of the two indicators, and then the arithmetic mean of the
+two resulting indices is taken. Using the arithmetic mean of
+two education indices allows perfect substitutability between
+mean years of schooling and expected years of schooling, which
+seems to be right given that many developing countries have low
+school attainment among adults but are eager to achieve universal primary and secondary school enrolment among school-age
+children.
 
-\pagebreak
+## Índice de Ingreso
 
-# Índice de Ingreso
+The low minimum value for gross national income (GNI)
+per capita, $100, is justified by the considerable amount of
+unmeasured subsistence and nonmarket production in economies close to the minimum, which is not captured in the official
+data. The maximum is set at $75,000 per capita. Kahneman
+and Deaton (2010) have shown that there is virtually no gain
+in human development and well-being from annual income per
+capita above $75,000. Currently, only four countries (Brunei
+Darussalam, Liechtenstein, Qatar and Singapore) exceed the
+$75,000 income per capita ceiling. 
 
+## Estimación de datos faltantes
+
+For a small number of countries missing one of the four indicators, the HDRO estimated the missing values using crosscountry regression models.
+In this Report expected years of schooling were estimated for
+Bahamas, Dominica, Equatorial Guinea, Haiti, Libya, Papua
+New Guinea, Tonga, Trinidad and Tobago, and Vanuatu. Mean
+years of schooling were estimated for Eritrea, Grenada and Saint
+Kitts and Nevis.
+
+# Categorías según desarrollo humano
+
+![](agregar1.png)
+
+Aggregate HDI values for country groups (by human development category, region and the like) are calculated by applying
+the HDI formula to the weighted group averages of component
+indicators. Life expectancy and GNI per capita are weighted
+by total population, expected years of schooling is weighted by
+population ages 5–24 and mean years of schooling is weighted
+by population ages 25 and older.
 
 \pagebreak
 
