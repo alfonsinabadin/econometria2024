@@ -2,7 +2,9 @@
 title: "Trabajo Práctico Final"
 author: "Econometría"
 fontsize: 10pt
-output: pdf_document
+output:
+  html_document:
+    df_print: paged
 header-includes:
 - \usepackage{setspace}
 - \doublespacing
@@ -45,9 +47,8 @@ El objetivo principal de la presente investigación es proponer una modificació
 El IDH se calcula como una media geométrica de índices que representan a las tres dimensiones estudiadas: una vida larga y saludable, el conocimiento y un nivel de vida decente.
 
 $$IDH = \Bigl(\text{Índice de salud}\times\text{Índice de conocimiento}\times\text{Índice de ingreso}\Bigl)^{1/3}$$
-
-
-donde cada índice se calcula con el índice de dimensión
+Para cada uno de los índices se definen valores mínimos y máximos de cada indicador básico. El desempeño de cada dimensión se expresa como un valor entre 0 y 1, mediante
+la siguiente formula:
 
 $$\text{Índice de dimensión}=\frac{\text{valor actual - valor mínimo}}{\text{valor máximo - valor mínimo}}$$
 
@@ -85,21 +86,15 @@ La esperanza de vida en buena salud al nacer es una variable que contiene más i
 
 ## Índice de Conocimiento
 
-En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de conocimiento, que se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
+En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. El cual se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
 
-Los años esperados de escolaridad se refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de la vida del niño. El valor se obtiene con la estimación del coeficiente que acompaña al país en el modelo lineal $y=\alpha+\beta \text{ año}+\varepsilon$
+Los años esperados de escolaridad refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela, si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de su vida. El valor se obtiene con la estimación del coeficiente que acompaña al país en el modelo lineal $y=\alpha+\beta \text{ año}+\varepsilon$
 
 La fórmula de cálculo utilizada para obtener este indicador
 es la siguiente:
-
 $$\sum_{i=5}^{17} \frac{\text{Asistencia a la educación de personas con edad i}}{\text{Total de personas con la edad i}}$$
 
-Societies can subsist without formal education, justifying the
-education minimum of 0 years. The maximum for expected
-years of schooling, 18, is equivalent to achieving a master’s
-degree in most countries. The maximum for mean years of
-schooling, 15, is the projected maximum of this indicator for
-2025.
+
 
 For the education dimension, equation 1 is first applied to
 each of the two indicators, and then the arithmetic mean of the
@@ -109,6 +104,60 @@ mean years of schooling and expected years of schooling, which
 seems to be right given that many developing countries have low
 school attainment among adults but are eager to achieve universal primary and secondary school enrolment among school-age
 children.
+
+Por otro lado, se limita la edad de 5 a 17 años debido a que
+en el país se tiene un enfoque importante en que las
+personas inicien su etapa escolar en niveles de transición y
+kínder, y finalicen al menos la educación secundaria. Se
+considera que con este nivel educativo al menos las
+personas pueden acceder a oportunidades de educación
+especializada no solamente en universidades sino también
+opciones técnicas.
+
+Años medios de escolarización: Número medio de años de educación recibidos por las personas de 25 años o más, convertido a partir de los niveles de logro educativo utilizando las duraciones oficiales de cada nivel.
+Años de educación promedio Años de
+educación promedio que reciben las personas
+de 25 años y más durante su vida, basados
+en los niveles de logros educacionales de la
+población transformados en años de educación
+de acuerdo con la duración teórica de cada nivel
+de educación a la que se asiste.
+
+# Propuesta cami
+En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. El cual se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
+
+Los años esperados de escolaridad refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela, si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de su vida. Y los años medios de escolaridad son el número medio de años de educación recibidos por las personas de 25 años o más, convertido a partir de los niveles de logro educativo utilizando las duraciones oficiales de cada nivel.
+
+Resulta necesario aclarar que para la dimensión educación, al tomarse dos indicadores en vez de uno, primero se calcula el índice de dimensión de ambos y, a continuación, se obtiene la media aritmética de los dos índices resultantes.
+_La utilización de la media aritmética de dos índices de educación permite una sustituibilidad perfecta entre años medios de escolarización y los años esperados de escolarización, lo que parece correcto dado que muchos países en desarrollo tienen un bajo escolarización entre los adultos, pero están deseosos de lograr la escolarización universal en primaria y secundaria de los niños en edad escolar._
+
+$$\text{Índice de años esperados} = \frac{\text{Años esperados de escolaridad}-0}{18-0}$$
+$$\text{Índice de años medios} = \frac{\text{Años medios de escolaridad}-0}{15-0}$$
+Las sociedades pueden subsistir sin educación formal, lo que justifica la educación mínima de 0 años. El máximo de años esperados de escolaridad, 18, equivale a la obtención de un máster en la mayoría de los países. El máximo de años medios de escolaridad, 15, es el máximo previsto de este indicador para 2025.
+
+El índice de educación queda definido entonces como la media aritmética de los índices mencionados:
+
+$$\text{Índice de educación} = \frac{\text{Índice años esperados de escolaridad}+\text{Índice años medios de escolaridad}}{2}$$
+
+*Falta explicar cómo era antes de la modificación porque estamos de acuerdo*
+Antes del año 2010, se tenían en cuenta las variables alfabetización y matriculación bruta en la dimensión de conocimientos.
+
+En el ámbito de los conocimientos, los años promedio de instrucción
+sustituyen a la alfabetización y la matriculación bruta se replanteó como
+los años esperados de instrucción, es decir, los años de educación que un
+niño puede esperar recibir dada la tasa de matriculación vigente. Cada
+vez más países calculan con mayor frecuencia los años promedio de instrucción. Dicha medida permite distinguir mejor entre países, mientras que los años esperados de instrucción son consistentes con la reformulación de esta dimensión en términos de años. 
+
+Lo ideal sería que las mediciones de la dimensión de conocimientos incorporasen evaluaciones de calidad, tal como se ha hecho en varios informes sobre desarrollo humano nacionales y regionales. Por ejemplo, el Informe de los Estados Árabes
+de 2003 creó una medida tanto de la cantidad como de la calidad de
+la educación. Ésta ajusta los años promedio de instrucción con puntajes
+promedio en pruebas e incluye indicadores vinculados con medios de difusión, comunicaciones y científicos capacitados. Pero no existen buenas
+medidas sobre la calidad de la educación para una cantidad suficiente de
+países; las evaluaciones internacionales sobre conocimientos científicos
+y matemáticos y habilidades de lecto-escritura de los jóvenes son instrumentos de gran valor, pero su cobertura es baja y su frecuencia, irregular.
+También investigamos medidas alternativas sobre la capacidad de disfrutar de una vida saludable, pero no hemos encontrado ninguna opción
+mejor o más viable que la esperanza de vida al nacer.
+
 
 ## Índice de Ingreso
 
@@ -121,6 +170,26 @@ in human development and well-being from annual income per
 capita above $75,000. Currently, only four countries (Brunei
 Darussalam, Liechtenstein, Qatar and Singapore) exceed the
 $75,000 income per capita ceiling. 
+
+The World Bank’s 2022 World Development Indicators database contains estimates of GNI per capita in constant 2017 purchasing power parity (PPP)
+terms for many countries. For countries missing this indicator (entirely or partly), the Human Development Report Office (HDRO) calculates it by converting GNI per capita in local currency from current to
+constant terms using two steps. First, the value of
+GNI per capita in current terms is converted into PPP
+terms for the base year (2017). Second, a time series of GNI per capita in 2017 PPP constant terms is
+constructed by applying the real growth rates to the
+GNI per capita in PPP terms for the base year. The
+real growth rate is implied by the ratio of the nominal growth of GNI per capita in current local currency
+terms to the GDP deflator.
+For several countries without a value of GNI per
+capita in constant 2017 PPP terms for 2021 reported
+in the World Development Indicators database, real
+growth rates of GDP per capita available in the World
+Development Indicators database or in the International Monetary Fund’s Economic Outlook database
+are applied to the most recent GNI values in constant
+PPP terms.
+Official PPP conversion rates are produced by the International Comparison Program, whose surveys periodically collect thousands of prices of matched goods
+and services in many countries. The last round of this
+exercise refers to 2017 and covered 176 economies.
 
 ## Estimación de datos faltantes
 
@@ -144,9 +213,47 @@ by population ages 25 and older.
 
 \pagebreak
 
+# Desarrollo Humano
+Definición en la Página del IDH, Programa de las Naciones Unidas para el Desarrollo.
+
+En 1990, el primer Informe sobre Desarrollo Humano introdujo un nuevo enfoque para promover el bienestar humano. El desarrollo humano consiste en ampliar la riqueza de la vida humana, en lugar de simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones.
+
+Personas: el desarrollo humano se centra en mejorar la vida de las personas, en lugar de dar por sentado que el crecimiento económico conducirá, automáticamente, a un mayor bienestar para todos. El crecimiento de los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo.
+
+Oportunidades: el desarrollo humano consiste en dar a las personas más libertad para vivir vidas que valoren. En efecto, esto significa desarrollar las capacidades de las personas y darles la oportunidad de utilizarlas. Por ejemplo, educar a una niña le permitirá desarrollar sus capacidades, pero de poco servirá si se le niega el acceso a un puesto de trabajo o si no tiene las aptitudes adecuadas para el mercado laboral local. Tres fundamentos del desarrollo humano son vivir una vida larga, sana y creativa, tener conocimientos y tener acceso a los recursos necesarios para un nivel de vida decente. Muchas otras cosas también son importantes, sobre todo para ayudar a crear las condiciones adecuadas para el desarrollo humano. Una vez alcanzados los aspectos básicos del desarrollo humano, se abren oportunidades para progresar en otros aspectos de la vida.
+
+Elección: el desarrollo humano consiste, fundamentalmente, en una mayor capacidad de elección. Se trata de ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Nadie puede garantizar la felicidad humana, y las decisiones que tomen las personas son asunto suyo. El proceso de desarrollo -desarrollo humano- debería al menos crear un entorno para que las personas, individual y colectivamente, desarrollen todo su potencial y tengan una oportunidad razonable de llevar una vida productiva y creativa que valoren.
+
+# Cosas para justificar la rama nueva
+
+*Informe IDH 2010*
+El nuevo IDH poseía algunas debilidades, como lo reconocieron los autores; entre ellas, la dependencia de los promedios nacionales —que ocultaban sesgos de distribución— y la falta de una “medida cuantitativa de la libertad humana”. No obstante, logró plantear sin problemas la tesis central del Informe, declarada brevemente ya en la primera frase: “La verdadera riqueza de una nación está en su gente”.
+Veinte años después, la brillantez conceptual y la importancia del paradigma original del desarrollo humano siguen siendo indiscutibles. Existe un consenso casi universal sobre la imposibilidad de medir el éxito de un país o el bienestar de un individuo únicamente a partir de su ingreso. Si bien el ingreso es fundamental, ya que sin recursos cualquier avance es difícil de lograr, también debemos tomar en cuenta si la gente puede llevar una vida saludable y prolongada, si tiene oportunidad de recibir educación y si es libre de aplicar sus conocimientos y talentos para configurar su propio destino. 
+Hacia el futuro, los próximos informes deberán lidiar con temas aún más
+complejos, entre ellos el ámbito cada vez más crítico de la sostenibilidad, la desigualdad y nociones más amplias de empoderamiento.
+Mientras eso sucede, los nuevos desafíos que enfrentamos son aún más graves, como aquellos relacionados con la conservación del medio ambiente y la sostenibilidad de nuestro bienestar y de las libertades básicas. 
+
+Durante los últimos 20 años, el IDH ha sido objeto de críticas. Algunas se relacionan con su construcción y composición, mientras
+otras sugieren que debería ampliarse e incluir
+más dimensiones, desde igualdad de género
+hasta biodiversidad. Muchas de las inquietudes
+son válidas. Pero, el objetivo no es crear un indicador incuestionable del bienestar, sino reorientar la atención hacia un desarrollo enfocado en
+el ser humano y alimentar el debate sobre cómo
+propiciar el progreso de las sociedades. Mientras más discutimos sobre qué debe incluirse o
+no en el IDH —ya sea si tiene sentido agrupar
+distintas categorías, cuánta importancia darle
+a cada una o cómo conseguir más y mejores
+datos— más se aleja el debate del estrecho enfoque en el crecimiento que dominó la reflexión
+sobre el desarrollo.
+El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado solamente en el ingreso.
+
+*VER A PARTIR DE LA PAG 29 DE INFORME 2020*
+
 # COSAS QUE SE ME VAN OCURRIENDO QUE TIENEN QUE ESTAR
 
-- Antes de nombrar la modificación que proponemos deberíamos nombrar algo de críticas al IDH y otras modificaciones que ya se hicieron (Informe ver en Documentos) y por qué buscamos una distinta que queremos mostrar.
+- *Antes de nombrar la modificación que proponemos deberíamos nombrar algo de críticas al IDH y otras modificaciones que ya se hicieron (Informe ver en Documentos) y por qué buscamos una distinta que queremos mostrar.*
+ EN 2010, se incorporan tres nuevos indicadores que capturan la desigualdad multidimensional, las disparidades de género y las privaciones extremas. El Índice de Desarrollo Humano ajustado por la Desigualdad, el Índice de Desigualdad de Género, así como el Índice de Pobreza Multidimensional
+ *CAP 5 P106 DEL INFORME 2010*
 
 - Orden posible:
     - Intro + objetivo
