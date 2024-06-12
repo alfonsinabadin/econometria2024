@@ -34,11 +34,19 @@ lang: "es-ES"
 
 # Introducción
 
-El Índice de Desarrollo Humano (IDH) es un indicador compuesto, extensamente utilizado a nivel internacional, que relaciona tres dimensiones para dar cuenta del grado de oportunidad efectiva de expandir sus capacidades que tienen las personas: una vida larga y saludable, el conocimiento de la persona y el tener un nivel estándar de vida decente. Es una forma de obtener el promedio de los logros de un área geográfica específica.
+# Desarrollo Humano
 
-Para calcularlo, se toman las variables esperanza de vida, años esperados de escolarización, años promedio de escolarización y PBI per cápita de cada país. Se propone cuestionar el uso de estas variables o si es necesario incluir nuevas en el cálculo, ya que gracias a la facilidad que internet ofrece, podrían ser accesibles nuevas medidas a tener en cuenta.
+El desarrollo humano consiste en ampliar la riqueza de la vida humana, en lugar de simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones[^1].
 
-El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que explique correctamente la naturaleza de cada país en relación al desarrollo humano. La Organización de las Naciones Unidas (ONU) considera al desarrollo humano como la ampliación de la riqueza de la vida humana, más que ampliar la riqueza de la economía en la que viven los seres humanos. Es un enfoque que se centra en las personas y sus oportunidades. Se propone tener en cuenta también aspectos sobre la sociedad, la discriminación, los derechos y las libertades civiles.
+En lugar de dar por sentado que el crecimiento económico conducirá, automáticamente, a un mayor bienestar para todos, el desarrollo humano se enfoca en mejorar las vidas de las personas en un sentido más amplio. Por lo tanto, el crecimiento de los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo. Bajo esta premisa, se tienen en cuenta también aspectos que impliquen desarrollar las capacidades de las personas, brindando la oportunidad y la libertad de utilizarlas, sin insistir en que las aprovechen.
+
+[^1]: Fuente: [\textcolor{blue}{\underline{Human Development Reports, United Nations Development Programme.}}](https://hdr.undp.org/about/human-development).
+
+En 1990 se calcula por primera vez por el Programa de las Naciones Unidas para el Desarrollo un indicador del desarollo humano bajo la definición mencionada, denominado Índice de Desarrollo Humano (IDH). Este es un indicador compuesto, extensamente utilizado a nivel internacional, que relaciona tres dimensiones para dar cuenta del grado de oportunidad efectiva de expandir las capacidades de las personas: una vida larga y saludable, el acceso al conocimiento y el tener un nivel estándar de vida decente. Es una forma de obtener el promedio de los logros de un área geográfica específica.
+
+Para calcularlo, se toman las variables esperanza de vida, años esperados de escolaridad, años promedio de escolaridad y PBN per cápita de cada país. Se propone cuestionar el uso de estas variables o si es necesario incluir nuevas en el cálculo, ya que gracias a la facilidad que internet ofrece, se podrían tener en cuenta nuevas medidas de facil acceso.
+
+El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que refleje en un sentido más integrado la naturaleza de cada país en relación al desarrollo humano. Dada la definición de desarollo humano antes mencionada, se propone tener en cuenta para el cálculo del IDH también aspectos sobre la sociedad, la discriminación, los derechos, la calidad de vida, desigualdades y las libertades civiles.
 
 \pagebreak
 
@@ -46,59 +54,31 @@ El objetivo principal de la presente investigación es proponer una modificació
 
 El IDH se calcula como una media geométrica de índices que representan a las tres dimensiones estudiadas: una vida larga y saludable, el conocimiento y un nivel de vida decente.
 
-$$IDH = \Bigl(\text{Índice de salud}\times\text{Índice de conocimiento}\times\text{Índice de ingreso}\Bigl)^{1/3}$$
-Para cada uno de los índices se definen valores mínimos y máximos de cada indicador básico. El desempeño de cada dimensión se expresa como un valor entre 0 y 1, mediante
-la siguiente formula:
+(cambiar indice de PBI por indice de ingreso y cambiar indice de salud por indice de esperanza de vida)
+
+![](diagrama1.png) 
+
+$$IDH = \Bigl(\text{Índice de esperanza de vida}\times\text{Índice de educación}\times\text{Índice de ingreso}\Bigl)^{1/3}$$
+Todos estos índices de dimension se calculan de la siguiente forma:
 
 $$\text{Índice de dimensión}=\frac{\text{valor actual - valor mínimo}}{\text{valor máximo - valor mínimo}}$$
 
-![](diagrama1.png)
+Los valores mínimo y máximo están definidos para transformar la variable en un indicador con valores entre 0 y 1 y se llaman "cero natural" y "objetivo aspiracional", respectivamente.
 
-Durante la investigación se debate cada una de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
+### Vida larga y saludable 
 
-## Vida larga y saludable
+La primer componente del IDH es vida larga y saludable, que sin dudas promueve el desarrollo humano y es primordial para mantener un buen estilo de vida. Actualmente, el indicador que representa este aspecto se obtiene a partir de la esperanza de vida al nacer.
 
-Como primera componente del IDH se tiene una vida larga y saludable, que sin dudas promueve el desarrollo humano y es primordial para mantener un buen estilo de vida. Actualmente, el indicador que representa este aspecto es el Índice de esperanza de vida o Índice de salud, que se calcula para cada país como
+Se define a la esperanza de vida como número medio de años que un recién nacido podría esperar vivir, si transcurriera su vida expuesto a las tasas de mortalidad específicas por sexo y edad vigentes en el momento de su nacimiento, para un año concreto, en un país, territorio o zona geográfica determinados.
 
-$$\text{Índice de salud} = \frac{\text{Esperanza de vida al nacer}-20}{85-20}$$
+Para el cálculo del IDH se transforma la esperanza de vida al nacer en un índice calculado con el índice de dimensión mencionado anteriormente. Para esto se definen valores mínimos y máximos de la esperaza de  vida.
 
-Los datos de esperanza de vida al nacer se obtienen del Departamento de Asuntos Económicos y Sociales de las Naciones Unidas y se calculan como el promedio de años que tiene un recién nacido de vivir, siempre y cuando los patrones de mortalidad se mantengan constantes en su vida. Los valores mínimo y máximo están definidos para transformar la variable en un indicador con valores de 0 a 1 y se llaman "cero natural" y "objetivo aspiracional", respectivamente.
+La elección del cero natural para la esperanza de vida es de 20 años y está basada en evidencia histórica que muestra que ningún país en el siglo 20 ha tenido una esperanza de vida menor a los 20 años. El valor máximo u objetivo aspiracional está definido a los 85 años ya que es un objetivo realista al que muchos países pueden aspirar, especialmente por las constantes mejoras en las condiciones de vida y los avances médicos.
 
-La elección del cero natural en los 20 años para la esperanza de vida está basada en evidencia histórica que muestra que ningún país en el siglo 20 ha tenido una esperanza de vida menor a los 20 años. El valor máximo u objetivo aspiracional está definido a los 85 años ya que es un objetivo realista al que muchos países pueden aspirar, especialmente por las constantes mejoras en las condiciones de vida y los avances médicos.
+De esta forma el índice de esperanza de vida se calcula de la siguiente forma:
 
-### Debate
-
-Tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
-
-Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida en buena salud al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan (tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).
-
-El método de Sullivan es un método estadístico que combina la información de las tablas de mortalidad con datos sobre la prevalencia de morbilidades o limitaciones en la actividad. Ajustando las tablas de mortalidad con la prevalencia de morbilidad, se calcula la esperanza de vida libre de limitaciones, sumando los años de vida ajustados para obtener una medida integral de salud poblacional. Este método proporciona una visión clara de los años que se espera que una persona viva en buena salud, combinando la cantidad y calidad de vida.
-
-Calculo de la esperanza de vida saludable (segun la organización mundial de la salud): 
-
-$$HALE_x = \biggl[\sum_{i=x}^w YWD_i\biggl] / I_x$$
-Donde: 
-- $YWD_x = L_x (1-D_x)$: años vividos sin discapacidad, es decir, años de vida saludable vividos entre la edad x y x+5
-
-- $I_x$: sobrevivientes a las edad x
-
-- $L_x$: Total de años vividos (personas años) entre la edad x y x+5 de la tabla de vida 
-
-- $D_x$: Proporción de gente con discapacidad entre los años x y x+5 
-
-### Modificación en el cálculo del IDH
-
-La esperanza de vida en buena salud al nacer es una variable que contiene más información e identifica mejor a la dimensión "tener una vida larga y saludable". Ahora bien, ¿cómo incluirla al cálculo de IDH? Se han barajado algunas opciones:
-
-- Reemplazar la esperanza de vida al nacer por la esperanza de vida en buena salud al nacer directamente en el cálculo del índice de salud. Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. De esta forma, se estaría subestimando el valor del IDH para aquellos países que no tienen la posibilidad de aportar un índice de salud, aún así teniendo un resultado alto en la esperanza de vida al nacer.
-
-- Tomar ambas variables y promediarlas previo al cálculo del índice. Esta opción fue rápidamente descartada por el hecho de que ambas variables resumen aspectos muy similares, están muy relacionadas.
-
-- Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida en buena salud al nacer es notablemente menor. La determinación de la penalización propuesta y la elección de valores mínimo y máximo involucraría pensamientos subjetivos. Esta opción se lleva a cabo tranformando los dos valores en indicadores y despues multipliacandolos, de este forma el valor anteriormente obtenido para el índice de salud baja apenas en aquellos paises con esperanza de vida saludable mucho menor a la esperanza de vida.
-
-- Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la espereranza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente.
-
-## Índice de Conocimiento
+$$\text{Índice de esperanza de vida} = \frac{\text{Esperanza de vida al nacer}-20}{85-20}$$
+## Conocimiento 
 
 En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. El cual se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
 
@@ -173,6 +153,49 @@ También investigamos medidas alternativas sobre la capacidad de disfrutar de un
 mejor o más viable que la esperanza de vida al nacer.
 
 
+## Nivel estandar de vida decente
+
+
+Durante la investigación se debate cada una de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
+
+## Vida larga y saludable
+
+### Debate
+
+Tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+
+Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida en buena salud al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan (tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).
+
+El método de Sullivan es un método estadístico que combina la información de las tablas de mortalidad con datos sobre la prevalencia de morbilidades o limitaciones en la actividad. Ajustando las tablas de mortalidad con la prevalencia de morbilidad, se calcula la esperanza de vida libre de limitaciones, sumando los años de vida ajustados para obtener una medida integral de salud poblacional. Este método proporciona una visión clara de los años que se espera que una persona viva en buena salud, combinando la cantidad y calidad de vida.
+
+Calculo de la esperanza de vida saludable (segun la organización mundial de la salud): 
+
+$$HALE_x = \biggl[\sum_{i=x}^w YWD_i\biggl] / I_x$$
+Donde: 
+- $YWD_x = L_x (1-D_x)$: años vividos sin discapacidad, es decir, años de vida saludable vividos entre la edad x y x+5
+
+- $I_x$: sobrevivientes a las edad x
+
+- $L_x$: Total de años vividos (personas años) entre la edad x y x+5 de la tabla de vida 
+
+- $D_x$: Proporción de gente con discapacidad entre los años x y x+5 
+
+### Modificación en el cálculo del IDH
+
+La esperanza de vida en buena salud al nacer es una variable que contiene más información e identifica mejor a la dimensión "tener una vida larga y saludable". Ahora bien, ¿cómo incluirla al cálculo de IDH? Se han barajado algunas opciones:
+
+- Reemplazar la esperanza de vida al nacer por la esperanza de vida en buena salud al nacer directamente en el cálculo del índice de salud. Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. De esta forma, se estaría subestimando el valor del IDH para aquellos países que no tienen la posibilidad de aportar un índice de salud, aún así teniendo un resultado alto en la esperanza de vida al nacer.
+
+- Tomar ambas variables y promediarlas previo al cálculo del índice. Esta opción fue rápidamente descartada por el hecho de que ambas variables resumen aspectos muy similares, están muy relacionadas.
+
+- Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida en buena salud al nacer es notablemente menor. La determinación de la penalización propuesta y la elección de valores mínimo y máximo involucraría pensamientos subjetivos. Esta opción se lleva a cabo tranformando los dos valores en indicadores y despues multipliacandolos, de este forma el valor anteriormente obtenido para el índice de salud baja apenas en aquellos paises con esperanza de vida saludable mucho menor a la esperanza de vida.
+
+- Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la espereranza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente.
+
+## Índice de Conocimiento
+
+
+
 ## Índice de Ingreso
 
 The low minimum value for gross national income (GNI)
@@ -227,16 +250,7 @@ by population ages 25 and older.
 
 \pagebreak
 
-# Desarrollo Humano
-Definición en la Página del IDH, Programa de las Naciones Unidas para el Desarrollo.
 
-En 1990, el primer Informe sobre Desarrollo Humano introdujo un nuevo enfoque para promover el bienestar humano. El desarrollo humano consiste en ampliar la riqueza de la vida humana, en lugar de simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones.
-
-Personas: el desarrollo humano se centra en mejorar la vida de las personas, en lugar de dar por sentado que el crecimiento económico conducirá, automáticamente, a un mayor bienestar para todos. El crecimiento de los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo.
-
-Oportunidades: el desarrollo humano consiste en dar a las personas más libertad para vivir vidas que valoren. En efecto, esto significa desarrollar las capacidades de las personas y darles la oportunidad de utilizarlas. Por ejemplo, educar a una niña le permitirá desarrollar sus capacidades, pero de poco servirá si se le niega el acceso a un puesto de trabajo o si no tiene las aptitudes adecuadas para el mercado laboral local. Tres fundamentos del desarrollo humano son vivir una vida larga, sana y creativa, tener conocimientos y tener acceso a los recursos necesarios para un nivel de vida decente. Muchas otras cosas también son importantes, sobre todo para ayudar a crear las condiciones adecuadas para el desarrollo humano. Una vez alcanzados los aspectos básicos del desarrollo humano, se abren oportunidades para progresar en otros aspectos de la vida.
-
-Elección: el desarrollo humano consiste, fundamentalmente, en una mayor capacidad de elección. Se trata de ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Nadie puede garantizar la felicidad humana, y las decisiones que tomen las personas son asunto suyo. El proceso de desarrollo -desarrollo humano- debería al menos crear un entorno para que las personas, individual y colectivamente, desarrollen todo su potencial y tengan una oportunidad razonable de llevar una vida productiva y creativa que valoren.
 
 # Cosas para justificar la rama nueva
 
@@ -270,9 +284,11 @@ El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado
  *CAP 5 P106 DEL INFORME 2010*
 
 - Orden posible:
-    - Intro + objetivo
-    - Definición del IDH actual y calculo de cada dimensión
+    - *Intro + objetivo: definicion del desarrollo humano segun idh y segun nosotros*
+    - terminos
+    - Definición del calculo IDH actual y calculo de cada dimensión y explicación
     - Críticas / Otas modificaciones que ya se hicieron + Por qué proponemos igual hacer uno nuevo
+    https://www.undp.org/sites/g/files/zskgke326/files/2023-09/notas_tecnicas.pdf
     - Explicación de modificaciones en cada dimensión (incluyendo posibilidades que se nos ocurrieron pero no hicimos o que descartamos o que estarían bueno hacer). Explicar tmb la de Derechos y libertades.
     - Cálculo final IDH modif (1 o los que sean) Aclarar acá o arriba de donde se obtuvieron los datos
     - Resultados (ver abajo opciones)
@@ -294,6 +310,10 @@ El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado
 -	Resulta diferente o no al IDH ventajas y desventajas
 
 - Idea mirando las tablas del informe del idh compara la clasificación de IDH con IDH modif por desigualdad viendo la diferencia. Ver si se podría y valdría la pena hacer lo mismo con el nuestro
+
+## eleccion 
+
+Elección: el desarrollo humano consiste, fundamentalmente, en una mayor capacidad de elección. Se trata de ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Nadie puede garantizar la felicidad humana, y las decisiones que tomen las personas son asunto suyo. El proceso de desarrollo -desarrollo humano- debería al menos crear un entorno para que las personas, individual y colectivamente, desarrollen todo su potencial y tengan una oportunidad razonable de llevar una vida productiva y creativa que valoren.
 
 
 #Bibliografia
