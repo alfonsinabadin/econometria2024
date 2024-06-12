@@ -15,31 +15,31 @@ source("depuración_ONU.R")
 bbdd_descrip <- datos_juntos_sinNA %>%
   select(codigo, Pais,dim_econ,gnipc2_2019,gini,vida_nacer,salud_nacer)
 
-colnames(bbdd_descrip) <- c("Codigo","Pais","Dim_Econ","PBIPC","G","Vida_nacer","Salud_nacer")
+colnames(bbdd_descrip) <- c("Codigo","Pais","Dim_Econ","GNIPC","G","Vida_nacer","Salud_nacer")
 
 ```
 
 # Indice Economico
 
-PBIPC = PBI Per capita (Acotado en maximo y minimo seleccionados)
+GNIPC = GNI Per capita (Acotado en maximo y minimo seleccionados)
 G = Indice de Gini
 
 ## Calculo actual 
-$$\frac{\ln(PBIPC)-\ln(100)}{\ln(75000)-\ln(100)}$$
+$$\frac{\ln(GNIPC)-\ln(100)}{\ln(75000)-\ln(100)}$$
 
 ## Opcion 1) 
 
-PBIPCA = PBI Per cápita ajustado por Ginni
-$$PBIPCA = PBIPC * (1-G/100)$$
+GNIPCA = GNI Per cápita ajustado por Ginni
+$$GNIPCA = GNIPC * (1-G/100)$$
 
-$$\frac{\ln(PBIPCA)-\ln(100)}{\ln(75000)-\ln(100)}$$
+$$\frac{\ln(GNIPCA)-\ln(100)}{\ln(75000)-\ln(100)}$$
 
 
 
 ```{r}
 #Creacion nuevo indice economico1
-bbdd_descrip$PBIPCA <- bbdd_descrip$PBIPC * (1- bbdd_descrip$G / 100)
-bbdd_descrip$Dim_Econ1 <- (log(bbdd_descrip$PBIPCA)-log(100))/(log(75000)-log(100))
+bbdd_descrip$GNIPCA <- bbdd_descrip$GNIPC * (1- bbdd_descrip$G / 100)
+bbdd_descrip$Dim_Econ1 <- (log(bbdd_descrip$GNIPCA)-log(100))/(log(75000)-log(100))
 
 
 #Boxplot
@@ -58,7 +58,7 @@ boxecon_1 <- ggplot(bbddescrip_nuevo) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 # Guardar el gráfico en un archivo JPEG con un nombre específico
-ggsave("descriptivo/boxplot_comparacion1_1.jpg", plot = boxecon_1)
+ggsave("boxplot_comparacion1_1.jpg", plot = boxecon_1)
 
 
 
@@ -69,7 +69,7 @@ histindice0_1 <- ggplot(bbdd_descrip, aes(x = Dim_Econ)) +
   labs(title = "Original", x = "Valor", y = "Frecuencia")
 
 
-ggsave("descriptivo/histograma_0_1.jpg", plot = histindice0_1)
+ggsave("histograma_0_1.jpg", plot = histindice0_1)
 
 
 # Opcion1
@@ -77,7 +77,7 @@ histindice1_1 <- ggplot(bbdd_descrip, aes(x = Dim_Econ1)) +
   geom_histogram(binwidth = 0.2, fill = "blue", color = "black", alpha = 0.5) +  # Agregar líneas alrededor de las barras
   labs(title = "Opcion 1", x = "Valor", y = "Frecuencia")
 
-ggsave("descriptivo/histograma_1_1.jpg", plot = histindice1_1)
+ggsave("histograma_1_1.jpg", plot = histindice1_1)
 
 # Calcula la correlación entre dos variables
 correlacion1_1 <- cor(bbdd_descrip$Dim_Econ, bbdd_descrip$Dim_Econ1)
@@ -87,14 +87,14 @@ print(correlacion1_1)
 
 
 ```
-![](descriptivo/boxplot_comparacion1_1.jpg)
+![](boxplot_comparacion1_1.jpg)
 
-![](descriptivo/histograma_0_1.jpg)
+![](histograma_0_1.jpg)
 
-![](descriptivo/histograma_1_1.jpg)
+![](histograma_1_1.jpg)
 ## Opcion 2)
 
-$$\frac{\ln(PBIPC)-\ln(100)}{\ln(75000)-\ln(100)} * (1-G/100)$$
+$$\frac{\ln(GNIPC)-\ln(100)}{\ln(75000)-\ln(100)} * (1-G/100)$$
 ```{r}
 #Creacion nuevo indice economico1
 bbdd_descrip$Dim_Econ2 <- bbdd_descrip$Dim_Econ*(1-bbdd_descrip$G/100)
@@ -116,7 +116,7 @@ boxecon_2 <- ggplot(bbddescrip_nuevo) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 # Guardar el gráfico en un archivo JPEG con un nombre específico
-ggsave("descriptivo/boxplot_comparacion1_2.jpg", plot = boxecon_2)
+ggsave("boxplot_comparacion1_2.jpg", plot = boxecon_2)
 
 
 
@@ -128,7 +128,7 @@ histindice1_2 <- ggplot(bbdd_descrip, aes(x = Dim_Econ2)) +
   geom_histogram(binwidth = 0.2, fill = "blue", color = "black", alpha = 0.5) +  # Agregar líneas alrededor de las barras
   labs(title = "Opcion 2", x = "Valor", y = "Frecuencia")
 
-ggsave("descriptivo/histograma_1_2.jpg", plot = histindice1_2)
+ggsave("histograma_1_2.jpg", plot = histindice1_2)
 
 # Calcula la correlación entre dos variables
 correlacion1_2 <- cor(bbdd_descrip$Dim_Econ, bbdd_descrip$Dim_Econ2)
@@ -139,25 +139,25 @@ print(correlacion1_2)
 
 ```
 
-![](descriptivo/boxplot_comparacion1_2.jpg)
+![](boxplot_comparacion1_2.jpg)
 
-![](descriptivo/histograma_1_2.jpg)
+![](histograma_1_2.jpg)
 
 ## Opcion 3) 
 
 Aquellos valores de índice de Ginni que tengan valores menores a 0.3 se les asigna 0.3
 
-PBIPCA = PBI Per cápita ajustado por Ginni
-$$PBIPCA = PBIPC * (1-G/100)$$
+GNIPCA = GNI Per cápita ajustado por Ginni
+$$GNIPCA = GNIPC * (1-G/100)$$
 
-$$\frac{\ln(PBIPCA)-\ln(100)}{\ln(75000)-\ln(100)}$$
+$$\frac{\ln(GNIPCA)-\ln(100)}{\ln(75000)-\ln(100)}$$
 
 ```{r}
 #Creacion nuevo indice economico1
 bbdd_descrip$G_30 <- ifelse(bbdd_descrip$G >= 30, bbdd_descrip$G, 30)
 
-bbdd_descrip$PBIPCA_30 <- bbdd_descrip$PBIPC * (1- bbdd_descrip$G_30 / 100)
-bbdd_descrip$Dim_Econ3 <- (log(bbdd_descrip$PBIPCA_30)-log(100))/(log(75000)-log(100))
+bbdd_descrip$GNIPCA_30 <- bbdd_descrip$GNIPC * (1- bbdd_descrip$G_30 / 100)
+bbdd_descrip$Dim_Econ3 <- (log(bbdd_descrip$GNIPCA_30)-log(100))/(log(75000)-log(100))
 
 
 #Boxplot
@@ -176,7 +176,7 @@ boxecon_3 <- ggplot(bbddescrip_nuevo) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 # Guardar el gráfico en un archivo JPEG con un nombre específico
-ggsave("descriptivo/boxplot_comparacion1_3.jpg", plot = boxecon_3)
+ggsave("boxplot_comparacion1_3.jpg", plot = boxecon_3)
 
 
 
@@ -187,7 +187,7 @@ histindice1_3 <- ggplot(bbdd_descrip, aes(x = Dim_Econ3)) +
   geom_histogram(binwidth = 0.2, fill = "blue", color = "black", alpha = 0.5) +  # Agregar líneas alrededor de las barras
   labs(title = "Opcion 3", x = "Valor", y = "Frecuencia")
 
-ggsave("descriptivo/histograma_1_3.jpg", plot = histindice1_3)
+ggsave("histograma_1_3.jpg", plot = histindice1_3)
 
 # Calcula la correlación entre dos variables
 correlacion1_3 <- cor(bbdd_descrip$Dim_Econ, bbdd_descrip$Dim_Econ3)
@@ -198,14 +198,14 @@ print(correlacion1_3)
 
 ```
 
-![](descriptivo/boxplot_comparacion1_3.jpg)
+![](boxplot_comparacion1_3.jpg)
 
-![](descriptivo/histograma_1_3.jpg)
+![](histograma_1_3.jpg)
 ## Opcion 4)
 
 Aquellos valores de índice de Ginni que tengan valores menores a 0.3 se les asigna 0.3
 
-$$\frac{\ln(PBIPC)-\ln(100)}{\ln(75000)-\ln(100)} * (1-G/100)$$
+$$\frac{\ln(GNIPC)-\ln(100)}{\ln(75000)-\ln(100)} * (1-G/100)$$
 
 ```{r}
 #Creacion nuevo indice economico1
@@ -228,7 +228,7 @@ boxecon_4 <- ggplot(bbddescrip_nuevo) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 # Guardar el gráfico en un archivo JPEG con un nombre específico
-ggsave("descriptivo/boxplot_comparacion1_4.jpg", plot = boxecon_4)
+ggsave("boxplot_comparacion1_4.jpg", plot = boxecon_4)
 
 
 
@@ -240,7 +240,7 @@ histindice1_4 <- ggplot(bbdd_descrip, aes(x = Dim_Econ4)) +
   geom_histogram(binwidth = 0.2, fill = "blue", color = "black", alpha = 0.5) +  # Agregar líneas alrededor de las barras
   labs(title = "Opcion 4", x = "Valor", y = "Frecuencia")
 
-ggsave("descriptivo/histograma_1_4.jpg", plot = histindice1_4)
+ggsave("histograma_1_4.jpg", plot = histindice1_4)
 
 # Calcula la correlación entre dos variables
 correlacion1_4 <- cor(bbdd_descrip$Dim_Econ, bbdd_descrip$Dim_Econ4)
@@ -251,8 +251,15 @@ print(correlacion1_4)
 
 ```
 
-![](descriptivo/boxplot_comparacion1_4.jpg)
+![](boxplot_comparacion1_4.jpg)
 
-![](descriptivo/histograma_1_4.jpg)
+![](histograma_1_4.jpg)
 
+# Indice de Salud
+
+Vida_nacer: Esperanza de vida al nacer
+Salud_nacer: Esperanza de salud al nacer
+
+## Calculo actual 
+$$\frac{\ln(GNIPC)-\ln(100)}{\ln(75000)-\ln(100)}$$
 
