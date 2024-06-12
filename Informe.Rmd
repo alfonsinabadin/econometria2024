@@ -74,6 +74,18 @@ Se considera condición de buena salud a la ausencia de limitaciones funcionales
 
 El método de Sullivan es un método estadístico que combina la información de las tablas de mortalidad con datos sobre la prevalencia de morbilidades o limitaciones en la actividad. Ajustando las tablas de mortalidad con la prevalencia de morbilidad, se calcula la esperanza de vida libre de limitaciones, sumando los años de vida ajustados para obtener una medida integral de salud poblacional. Este método proporciona una visión clara de los años que se espera que una persona viva en buena salud, combinando la cantidad y calidad de vida.
 
+Calculo de la esperanza de vida saludable (segun la organización mundial de la salud): 
+
+$$HALE_x = \biggl[\sum_{i=x}^w YWD_i\biggl] / I_x$$
+Donde: 
+- $YWD_x = L_x (1-D_x)$: años vividos sin discapacidad, es decir, años de vida saludable vividos entre la edad x y x+5
+
+- $I_x$: sobrevivientes a las edad x
+
+- $L_x$: Total de años vividos (personas años) entre la edad x y x+5 de la tabla de vida 
+
+- $D_x$: Proporción de gente con discapacidad entre los años x y x+5 
+
 ### Modificación en el cálculo del IDH
 
 La esperanza de vida en buena salud al nacer es una variable que contiene más información e identifica mejor a la dimensión "tener una vida larga y saludable". Ahora bien, ¿cómo incluirla al cálculo de IDH? Se han barajado algunas opciones:
@@ -82,7 +94,9 @@ La esperanza de vida en buena salud al nacer es una variable que contiene más i
 
 - Tomar ambas variables y promediarlas previo al cálculo del índice. Esta opción fue rápidamente descartada por el hecho de que ambas variables resumen aspectos muy similares, están muy relacionadas.
 
-- Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida en buena salud al nacer es notablemente menor. La determinación de la penalización propuesta y la elección de valores mínimo y máximo involucraría pensamientos subjetivos.
+- Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida en buena salud al nacer es notablemente menor. La determinación de la penalización propuesta y la elección de valores mínimo y máximo involucraría pensamientos subjetivos. Esta opción se lleva a cabo tranformando los dos valores en indicadores y despues multipliacandolos, de este forma el valor anteriormente obtenido para el índice de salud baja apenas en aquellos paises con esperanza de vida saludable mucho menor a la esperanza de vida.
+
+- Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la espereranza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente.
 
 ## Índice de Conocimiento
 
