@@ -61,3 +61,26 @@ colnames(datos_gini) <- c("codigo", "gini")
 
 datos_juntos_sinNA <- merge(datos_juntos_sinNA, datos_gini, by = "codigo")
 datos_juntos <- merge(datos_juntos, datos_gini, by = "codigo", all.x = TRUE)
+
+### DATOS DE LIBERTAD
+library(readxl)
+libertadOG <- read_excel("All_data_FIW_2013-2024.xlsx", sheet = "FIW13-24")
+libertad <- libertadOG |> filter(Edition == 2019)
+libertad <- libertad |> select("Country/Territory", "Total", "PR", "CL")
+colnames(libertad) <- c("country", "lpts", "political_rights", "civil_liberties")
+
+library(countrycode)
+libertad <- libertad |> 
+  mutate(ISO3 = countrycode(country, "country.name", "iso3c"))
+
+# Verificar los primeros registros para asegurarse de que la columna se ha añadido correctamente
+head(libertad)
+
+libertad <- libertad |> 
+  filter(!is.na(ISO3)) |> 
+  mutate(codigo = ISO3) |> 
+  select(codigo, lpts, political_rights, civil_liberties)
+
+datos_juntos_sinNA <- merge(datos_juntos_sinNA, libertad, by = "codigo")
+datos_juntos <- merge(datos_juntos, libertad, by = "codigo", all.x = TRUE)
+
