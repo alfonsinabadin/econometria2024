@@ -15,31 +15,31 @@ source("depuración_ONU.R")
 bbdd_descrip <- datos_juntos_sinNA %>%
   select(codigo, Pais,dim_econ,gnipc2_2019,gini)
 
-colnames(bbdd_descrip) <- c("Codigo","Pais","Dim_Econ","PBIPC","G")
+colnames(bbdd_descrip) <- c("Codigo","Pais","Dim_Econ","GNIPC","G")
 
 ```
 
 # Indice Economico
 
-PBIPC = PBI Per capita (Acotado en maximo y minimo seleccionados)
-G = Indice de Gini
+GNIPC = Ingreso nacional bruto per capita (Acotado en maximo y minimo seleccionados)
+G = Indice de Ginni
 
 ## Calculo actual 
-$$\frac{\ln(PBIPC)-\ln(100)}{\ln(75000)-\ln(100)}$$
+$$\frac{\ln(GNIPC)-\ln(100)}{\ln(75000)-\ln(100)}$$
 
 ## Opcion 1) 
 
-PBIPCA = PBI Per cápita ajustado por Gini
-$$PBIPCA = PBIPC * (1-G/100)$$
+GNIPCA = GNI Per cápita ajustado por Gini
+$$GNIPCA = GNIPC * (1-G/100)$$
 
-$$\frac{\ln(PBIPCA)-\ln(100)}{\ln(75000)-\ln(100)}$$
+$$\frac{\ln(GNIPCA)-\ln(100)}{\ln(75000)-\ln(100)}$$
 
 
 
 ```{r}
 #Creacion nuevo indice economico1
-bbdd_descrip$PBIPCA <- bbdd_descrip$PBIPC * (1- bbdd_descrip$G / 100)
-bbdd_descrip$Dim_Econ1 <- (log(bbdd_descrip$PBIPCA)-log(100))/(log(75000)-log(100))
+bbdd_descrip$GNIPCA <- bbdd_descrip$GNIPC * (1- bbdd_descrip$G / 100)
+bbdd_descrip$Dim_Econ1 <- (log(bbdd_descrip$GNIPCA)-log(100))/(log(75000)-log(100))
 
 
 #Boxplot
