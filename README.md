@@ -25,3 +25,7 @@ alfon:
 - Instituto de Estadística de españa (explicación esperanza de vida en buena salud) https://www.ine.es/ss/Satellite?L=es_ES&c=INESeccion_C&cid=1259926378861&p=%5C&pagename=ProductosYServicios%2FPYSLayout&param1=PYSDetalle&param3=1259924822888
 
 - Método sullivan para el cálculo de la esp de vida sana 
+
+- CÁLCULO DE LOS ÍNDICES DE DESARROLLO HUMANO: https://www.undp.org/sites/g/files/zskgke326/files/2023-09/notas_tecnicas.pdf
+
+- Esperanza de vida escolar: https://uis.unesco.org/sites/default/files/documents/education-indicators-technical-guidelines-sp.pdf
