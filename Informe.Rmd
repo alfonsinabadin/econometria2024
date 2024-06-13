@@ -75,31 +75,35 @@ De esta forma el índice de esperanza de vida se calcula de la siguiente forma:
 $$\text{Índice de esperanza de vida} = \frac{\text{Esperanza de vida al nacer}-20}{85-20}$$
 
 ## Conocimiento 
-En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. El cual se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
+
+En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. Este se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
 
 Los años esperados de escolaridad refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela, si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de su vida. Y los años medios de escolaridad son el número medio de años de educación recibidos por las personas de 25 años o más, convertido a partir de los niveles de logro educativo utilizando las duraciones oficiales de cada nivel.
 
-**Otra def no se cuál es más clara** Años de educación promedio Años de educación promedio que reciben las personas de 25 años y más durante su vida, basados en los niveles de logros educacionales de la población transformados en años de educación de acuerdo con la duración teórica de cada nivel de educación a la que se asiste.
+**Otra def no se cuál es más clara** Años de educación promedio Años de educación promedio que reciben las personas de 25 años y más durante su vida, basados en los niveles de logros educacionales de la población transformados en años de educación de acuerdo con la duración teórica de cada nivel de educación a la que se asiste.(creo que esta se entiende más: soy sofi)
 
 Resulta necesario aclarar que para la rama de educación, al tomarse dos indicadores en vez de uno, primero se calcula el índice de dimensión de ambos y, a continuación, se obtiene la media aritmética de los dos índices resultantes.
 
-_La utilización de la media aritmética de dos índices de educación permite una sustituibilidad perfecta entre años medios de escolaridad y los años esperados de escolaridad, lo que parece correcto dado que muchos países en desarrollo tienen un bajo escolaridad entre los adultos, pero están deseosos de lograr la escolaridad universal en primaria y secundaria de los niños en edad escolar._ (lo ponemos o no? es de lo que estaba en inglés)
+_La utilización de la media aritmética de dos índices de educación permite una sustituibilidad perfecta entre años medios de escolaridad y los años esperados de escolaridad, lo que parece correcto dado que muchos países en desarrollo tienen un bajo escolaridad entre los adultos, pero están deseosos de lograr la escolaridad universal en primaria y secundaria de los niños en edad escolar._ (lo ponemos o no? es de lo que estaba en inglés) (hay que ponerlo para justificar pq se usan las dos y no una sola pero no queda tan claro si es que se agrega los años esperados por esto de los paises en desarrollo o si lo q se agrega es los años promedios, se podria explicar más)
 
 $$\text{Índice de años esperados} = \frac{\text{Años esperados de escolaridad}-0}{18-0}$$
+
 $$\text{Índice de años medios} = \frac{\text{Años medios de escolaridad}-0}{15-0}$$
+
 Las sociedades pueden subsistir sin educación formal, lo que justifica la educación mínima de 0 años. El máximo de años esperados de escolaridad, 18, equivale a la obtención de un máster en la mayoría de los países. El máximo de años medios de escolaridad, 15, es el máximo previsto de este indicador para 2025.
 
 El índice de educación queda definido entonces como la media aritmética de los índices mencionados:
 
 $$\text{Índice de educación} = \frac{\text{Índice años esperados de escolaridad}+\text{Índice años medios de escolaridad}}{2}$$
-**Decidir si aclaramos esto, si sí tmb deberiamos aclarar años promedio y esperanza  de vida**
+**Decidir si aclaramos esto, si sí tmb deberiamos aclarar años promedio y esperanza  de vida** (hay que aclarar por lo menos en palabras que es)
 
 *va en la parte de Años esperados de escolaridad*
 
-El valor se obtiene con la estimación del coeficiente que acompaña al país en el modelo lineal $y=\alpha+\beta \text{ año}+\varepsilon$
+El valor se obtiene con la estimación del coeficiente que acompaña al país en el modelo lineal $y=\alpha+\beta \text{ año}+\varepsilon$ (que valor?? no queda claro)
 
 La fórmula de cálculo utilizada para obtener este indicador
-es la siguiente:
+es la siguiente: (que calculo? aclarar que es lo que se esta explicando aca)
+
 $$\sum_{i=5}^{17} \frac{\text{Asistencia a la educación de personas con edad i}}{\text{Total de personas con la edad i}}$$
 
 Por otro lado, se limita la edad de 5 a 17 años debido a que en el país se tiene un enfoque importante en que las personas inicien su etapa escolar en niveles de transición y kínder, y finalicen al menos la educación secundaria. Se considera que con este nivel educativo al menos las personas pueden acceder a oportunidades de educación especializada no solamente en universidades sino también opciones técnicas.
@@ -109,9 +113,8 @@ Por otro lado, se limita la edad de 5 a 17 años debido a que en el país se tie
 INGRESO O PRODUCTO NACIONAL BRUTO
 A veces dice que es lo mismo y otras que no
 
-
 El bajo valor mínimo para el Ingreso Nacional Bruto (en inglés Gross Nacional Income GNI) per cápita, 100 dólares, se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. El máximo se establece en 75,000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. *Actualmente*, solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
-
+(este minimo y maximo no era para el PBI o al final era para el PNB???)
 _Lo que sigue está sacado de lo de 2022_
 
 La base de datos de Indicadores del Desarrollo Mundial del Banco Mundial de 2022 contiene estimaciones del GNI per cápita en términos de paridad de poder adquisitivo (PPP) constantes de 2017 para muchos países. Para los países que no tienen este indicador (total o parcialmente), la Oficina del Informe sobre Desarrollo Humano (HDRO) lo calcula convirtiendo el GNI per cápita en moneda local de términos corrientes a términos constantes usando dos pasos. Primero, el valor del GNI per cápita en términos corrientes se convierte en términos PPP para el año base (2017). Segundo, se construye una serie temporal del GNI per cápita en términos constantes de PPP de 2017 aplicando las tasas de crecimiento real al GNI per cápita en términos de PPP para el año base. La tasa de crecimiento real se implica por la proporción del crecimiento nominal del GNI per cápita en moneda local corriente al deflactor del PIB.
@@ -129,16 +132,25 @@ Las tasas de conversión oficiales de PPP son producidas por el Programa de Comp
 Durante la investigación se debate cada una de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
 
 # Críticas IDH + Modif que ya existen
-Acordarnos de explicar por qué proponemos hacer uno nuevo
+
+Si bien se piensa que el calculo del IDH actual logra reflejar muchas cuestiones vinculadas a lo que hace que un pais se pueda considerar con mayor o menor desarollo humano, hay otros aspectos de lo que se define como desarollo humano que no son tenidos en cuenta. 
+
+En primer lugar, se menciona que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos sino que los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo. Esto indica que si bien una medida como el Ingreso Nacional Bruto podría ser un medio para explicar si un país esta más o menos desarollado no podría definir esto por completo, ya que el tener un valor alto de PNB no garantizaría el bienestar de toda la población. A partir de esta problematica surge la idea de implentar otra variable de corección en esta dimensión para asi poder tener en cuenta otras cuestiones del desarrollo humano para el nivel de vida de las personas.
+
+Si nos enfocamos en la dimensión de vida larga y saludable podemos notar que en un principio el mismo nombre de esta dimensión no esta completamente explicado por la variable que se utiliza ya que la esperanza de vida solo indicaría si las personas tienen una vida larga o corta pero no se habla de que tan saludable. Si bien la esperanza de vida es una variable importante a la hora de analizar las condiciones de salud de un país, no se tiene en cuenta como es la calidad de vida de estos años que se esperan vivir. Es por esta razón, que en esta dimensión se considera importante incorporar otra variable que pueda tener en cuenta las condiciones en las que se viven, en cuento a salud, en los distintos paises.
+
+Por último, la definición de desarollo humano menciona que este desarrollo consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles como vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al indice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad de las personas en su día a día. 
 
 # Propuestas / modificaciones 
 HAY QUE EXPLICAR EN CADA UNO CÓMO ENTENDEMOS CADA CONCEPTO
+
+En esta sección se explica cada una de las modificaciones propuestas para este nuevo indice acompañado del razonamiento que se hizo. Ademas, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o que fueron pensadas como otras opciones que pueden ser implementadas también pero que no se terminaron eligieron por cuestiones de logistica (tieempo y falta de datos).
 
 ## Vida larga y saludable
 
 ### Debate
 
-Tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+Como se menciono anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
 
 Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida en buena salud al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan (tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).
 
@@ -192,8 +204,13 @@ mejor o más viable que la esperanza de vida al nacer.
 
 ## Nivel estándar de vida decente
 
+### debate 
+### Modificación 
+
 ## RAMA NUEVA
 Cosas para justificar la rama nueva
+
+## Debate 
 
 *Informe IDH 2010*
 El nuevo IDH poseía algunas debilidades, como lo reconocieron los autores; entre ellas, la dependencia de los promedios nacionales —que ocultaban sesgos de distribución— y la falta de una “medida cuantitativa de la libertad humana”. No obstante, logró plantear sin problemas la tesis central del Informe, declarada brevemente ya en la primera frase: “La verdadera riqueza de una nación está en su gente”.
@@ -217,6 +234,7 @@ sobre el desarrollo.
 El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado solamente en el ingreso.
 
 *VER A PARTIR DE LA PAG 29 DE INFORME 2020*
+### Modificación IDH 
 
 # Cálculo de IDH modif
 Antes o como secciones de esta explicar de dónde sacamos los datos, qué hicimos con los datos faltantes.
