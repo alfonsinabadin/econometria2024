@@ -1,3 +1,10 @@
+Cosas que faltan:
+- Sección con IDH modificadoa que ya existen el de desigualdad y esos
+- Sección o nombrar en algún lado de donde se obtuvieron los datos 
+- Explicar lo de la estimacion de los datos faltantes, que tomamos los últimos
+
+
+
 Link de descarga de bases:
 
 - https://apps.who.int/gho/data/node.main.HALE?lang=en

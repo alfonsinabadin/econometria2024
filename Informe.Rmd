@@ -34,8 +34,6 @@ lang: "es-ES"
 
 # Introducción
 
-# Desarrollo Humano
-
 El desarrollo humano consiste en ampliar la riqueza de la vida humana, en lugar de simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones[^1].
 
 En lugar de dar por sentado que el crecimiento económico conducirá, automáticamente, a un mayor bienestar para todos, el desarrollo humano se enfoca en mejorar las vidas de las personas en un sentido más amplio. Por lo tanto, el crecimiento de los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo. Bajo esta premisa, se tienen en cuenta también aspectos que impliquen desarrollar las capacidades de las personas, brindando la oportunidad y la libertad de utilizarlas, sin insistir en que las aprovechen.
@@ -50,16 +48,17 @@ El objetivo principal de la presente investigación es proponer una modificació
 
 \pagebreak
 
-# Índice de desarrollo humano actual
+# Índice de desarrollo humano
 
 El IDH se calcula como una media geométrica de índices que representan a las tres dimensiones estudiadas: una vida larga y saludable, el conocimiento y un nivel de vida decente.
 
-(cambiar indice de PBI por indice de ingreso y cambiar indice de salud por indice de esperanza de vida)
+(EN LA FOTO cambiar indice de PBI por indice de ingreso para que quede igual a como lo nombramos)
 
 ![](diagrama1.png) 
 
 $$IDH = \Bigl(\text{Índice de esperanza de vida}\times\text{Índice de educación}\times\text{Índice de ingreso}\Bigl)^{1/3}$$
-Todos estos índices de dimension se calculan de la siguiente forma:
+
+Todos estos índices de dimensión se calculan de la siguiente forma:
 
 $$\text{Índice de dimensión}=\frac{\text{valor actual - valor mínimo}}{\text{valor máximo - valor mínimo}}$$
 
@@ -67,63 +66,24 @@ Los valores mínimo y máximo están definidos para transformar la variable en u
 
 ### Vida larga y saludable 
 
-La primer componente del IDH es vida larga y saludable, que sin dudas promueve el desarrollo humano y es primordial para mantener un buen estilo de vida. Actualmente, el indicador que representa este aspecto se obtiene a partir de la esperanza de vida al nacer.
+La primer componente del IDH es vida larga y saludable, que sin dudas promueve el desarrollo humano y es primordial para mantener un buen estilo de vida. Actualmente, el indicador que representa este aspecto se obtiene a partir de la esperanza de vida al nacer. Entendiendo a la esperanza de vida al nacer como número medio de años que un recién nacido podría esperar vivir, si transcurriera su vida expuesto a las tasas de mortalidad específicas por sexo y edad vigentes en el momento de su nacimiento, para un año concreto, en un país, territorio o zona geográfica determinados.
 
-Se define a la esperanza de vida como número medio de años que un recién nacido podría esperar vivir, si transcurriera su vida expuesto a las tasas de mortalidad específicas por sexo y edad vigentes en el momento de su nacimiento, para un año concreto, en un país, territorio o zona geográfica determinados.
-
-Para el cálculo del IDH se transforma la esperanza de vida al nacer en un índice calculado con el índice de dimensión mencionado anteriormente. Para esto se definen valores mínimos y máximos de la esperaza de  vida.
-
-La elección del cero natural para la esperanza de vida es de 20 años y está basada en evidencia histórica que muestra que ningún país en el siglo 20 ha tenido una esperanza de vida menor a los 20 años. El valor máximo u objetivo aspiracional está definido a los 85 años ya que es un objetivo realista al que muchos países pueden aspirar, especialmente por las constantes mejoras en las condiciones de vida y los avances médicos.
+Para el cálculo del IDH se transforma la esperanza de vida al nacer en un índice calculado con el índice de dimensión mencionado anteriormente. Para esto se definen valores mínimos y máximos de la esperaza de vida. La elección del cero natural para la esperanza de vida es de 20 años y está basada en evidencia histórica que muestra que ningún país en el siglo 20 ha tenido una esperanza de vida menor a los 20 años. El valor máximo u objetivo aspiracional está definido a los 85 años ya que es un objetivo realista al que muchos países pueden aspirar, especialmente por las constantes mejoras en las condiciones de vida y los avances médicos.
 
 De esta forma el índice de esperanza de vida se calcula de la siguiente forma:
 
 $$\text{Índice de esperanza de vida} = \frac{\text{Esperanza de vida al nacer}-20}{85-20}$$
+
 ## Conocimiento 
-
-En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. El cual se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
-
-Los años esperados de escolaridad refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela, si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de su vida. El valor se obtiene con la estimación del coeficiente que acompaña al país en el modelo lineal $y=\alpha+\beta \text{ año}+\varepsilon$
-
-La fórmula de cálculo utilizada para obtener este indicador
-es la siguiente:
-$$\sum_{i=5}^{17} \frac{\text{Asistencia a la educación de personas con edad i}}{\text{Total de personas con la edad i}}$$
-
-
-
-For the education dimension, equation 1 is first applied to
-each of the two indicators, and then the arithmetic mean of the
-two resulting indices is taken. Using the arithmetic mean of
-two education indices allows perfect substitutability between
-mean years of schooling and expected years of schooling, which
-seems to be right given that many developing countries have low
-school attainment among adults but are eager to achieve universal primary and secondary school enrolment among school-age
-children.
-
-Por otro lado, se limita la edad de 5 a 17 años debido a que
-en el país se tiene un enfoque importante en que las
-personas inicien su etapa escolar en niveles de transición y
-kínder, y finalicen al menos la educación secundaria. Se
-considera que con este nivel educativo al menos las
-personas pueden acceder a oportunidades de educación
-especializada no solamente en universidades sino también
-opciones técnicas.
-
-Años medios de escolarización: Número medio de años de educación recibidos por las personas de 25 años o más, convertido a partir de los niveles de logro educativo utilizando las duraciones oficiales de cada nivel.
-Años de educación promedio Años de
-educación promedio que reciben las personas
-de 25 años y más durante su vida, basados
-en los niveles de logros educacionales de la
-población transformados en años de educación
-de acuerdo con la duración teórica de cada nivel
-de educación a la que se asiste.
-
-# Propuesta cami
 En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. El cual se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
 
 Los años esperados de escolaridad refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela, si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de su vida. Y los años medios de escolaridad son el número medio de años de educación recibidos por las personas de 25 años o más, convertido a partir de los niveles de logro educativo utilizando las duraciones oficiales de cada nivel.
 
-Resulta necesario aclarar que para la dimensión educación, al tomarse dos indicadores en vez de uno, primero se calcula el índice de dimensión de ambos y, a continuación, se obtiene la media aritmética de los dos índices resultantes.
-_La utilización de la media aritmética de dos índices de educación permite una sustituibilidad perfecta entre años medios de escolarización y los años esperados de escolarización, lo que parece correcto dado que muchos países en desarrollo tienen un bajo escolarización entre los adultos, pero están deseosos de lograr la escolarización universal en primaria y secundaria de los niños en edad escolar._
+**Otra def no se cuál es más clara** Años de educación promedio Años de educación promedio que reciben las personas de 25 años y más durante su vida, basados en los niveles de logros educacionales de la población transformados en años de educación de acuerdo con la duración teórica de cada nivel de educación a la que se asiste.
+
+Resulta necesario aclarar que para la rama de educación, al tomarse dos indicadores en vez de uno, primero se calcula el índice de dimensión de ambos y, a continuación, se obtiene la media aritmética de los dos índices resultantes.
+
+_La utilización de la media aritmética de dos índices de educación permite una sustituibilidad perfecta entre años medios de escolaridad y los años esperados de escolaridad, lo que parece correcto dado que muchos países en desarrollo tienen un bajo escolaridad entre los adultos, pero están deseosos de lograr la escolaridad universal en primaria y secundaria de los niños en edad escolar._ (lo ponemos o no? es de lo que estaba en inglés)
 
 $$\text{Índice de años esperados} = \frac{\text{Años esperados de escolaridad}-0}{18-0}$$
 $$\text{Índice de años medios} = \frac{\text{Años medios de escolaridad}-0}{15-0}$$
@@ -132,31 +92,47 @@ Las sociedades pueden subsistir sin educación formal, lo que justifica la educa
 El índice de educación queda definido entonces como la media aritmética de los índices mencionados:
 
 $$\text{Índice de educación} = \frac{\text{Índice años esperados de escolaridad}+\text{Índice años medios de escolaridad}}{2}$$
+**Decidir si aclaramos esto, si sí tmb deberiamos aclarar años promedio y esperanza  de vida**
 
-*Falta explicar cómo era antes de la modificación porque estamos de acuerdo*
-Antes del año 2010, se tenían en cuenta las variables alfabetización y matriculación bruta en la dimensión de conocimientos.
+*va en la parte de Años esperados de escolaridad*
 
-En el ámbito de los conocimientos, los años promedio de instrucción
-sustituyen a la alfabetización y la matriculación bruta se replanteó como
-los años esperados de instrucción, es decir, los años de educación que un
-niño puede esperar recibir dada la tasa de matriculación vigente. Cada
-vez más países calculan con mayor frecuencia los años promedio de instrucción. Dicha medida permite distinguir mejor entre países, mientras que los años esperados de instrucción son consistentes con la reformulación de esta dimensión en términos de años. 
+El valor se obtiene con la estimación del coeficiente que acompaña al país en el modelo lineal $y=\alpha+\beta \text{ año}+\varepsilon$
 
-Lo ideal sería que las mediciones de la dimensión de conocimientos incorporasen evaluaciones de calidad, tal como se ha hecho en varios informes sobre desarrollo humano nacionales y regionales. Por ejemplo, el Informe de los Estados Árabes
-de 2003 creó una medida tanto de la cantidad como de la calidad de
-la educación. Ésta ajusta los años promedio de instrucción con puntajes
-promedio en pruebas e incluye indicadores vinculados con medios de difusión, comunicaciones y científicos capacitados. Pero no existen buenas
-medidas sobre la calidad de la educación para una cantidad suficiente de
-países; las evaluaciones internacionales sobre conocimientos científicos
-y matemáticos y habilidades de lecto-escritura de los jóvenes son instrumentos de gran valor, pero su cobertura es baja y su frecuencia, irregular.
-También investigamos medidas alternativas sobre la capacidad de disfrutar de una vida saludable, pero no hemos encontrado ninguna opción
-mejor o más viable que la esperanza de vida al nacer.
+La fórmula de cálculo utilizada para obtener este indicador
+es la siguiente:
+$$\sum_{i=5}^{17} \frac{\text{Asistencia a la educación de personas con edad i}}{\text{Total de personas con la edad i}}$$
+
+Por otro lado, se limita la edad de 5 a 17 años debido a que en el país se tiene un enfoque importante en que las personas inicien su etapa escolar en niveles de transición y kínder, y finalicen al menos la educación secundaria. Se considera que con este nivel educativo al menos las personas pueden acceder a oportunidades de educación especializada no solamente en universidades sino también opciones técnicas.
+
+## Nivel estándar de vida decente
+
+INGRESO O PRODUCTO NACIONAL BRUTO
+A veces dice que es lo mismo y otras que no
 
 
-## Nivel estandar de vida decente
+El bajo valor mínimo para el Ingreso Nacional Bruto (en inglés Gross Nacional Income GNI) per cápita, 100 dólares, se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. El máximo se establece en 75,000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. *Actualmente*, solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
 
+_Lo que sigue está sacado de lo de 2022_
+
+La base de datos de Indicadores del Desarrollo Mundial del Banco Mundial de 2022 contiene estimaciones del GNI per cápita en términos de paridad de poder adquisitivo (PPP) constantes de 2017 para muchos países. Para los países que no tienen este indicador (total o parcialmente), la Oficina del Informe sobre Desarrollo Humano (HDRO) lo calcula convirtiendo el GNI per cápita en moneda local de términos corrientes a términos constantes usando dos pasos. Primero, el valor del GNI per cápita en términos corrientes se convierte en términos PPP para el año base (2017). Segundo, se construye una serie temporal del GNI per cápita en términos constantes de PPP de 2017 aplicando las tasas de crecimiento real al GNI per cápita en términos de PPP para el año base. La tasa de crecimiento real se implica por la proporción del crecimiento nominal del GNI per cápita en moneda local corriente al deflactor del PIB.
+
+Para varios países sin un valor de GNI per cápita en términos constantes de PPP de 2017 para 2021 reportado en la base de datos de Indicadores del Desarrollo Mundial, se aplican tasas de crecimiento real del PIB per cápita disponibles en la base de datos de Indicadores del Desarrollo Mundial o en la base de datos Perspectivas de la Economía Mundial del Fondo Monetario Internacional a los valores más recientes de GNI en términos constantes de PPP. Las tasas de conversión oficiales de PPP son producidas por el Programa de Comparación Internacional, cuyas encuestas recolectan periódicamente miles de precios de bienes y servicios comparables en muchos países. La última ronda de este ejercicio se refiere a 2017 y cubrió 176 economías.
+
+_Lo que sigue está sacado de lo de 2019_
+
+La base de datos de Indicadores del Desarrollo Mundial de 2019 del Banco Mundial contiene estimaciones del GNI per cápita en términos de paridad de poder adquisitivo (PPP) constantes de 2011 para muchos países. Para los países que no tienen este indicador (total o parcialmente), la Oficina del Informe sobre Desarrollo Humano (HDRO) lo calcula convirtiendo el GNI per cápita en moneda local de términos corrientes a términos constantes utilizando dos pasos. Primero, el valor del GNI per cápita en términos corrientes se convierte en términos PPP para el año base (2011). Segundo, se construye una serie temporal del GNI per cápita en términos constantes de PPP de 2011 aplicando las tasas de crecimiento real al GNI per cápita en términos de PPP para el año base. La tasa de crecimiento real se determina por la proporción del crecimiento nominal del GNI per cápita en moneda local corriente al deflactor del PIB.
+
+Para varios países sin un valor de GNI per cápita en términos constantes de PPP de 2011 para 2018 reportado en la base de datos de Indicadores del Desarrollo Mundial, se aplican las tasas de crecimiento real del PIB per cápita disponibles en la base de datos de Indicadores del Desarrollo Mundial o en la base de datos de Perspectivas de la Economía Mundial del Fondo Monetario Internacional a los valores más recientes de GNI en términos constantes de PPP.
+
+Las tasas de conversión oficiales de PPP son producidas por el Programa de Comparación Internacional, cuyas encuestas recolectan periódicamente miles de precios de bienes y servicios comparables en muchos países. La última ronda de este ejercicio se refiere a 2011 y cubrió 199 países.
 
 Durante la investigación se debate cada una de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
+
+# Críticas IDH + Modif que ya existen
+Acordarnos de explicar por qué proponemos hacer uno nuevo
+
+# Propuestas / modificaciones 
+HAY QUE EXPLICAR EN CADA UNO CÓMO ENTENDEMOS CADA CONCEPTO
 
 ## Vida larga y saludable
 
@@ -192,67 +168,32 @@ La esperanza de vida en buena salud al nacer es una variable que contiene más i
 
 - Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la espereranza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente.
 
-## Índice de Conocimiento
+## Conocimiento
+JUSTIFICCACIÓN DE NO CAMBIO CONOC
 
+*Falta explicar cómo era antes de la modificación porque estamos de acuerdo*
+Antes del año 2010, se tenían en cuenta las variables alfabetización y matriculación bruta en la dimensión de conocimientos.
 
+En el ámbito de los conocimientos, los años promedio de instrucción
+sustituyen a la alfabetización y la matriculación bruta se replanteó como
+los años esperados de instrucción, es decir, los años de educación que un
+niño puede esperar recibir dada la tasa de matriculación vigente. Cada
+vez más países calculan con mayor frecuencia los años promedio de instrucción. Dicha medida permite distinguir mejor entre países, mientras que los años esperados de instrucción son consistentes con la reformulación de esta dimensión en términos de años. 
 
-## Índice de Ingreso
+Lo ideal sería que las mediciones de la dimensión de conocimientos incorporasen evaluaciones de calidad, tal como se ha hecho en varios informes sobre desarrollo humano nacionales y regionales. Por ejemplo, el Informe de los Estados Árabes
+de 2003 creó una medida tanto de la cantidad como de la calidad de
+la educación. Ésta ajusta los años promedio de instrucción con puntajes
+promedio en pruebas e incluye indicadores vinculados con medios de difusión, comunicaciones y científicos capacitados. Pero no existen buenas
+medidas sobre la calidad de la educación para una cantidad suficiente de
+países; las evaluaciones internacionales sobre conocimientos científicos
+y matemáticos y habilidades de lecto-escritura de los jóvenes son instrumentos de gran valor, pero su cobertura es baja y su frecuencia, irregular.
+También investigamos medidas alternativas sobre la capacidad de disfrutar de una vida saludable, pero no hemos encontrado ninguna opción
+mejor o más viable que la esperanza de vida al nacer.
 
-The low minimum value for gross national income (GNI)
-per capita, $100, is justified by the considerable amount of
-unmeasured subsistence and nonmarket production in economies close to the minimum, which is not captured in the official
-data. The maximum is set at $75,000 per capita. Kahneman
-and Deaton (2010) have shown that there is virtually no gain
-in human development and well-being from annual income per
-capita above $75,000. Currently, only four countries (Brunei
-Darussalam, Liechtenstein, Qatar and Singapore) exceed the
-$75,000 income per capita ceiling. 
+## Nivel estándar de vida decente
 
-The World Bank’s 2022 World Development Indicators database contains estimates of GNI per capita in constant 2017 purchasing power parity (PPP)
-terms for many countries. For countries missing this indicator (entirely or partly), the Human Development Report Office (HDRO) calculates it by converting GNI per capita in local currency from current to
-constant terms using two steps. First, the value of
-GNI per capita in current terms is converted into PPP
-terms for the base year (2017). Second, a time series of GNI per capita in 2017 PPP constant terms is
-constructed by applying the real growth rates to the
-GNI per capita in PPP terms for the base year. The
-real growth rate is implied by the ratio of the nominal growth of GNI per capita in current local currency
-terms to the GDP deflator.
-For several countries without a value of GNI per
-capita in constant 2017 PPP terms for 2021 reported
-in the World Development Indicators database, real
-growth rates of GDP per capita available in the World
-Development Indicators database or in the International Monetary Fund’s Economic Outlook database
-are applied to the most recent GNI values in constant
-PPP terms.
-Official PPP conversion rates are produced by the International Comparison Program, whose surveys periodically collect thousands of prices of matched goods
-and services in many countries. The last round of this
-exercise refers to 2017 and covered 176 economies.
-
-## Estimación de datos faltantes
-
-For a small number of countries missing one of the four indicators, the HDRO estimated the missing values using crosscountry regression models.
-In this Report expected years of schooling were estimated for
-Bahamas, Dominica, Equatorial Guinea, Haiti, Libya, Papua
-New Guinea, Tonga, Trinidad and Tobago, and Vanuatu. Mean
-years of schooling were estimated for Eritrea, Grenada and Saint
-Kitts and Nevis.
-
-# Categorías según desarrollo humano
-
-![](agregar1.png)
-
-Aggregate HDI values for country groups (by human development category, region and the like) are calculated by applying
-the HDI formula to the weighted group averages of component
-indicators. Life expectancy and GNI per capita are weighted
-by total population, expected years of schooling is weighted by
-population ages 5–24 and mean years of schooling is weighted
-by population ages 25 and older.
-
-\pagebreak
-
-
-
-# Cosas para justificar la rama nueva
+## RAMA NUEVA
+Cosas para justificar la rama nueva
 
 *Informe IDH 2010*
 El nuevo IDH poseía algunas debilidades, como lo reconocieron los autores; entre ellas, la dependencia de los promedios nacionales —que ocultaban sesgos de distribución— y la falta de una “medida cuantitativa de la libertad humana”. No obstante, logró plantear sin problemas la tesis central del Informe, declarada brevemente ya en la primera frase: “La verdadera riqueza de una nación está en su gente”.
@@ -277,7 +218,49 @@ El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado
 
 *VER A PARTIR DE LA PAG 29 DE INFORME 2020*
 
-# COSAS QUE SE ME VAN OCURRIENDO QUE TIENEN QUE ESTAR
+# Cálculo de IDH modif
+Antes o como secciones de esta explicar de dónde sacamos los datos, qué hicimos con los datos faltantes.
+
+## Estimación de datos faltantes
+
+For a small number of countries missing one of the four indicators, the HDRO estimated the missing values using crosscountry regression models.
+In this Report expected years of schooling were estimated for
+Bahamas, Dominica, Equatorial Guinea, Haiti, Libya, Papua
+New Guinea, Tonga, Trinidad and Tobago, and Vanuatu. Mean
+years of schooling were estimated for Eritrea, Grenada and Saint
+Kitts and Nevis.
+
+# Resultados
+
+- Rankear los países con IDH modificado y comparar (2 graficos países colores)
+
+- Corr entre los IDH y el/los modificados
+
+-	Resulta diferente o no al IDH ventajas y desventajas
+
+- Idea mirando las tablas del informe del idh compara la clasificación de IDH con IDH modif por desigualdad viendo la diferencia. Ver si se podría y valdría la pena hacer lo mismo con el nuestro
+
+# Cosas que quedan propuestas
+
+# Conclusión 
+
+# Categorías según desarrollo humano
+
+![](agregar1.png)
+
+Aggregate HDI values for country groups (by human development category, region and the like) are calculated by applying
+the HDI formula to the weighted group averages of component
+indicators. Life expectancy and GNI per capita are weighted
+by total population, expected years of schooling is weighted by
+population ages 5–24 and mean years of schooling is weighted
+by population ages 25 and older.
+
+\pagebreak
+
+
+
+
+# GUÍA DE COSAS QUE TIENEN QUE ESTAR
 
 - *Antes de nombrar la modificación que proponemos deberíamos nombrar algo de críticas al IDH y otras modificaciones que ya se hicieron (Informe ver en Documentos) y por qué buscamos una distinta que queremos mostrar.*
  EN 2010, se incorporan tres nuevos indicadores que capturan la desigualdad multidimensional, las disparidades de género y las privaciones extremas. El Índice de Desarrollo Humano ajustado por la Desigualdad, el Índice de Desigualdad de Género, así como el Índice de Pobreza Multidimensional
@@ -301,15 +284,7 @@ El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado
 
 
 
-# Resultados
 
-- Rankear los países con IDH modificado y comparar (2 graficos países colores)
-
-- Corr entre los IDH y el/los modificados
-
--	Resulta diferente o no al IDH ventajas y desventajas
-
-- Idea mirando las tablas del informe del idh compara la clasificación de IDH con IDH modif por desigualdad viendo la diferencia. Ver si se podría y valdría la pena hacer lo mismo con el nuestro
 
 ## eleccion 
 
