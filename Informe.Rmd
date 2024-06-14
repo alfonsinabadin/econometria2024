@@ -144,19 +144,19 @@ Por último, la definición de desarollo humano menciona que este desarrollo con
 # Propuestas / modificaciones 
 HAY QUE EXPLICAR EN CADA UNO CÓMO ENTENDEMOS CADA CONCEPTO
 
-En esta sección se explica cada una de las modificaciones propuestas para este nuevo indice acompañado del razonamiento que se hizo. Ademas, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o que fueron pensadas como otras opciones que pueden ser implementadas también pero que no se terminaron eligieron por cuestiones de logistica (tieempo y falta de datos).
+En esta sección se explica cada una de las modificaciones propuestas para este nuevo indice acompañado del razonamiento que se hizo. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o que fueron pensadas como otras opciones que pueden ser implementadas también pero que no se terminaron eligieron por cuestiones de logistica (tieempo y falta de datos).
 
 ## Vida larga y saludable
 
 ### Debate
 
-Como se menciono anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
 
-Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida en buena salud al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan (tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).
+Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida en buena salud al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan ( a traves de tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).
 
 El método de Sullivan es un método estadístico que combina la información de las tablas de mortalidad con datos sobre la prevalencia de morbilidades o limitaciones en la actividad. Ajustando las tablas de mortalidad con la prevalencia de morbilidad, se calcula la esperanza de vida libre de limitaciones, sumando los años de vida ajustados para obtener una medida integral de salud poblacional. Este método proporciona una visión clara de los años que se espera que una persona viva en buena salud, combinando la cantidad y calidad de vida.
 
-Calculo de la esperanza de vida saludable (segun la organización mundial de la salud): 
+En resumen, la organización mundial de la salud define al calculo de la esperanza de vida de la siguiente manera: 
 
 $$HALE_x = \biggl[\sum_{i=x}^w YWD_i\biggl] / I_x$$
 Donde: 
@@ -167,6 +167,9 @@ Donde:
 - $L_x$: Total de años vividos (personas años) entre la edad x y x+5 de la tabla de vida 
 
 - $D_x$: Proporción de gente con discapacidad entre los años x y x+5 
+
+También se investigaron medidas alternativas sobre la capacidad de disfrutar de una vida saludable, pero no hemos encontrado ninguna opción
+mejor o más viable que la esperanza de vida al nacer.
 
 ### Modificación en el cálculo del IDH
 
@@ -192,21 +195,26 @@ los años esperados de instrucción, es decir, los años de educación que un
 niño puede esperar recibir dada la tasa de matriculación vigente. Cada
 vez más países calculan con mayor frecuencia los años promedio de instrucción. Dicha medida permite distinguir mejor entre países, mientras que los años esperados de instrucción son consistentes con la reformulación de esta dimensión en términos de años. 
 
-Lo ideal sería que las mediciones de la dimensión de conocimientos incorporasen evaluaciones de calidad, tal como se ha hecho en varios informes sobre desarrollo humano nacionales y regionales. Por ejemplo, el Informe de los Estados Árabes
-de 2003 creó una medida tanto de la cantidad como de la calidad de
-la educación. Ésta ajusta los años promedio de instrucción con puntajes
-promedio en pruebas e incluye indicadores vinculados con medios de difusión, comunicaciones y científicos capacitados. Pero no existen buenas
+Lo ideal sería que las mediciones de la dimensión de conocimientos incorporasen evaluaciones de calidad, tal como se ha hecho en varios informes sobre desarrollo humano nacionales y regionales. Por ejemplo, el Informe de los Estados Árabes de 2003 creó una medida tanto de la cantidad como de la calidad de la educación. Ésta ajusta los años promedio de instrucción con puntajes promedio en pruebas e incluye indicadores vinculados con medios de difusión, comunicaciones y científicos capacitados. Pero no existen buenas
 medidas sobre la calidad de la educación para una cantidad suficiente de
 países; las evaluaciones internacionales sobre conocimientos científicos
 y matemáticos y habilidades de lecto-escritura de los jóvenes son instrumentos de gran valor, pero su cobertura es baja y su frecuencia, irregular.
-También investigamos medidas alternativas sobre la capacidad de disfrutar de una vida saludable, pero no hemos encontrado ninguna opción
-mejor o más viable que la esperanza de vida al nacer.
+
+Es por lo dicho anteriormente, que se decide dejar esta dimensión sin modificaciones pero con una propuesta futura de encontrar algún tipo de medición que pueda reflejar la calidad de la educación en los distintos paises.
 
 ## Nivel estándar de vida decente
 
 ### debate 
+
+Una de las principales preocupaciones al analizar el calculo del indice de desarrolo humano actual fue la falta de consideración de uno de los primeros aspectos que se mencionan en la definicón de desarrollo humano el cual establece que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos. Al utilizar el PNB para medir la dimensión de nivel estandar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar que tan bueno es el nivel de vida de este. 
+
+Se piensa que en ciertas situaciones puede haber un país con un gran valor de PNB pero en donde las riquezas no esten distisbruidas equitativamente. Es decir, quizas  este valor de PNB es alto por un bajo porcentaje de la población quien lo acumula mientras que existe un gran porcentaje de personas que no viven un nivel de vida decente. Es por esta razón que se considera incoporar en esta dimensión el indice de Gini. Este indice sirve para medir la desigualdad salarial dentro de un país.
+
+**explicar como se calcula el indice de gini**
+
 ### Modificación 
 
+**explicar diferentes formas de meter indice de gini a esta dimension y cual se elige y porque**
 ## RAMA NUEVA
 Cosas para justificar la rama nueva
 
