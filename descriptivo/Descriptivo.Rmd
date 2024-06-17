@@ -9,13 +9,14 @@ library("ggplot2")
 library("gridExtra")
 library("tidyverse")
 library("tidyr")
+library("openxlsx")
 source("depuración_ONU.R")
 
 #Carga data frame para analisis descriptivo
 bbdd_descrip <- datos_juntos_sinNA %>%
-  select(codigo, Pais,dim_econ,gnipc2_2019,gini,vida_nacer,salud_nacer,dim_salud)
+  select(codigo, Pais,dim_econ,gnipc2_2019,gini,vida_nacer,salud_nacer,dim_salud,dim_educ)
 
-colnames(bbdd_descrip) <- c("Codigo","Pais","Dim_Econ","GNIPC","G","Vida_nacer","Salud_nacer","Dim_Salud")
+colnames(bbdd_descrip) <- c("Codigo","Pais","Dim_Econ","GNIPC","G","Vida_nacer","Salud_nacer","Dim_Salud","Dim_Educ")
 
 ```
 
@@ -97,7 +98,7 @@ print(correcon1)
 $$Dim_{Econ2}=\frac{\ln(GNIPC)-\ln(100)}{\ln(75000)-\ln(100)} * (1-G/100)$$
 ```{r}
 #Creacion nuevo indice economico1
-bbdd_descrip$Dim_Econ2 <- bbdd_descrip$Dim_Econ*(1-bbdd_descrip$G/100)
+bbdd_descrip$Dim_Econ2 <- bbdd_descrip$Dim_Econ*sqrt(1-bbdd_descrip$G/100)
 
 
 #Boxplot
@@ -209,7 +210,7 @@ $$Dim_{Econ4}=\frac{\ln(GNIPC)-\ln(100)}{\ln(75000)-\ln(100)} * (1-G/100)$$
 
 ```{r}
 #Creacion nuevo indice economico1
-bbdd_descrip$Dim_Econ4 <- bbdd_descrip$Dim_Econ*(1-bbdd_descrip$G_30/100)
+bbdd_descrip$Dim_Econ4 <- bbdd_descrip$Dim_Econ*sqrt(1-bbdd_descrip$G_30/100)
 
 
 #Boxplot
@@ -255,6 +256,52 @@ print(correcon4)
 
 ![](histograma_1_4.jpg)
 
+```{r}
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Econ)) %>%
+  mutate(jerarquiaecon0 = row_number()) %>%
+  arrange(desc(row_number()))
+
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Econ1)) %>%
+  mutate(jerarquiaecon1 = row_number()) %>%
+  arrange(desc(row_number()))
+
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Econ2)) %>%
+  mutate(jerarquiaecon2 = row_number()) %>%
+  arrange(desc(row_number()))
+
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Econ3)) %>%
+  mutate(jerarquiaecon3 = row_number()) %>%
+  arrange(desc(row_number()))
+
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Econ4)) %>%
+  mutate(jerarquiaecon4 = row_number()) %>%
+  arrange(desc(row_number()))
+
+
+bbdd_descrip <- bbdd_descrip %>%
+  mutate(difecon1 = jerarquiaecon0 - jerarquiaecon1) 
+
+
+bbdd_descrip <- bbdd_descrip %>%
+  mutate(difecon2 = jerarquiaecon0 - jerarquiaecon2) 
+
+
+bbdd_descrip <- bbdd_descrip %>%
+  mutate(difecon3 = jerarquiaecon0 - jerarquiaecon3) 
+
+
+bbdd_descrip <- bbdd_descrip %>%
+  mutate(difecon4 = jerarquiaecon0 - jerarquiaecon4) 
+
+
+```
+
+
 # Indice de Salud
 
 Vida_nacer: Esperanza de vida al nacer
@@ -263,7 +310,7 @@ Salud_nacer: Esperanza de salud al nacer
 ## Calculo actual 
 $$Dim_{Salud0}=\frac{Vida_{nacer}-20}{85-20}$$
 
-## Opcion 1)
+## Opcion 1) DESCARTADO
 
 $$Indice_{Salud}=\frac{Salud_{Nacer}-17.41872}{74.75077-17.41872}$$
 $$Dim_{Salud1}=Indice_{Salud}*Dim_{Salud0}$$
@@ -371,7 +418,7 @@ print(corrsalud2)
 ![](histsalud2.jpg)
 ## Opcion 3)
 
-$$SaludVida_{nacer} = Salud_nacer * Vida_nacer$$
+$$SaludVida_{nacer} = Salud_{nacer} + Vida_nacer$$
 $$Dim_{Salud3}=\frac{SaludVida_{nacer}-18.70936}{79.87539-18.70936}$$
 ```{r}
 bbdd_descrip$SaludVida_nacer <- (bbdd_descrip$Vida_nacer+bbdd_descrip$Salud_nacer)/2
@@ -459,3 +506,54 @@ print(corrsalud4)
 ```
 ![](boxsalud4.jpg)
 ![](histsalud4.jpg)
+```{r}
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Salud)) %>%
+  mutate(jerarquiasalud0 = row_number()) %>%
+  arrange(desc(row_number()))
+
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Salud2)) %>%
+  mutate(jerarquiasalud2 = row_number()) %>%
+  arrange(desc(row_number()))
+
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Salud3)) %>%
+  mutate(jerarquiasalud3 = row_number()) %>%
+  arrange(desc(row_number()))
+
+bbdd_descrip <- bbdd_descrip %>%
+  arrange(desc(Dim_Salud4)) %>%
+  mutate(jerarquiasalud4 = row_number()) %>%
+  arrange(desc(row_number()))
+
+bbdd_descrip <- bbdd_descrip %>%
+  mutate(difsalud2 = jerarquiasalud0 - jerarquiasalud2) 
+
+
+bbdd_descrip <- bbdd_descrip %>%
+  mutate(difsalud3 = jerarquiasalud0 - jerarquiasalud3) 
+
+
+bbdd_descrip <- bbdd_descrip %>%
+  mutate(difsalud4 = jerarquiasalud0 - jerarquiasalud4) 
+
+
+```
+
+
+```{r}
+bbdd_final <- bbdd_descrip %>%
+  select(Codigo,Pais,Dim_Educ,Dim_Econ1,Dim_Salud2)
+
+colnames(bbdd_final) <- c("Codigo","Pais","Dim_Educ","Dim_Econ","Dim_Salud")
+
+# Guardar bbdd3 en un archivo Excel
+write.xlsx(bbdd_final, "bbdd_final.xlsx")
+
+```
+
+
+
+
+
