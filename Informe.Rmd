@@ -76,11 +76,9 @@ $$\text{Índice de esperanza de vida} = \frac{\text{Esperanza de vida al nacer}-
 
 En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. Este se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
 
-Los años esperados de escolaridad refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela, si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de su vida. Y los años medios de escolaridad son el número medio de años que reciben las personas de 25 años y más durante su vida, basados en los niveles de logros educacionales de la población transformados en años de educación de acuerdo con la duración teórica de cada nivel de educación a la que se asiste.
+Los años esperados de escolaridad refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela, si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de su vida. Y los años medios de escolaridad son el  número promedio de años de educación recibidos por las personas de 25 años o más, calculado a partir de los niveles de logros educativos utilizando la duración oficial de cada nivel.
 
 Resulta necesario aclarar que para la rama del conocimiento, al tomarse dos indicadores en vez de uno, primero se calcula el índice de dimensión de ambos y, a continuación, se obtiene la media aritmética de los dos índices resultantes.
-
-La utilización de la media aritmética de dos índices de educación permite una sustituibilidad perfecta entre años medios de escolaridad y los años esperados de escolaridad, lo que parece correcto dado que muchos países en desarrollo tienen un bajo escolaridad entre los adultos, pero están deseosos de lograr la escolaridad universal en primaria y secundaria de los niños en edad escolar. **(se podria explicar más)**
 
 $$\text{Índice de años esperados} = \frac{\text{Años esperados de escolaridad}-0}{18-0}$$
 
@@ -91,29 +89,34 @@ Las sociedades pueden subsistir sin educación formal, lo que justifica la educa
 El índice de educación queda definido entonces como la media aritmética de los índices mencionados:
 
 $$\text{Índice de educación} = \frac{\text{Índice años esperados de escolaridad}+\text{Índice años medios de escolaridad}}{2}$$
-**Decidir si aclaramos esto, si sí tmb deberiamos aclarar años promedio y esperanza  de vida** (hay que aclarar por lo menos en palabras que es)
 
 ## Nivel estándar de vida decente
 
-Se considera que un nivel decente de estándar de vida se puede alcanzar cuando la nación en la que se reside tiene un alto producto bruto interno per cápita, que refiere al valor monetario de la producción de bienes y servicios de demanda final de un país o región durante un período determinado para cada habitante de la población. En el _IDH_ se calcula el índice de ingreso como
+Se considera que un nivel estándar de vida se puede alcanzar cuando la nación en la que se reside tiene un alto producto bruto interno per cápita, que refiere al valor monetario de la producción de bienes y servicios de demanda final de un país o región durante un período determinado para cada habitante de la población. Es por eso que el PBI fue la variable considerada en el cálculo del IDH en un principio.
+Sin embargo, a partir del año 2010, para medir el nivel de vida, el producto nacional bruto (PNB) per cápita reemplaza al producto interno bruto (PIB) per cápita. Esto se debe a que en un mundo globalizado, suele haber grandes diferencias entre los ingresos de los residentes de un país y su producto interno. Parte de lo que ganan los habitantes se envía al extranjero, algunas personas reciben remesas del exterior y algunos países reciben considerables flujos de ayuda. 
 
-$$\text{Índice de PBI} = \frac{\ln(PBI) - \ln(100)}{\ln (75.000)-\ln (100)}$$
+Se define al producto nacional bruto (PNB) per cápita como los ingresos totales de una economía generados por su producción y la propiedad de los factores de producción, menos los ingresos pagados por el uso de factores de producción que son propiedad del resto del mundo, convertidos a dólares internacionales usando las tasas de la PPA, y divididos por la población a mitad del año.
+
+Para comparar el estándar de vida entre los países, los datos deben ajustarse por la paridad del poder adquisitivo (PPA) a fin de eliminar las diferencias en el valor de un dólar entre países. Se entiende por paridad de poder adquisitivo (PPA) al tipo de cambio que refleja las diferencias de precios entre países y permite hacer comparaciones internacionales del producto e ingreso reales. En la tasa de PPA en US$ (utilizada en este Informe), US$1 en PPA tiene el mismo poder adquisitivo en la economía de cualquier país que US$1 en los Estados Unidos de América.
+
+ En el _IDH_ se calcula el índice de ingreso como
+
+$$\text{Índice de ingreso} = \frac{PNB - 100}{75.000-100}$$
 
 El bajo valor mínimo para el Producto Nacional Bruto (en inglés Gross Nacional Income GNI) per cápita se considera en los 100 dólares, el uso de este valor se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. Por otro lado, el valor máximo se establece en 75.000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. Actualmente solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
 
+DESDE ACÁ REVISAR
 _Lo que sigue está sacado de lo de 2022_
 
 La base de datos de Indicadores del Desarrollo Mundial del Banco Mundial de 2022 contiene estimaciones del GNI per cápita en términos de paridad de poder adquisitivo (PPP) constantes de 2017 para muchos países. Para los países que no tienen este indicador (total o parcialmente), la Oficina del Informe sobre Desarrollo Humano (HDRO) lo calcula convirtiendo el GNI per cápita en moneda local de términos corrientes a términos constantes usando dos pasos. Primero, el valor del GNI per cápita en términos corrientes se convierte en términos PPP para el año base (2017). Segundo, se construye una serie temporal del GNI per cápita en términos constantes de PPP de 2017 aplicando las tasas de crecimiento real al GNI per cápita en términos de PPP para el año base. La tasa de crecimiento real se implica por la proporción del crecimiento nominal del GNI per cápita en moneda local corriente al deflactor del PIB.
 
 Para varios países sin un valor de GNI per cápita en términos constantes de PPP de 2017 para 2021 reportado en la base de datos de Indicadores del Desarrollo Mundial, se aplican tasas de crecimiento real del PIB per cápita disponibles en la base de datos de Indicadores del Desarrollo Mundial o en la base de datos Perspectivas de la Economía Mundial del Fondo Monetario Internacional a los valores más recientes de GNI en términos constantes de PPP. Las tasas de conversión oficiales de PPP son producidas por el Programa de Comparación Internacional, cuyas encuestas recolectan periódicamente miles de precios de bienes y servicios comparables en muchos países. La última ronda de este ejercicio se refiere a 2017 y cubrió 176 economías.
 
-_Lo que sigue está sacado de lo de 2019_
+Las tasas de conversión oficiales de PPP son producidas por el Programa de Comparación Internacional, cuyas encuestas recolectan periódicamente miles de precios de bienes y servicios comparables en muchos países. 
 
-La base de datos de Indicadores del Desarrollo Mundial de 2019 del Banco Mundial contiene estimaciones del GNI per cápita en términos de paridad de poder adquisitivo (PPP) constantes de 2011 para muchos países. Para los países que no tienen este indicador (total o parcialmente), la Oficina del Informe sobre Desarrollo Humano (HDRO) lo calcula convirtiendo el GNI per cápita en moneda local de términos corrientes a términos constantes utilizando dos pasos. Primero, el valor del GNI per cápita en términos corrientes se convierte en términos PPP para el año base (2011). Segundo, se construye una serie temporal del GNI per cápita en términos constantes de PPP de 2011 aplicando las tasas de crecimiento real al GNI per cápita en términos de PPP para el año base. La tasa de crecimiento real se determina por la proporción del crecimiento nominal del GNI per cápita en moneda local corriente al deflactor del PIB.
 
-Para varios países sin un valor de GNI per cápita en términos constantes de PPP de 2011 para 2018 reportado en la base de datos de Indicadores del Desarrollo Mundial, se aplican las tasas de crecimiento real del PIB per cápita disponibles en la base de datos de Indicadores del Desarrollo Mundial o en la base de datos de Perspectivas de la Economía Mundial del Fondo Monetario Internacional a los valores más recientes de GNI en términos constantes de PPP.
-
-Las tasas de conversión oficiales de PPP son producidas por el Programa de Comparación Internacional, cuyas encuestas recolectan periódicamente miles de precios de bienes y servicios comparables en muchos países. La última ronda de este ejercicio se refiere a 2011 y cubrió 199 países.
+—--
+Durante la investigación se debate cada una de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
 
 \pagebreak
 
