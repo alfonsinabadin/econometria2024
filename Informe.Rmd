@@ -97,7 +97,7 @@ $$\text{Índice de educación} = \frac{\text{Índice años esperados de escolari
 
 Se considera que un nivel decente de estándar de vida se puede alcanzar cuando la nación en la que se reside tiene un alto producto bruto interno per cápita, que refiere al valor monetario de la producción de bienes y servicios de demanda final de un país o región durante un período determinado para cada habitante de la población. En el _IDH_ se calcula el índice de ingreso como
 
-$$\text{Índice de PBI} = \frac{PBI - 100}{75.000-100}$$
+$$\text{Índice de PBI} = \frac{\ln(PBI) - \ln(100)}{\ln (75.000)-\ln (100)}$$
 
 El bajo valor mínimo para el Producto Nacional Bruto (en inglés Gross Nacional Income GNI) per cápita se considera en los 100 dólares, el uso de este valor se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. Por otro lado, el valor máximo se establece en 75.000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. Actualmente solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
 
@@ -115,53 +115,53 @@ Para varios países sin un valor de GNI per cápita en términos constantes de P
 
 Las tasas de conversión oficiales de PPP son producidas por el Programa de Comparación Internacional, cuyas encuestas recolectan periódicamente miles de precios de bienes y servicios comparables en muchos países. La última ronda de este ejercicio se refiere a 2011 y cubrió 199 países.
 
-Durante la investigación se debate cada una de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
-
 \pagebreak
 
 # Cuestionamiento
 
-Si bien se piensa que el calculo del IDH actual logra reflejar muchas cuestiones vinculadas a lo que hace que un pais se pueda considerar con mayor o menor desarollo humano, hay otros aspectos de lo que se define como desarollo humano que no son tenidos en cuenta. 
+Si bien se piensa que el calculo del IDH actual logra reflejar muchas cuestiones vinculadas a lo que hace que un país se pueda considerar con mayor o menor desarrollo humano, hay otros aspectos de lo que se define como desarrollo humano que no son tenidos en cuenta. 
 
-En primer lugar, se menciona que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos sino que los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo. Esto indica que si bien una medida como el Producto Nacional Bruto podría ser un medio para explicar si un país esta más o menos desarollado no podría definir esto por completo, ya que el tener un valor alto de _PBI_ no garantizaría el bienestar de toda la población. A partir de esta problemática surge la idea de implementar otra variable de corrección en esta dimensión para así poder tener en cuenta otras cuestiones del desarrollo humano para el nivel de vida de las personas.
+En primer lugar, se menciona que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos sino que los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo. Esto indica que si bien una medida como el Producto Nacional Bruto podría ser un medio para explicar si un país esta más o menos desarrollado no podría definir esto por completo, ya que el tener un valor alto de _PBI_ no garantizaría el bienestar de toda la población. A partir de esta problemática surge la idea de implementar otra variable de corrección en esta dimensión para así poder tener en cuenta otras cuestiones del desarrollo humano para el nivel de vida de las personas.
 
-Poniendo el foco en la dimensión de una vida larga y saludable, se puede identificar que en un principio el mismo nombre de esta dimensión no esta completamente explicado por la variable que se utiliza ya que la esperanza de vida solo indicaría si las personas tienen una vida larga o corta, pero no se determina qué tan saludable es. Si bien la esperanza de vida es una variable importante a la hora de analizar las condiciones de salud de un país, no se tiene en cuenta como es la calidad de vida de estos años que se esperan vivir. Es por esta razón, que en esta dimensión se considera importante incorporar otra variable que pueda tener en cuenta las condiciones en las que se viven, en cuento a salud, en los distintos paises.
+Poniendo el foco en la dimensión de una vida larga y saludable, se puede identificar que en un principio el mismo nombre de esta dimensión no esta completamente explicado por la variable que se utiliza ya que la esperanza de vida solo indicaría si las personas tienen una vida larga o corta, pero no se determina qué tan saludable es. Por esta razón, en esta dimensión se considera importante incorporar otra variable que pueda tener en cuenta las condiciones en las que se viven, en cuanto a salud, en los distintos países.
 
-Por último, la definición de desarollo humano menciona que este desarrollo consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles como vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al indice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad de las personas en su día a día. 
+Por otro lado, la definición de desarrollo humano menciona que este consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles cómo vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al indice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad de las personas en su día a día. 
 
-# Propuestas / modificaciones 
-HAY QUE EXPLICAR EN CADA UNO CÓMO ENTENDEMOS CADA CONCEPTO
+# Propuestas y modificaciones 
 
-En esta sección se explica cada una de las modificaciones propuestas para este nuevo indice acompañado del razonamiento que se hizo. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o que fueron pensadas como otras opciones que pueden ser implementadas también pero que no se terminaron eligieron por cuestiones de logistica (tieempo y falta de datos).
+En esta sección se explica cada una de las modificaciones propuestas para este nuevo índice, acompañado del razonamiento realizado. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o descartadas del presente desarrollo por diversas razones.
 
 ## Vida larga y saludable
 
 ### Debate
 
-Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable, esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
 
 Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida en buena salud al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan ( a traves de tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).
 
 El método de Sullivan es un método estadístico que combina la información de las tablas de mortalidad con datos sobre la prevalencia de morbilidades o limitaciones en la actividad. Ajustando las tablas de mortalidad con la prevalencia de morbilidad, se calcula la esperanza de vida libre de limitaciones, sumando los años de vida ajustados para obtener una medida integral de salud poblacional. Este método proporciona una visión clara de los años que se espera que una persona viva en buena salud, combinando la cantidad y calidad de vida.
 
-En resumen, la organización mundial de la salud define al calculo de la esperanza de vida de la siguiente manera: 
+En resumen, la organización mundial de la salud define al calculo de la esperanza de vida en buena salud al nacer de la siguiente manera: 
 
-$$HALE_x = \biggl[\sum_{i=x}^w YWD_i\biggl] / I_x$$
-Donde: 
-- $YWD_x = L_x (1-D_x)$: años vividos sin discapacidad, es decir, años de vida saludable vividos entre la edad x y x+5
+$$HALE_x = \Biggl[\sum_{i=x}^w YWD_i\Biggl] \Bigl/ I_x$$
 
-- $I_x$: sobrevivientes a las edad x
+donde: 
 
-- $L_x$: Total de años vividos (personas años) entre la edad x y x+5 de la tabla de vida 
+- $YWD_x = L_x (1-D_x)$ son los años vividos sin discapacidad entre la edad $x$ y $x+5$
 
-- $D_x$: Proporción de gente con discapacidad entre los años x y x+5 
+- $I_x$ es el número de sobrevivientes a las edad $x$
 
-También se investigaron medidas alternativas sobre la capacidad de disfrutar de una vida saludable, pero no hemos encontrado ninguna opción
-mejor o más viable que la esperanza de vida al nacer.
+- $L_x$ es el total de años vividos entre la edad $x$ y $x+5$ de la tabla de vida 
+
+- $D_x$ es la proporción de gente con discapacidad entre los años $x$ y $x+5$ 
+
+También se investigaron medidas alternativas sobre la capacidad de disfrutar de una vida saludable, pero no se ha encontrado ninguna opción mejor o más viable que la esperanza de vida al nacer.
 
 ### Modificación en el cálculo del IDH
 
 La esperanza de vida en buena salud al nacer es una variable que contiene más información e identifica mejor a la dimensión "tener una vida larga y saludable". Ahora bien, ¿cómo incluirla al cálculo de IDH? Se han barajado algunas opciones:
+
+**completar segun descriptivo**
 
 - Reemplazar la esperanza de vida al nacer por la esperanza de vida en buena salud al nacer directamente en el cálculo del índice de salud. Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. De esta forma, se estaría subestimando el valor del IDH para aquellos países que no tienen la posibilidad de aportar un índice de salud, aún así teniendo un resultado alto en la esperanza de vida al nacer.
 
@@ -172,6 +172,7 @@ La esperanza de vida en buena salud al nacer es una variable que contiene más i
 - Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la espereranza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente.
 
 ## Conocimiento
+
 JUSTIFICCACIÓN DE NO CAMBIO CONOC
 
 *Falta explicar cómo era antes de la modificación porque estamos de acuerdo*
@@ -192,13 +193,69 @@ Es por lo dicho anteriormente, que se decide dejar esta dimensión sin modificac
 
 ## Nivel estándar de vida decente
 
-### debate 
+### Debate 
 
-Una de las principales preocupaciones al analizar el calculo del indice de desarrolo humano actual fue la falta de consideración de uno de los primeros aspectos que se mencionan en la definicón de desarrollo humano el cual establece que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos. Al utilizar el PNB para medir la dimensión de nivel estandar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar que tan bueno es el nivel de vida de este. 
+Una de las principales preocupaciones al analizar el cálculo del índice de desarrollo humano actual fue la falta de consideración de uno de los primeros aspectos que se mencionan en la definición de desarrollo humano el cual establece que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos. Al utilizar el _PNB_ para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar que tan bueno es el nivel de vida de este. 
 
-Se piensa que en ciertas situaciones puede haber un país con un gran valor de PNB pero en donde las riquezas no esten distisbruidas equitativamente. Es decir, quizas  este valor de PNB es alto por un bajo porcentaje de la población quien lo acumula mientras que existe un gran porcentaje de personas que no viven un nivel de vida decente. Es por esta razón que se considera incoporar en esta dimensión el indice de Gini. Este indice sirve para medir la desigualdad salarial dentro de un país.
+Se piensa que en ciertas situaciones puede haber un país con un gran valor de PNB pero en donde las riquezas no estén distribuidas equitativamente. Es decir, quizás este valor de PNB es alto por un bajo porcentaje de la población quien lo acumula mientras que existe un gran porcentaje de personas que no viven un nivel de vida decente. Es por esta razón que se considera incorporar en esta dimensión el indice de Gini. 
 
-**explicar como se calcula el indice de gini**
+El coeficiente Gini es el método más utilizado para medir la desigualdad salarial. Es una herramienta analítica que suele emplearse para medir la concentración de ingresos entre los habitantes de una región, en un periodo de tiempo determinado. Fue desarrollada por el estadístico italiano Corrado Gini en 1912, representando con 0 a una igualdad perfecta y con un 100 a una desigualdad perfecta.
+
+Este indicador se calcula como el área entre la curva de Lorenz y una línea hipotética que representa la igualdad total. Esta gráfica se utiliza a través de dos ejes de coordenadas, para identificar de forma sencilla el porcentaje de ingresos que corresponde a un porcentaje de población.
+
+```{r fig.cap= "Índice de Gini en un caso hipotético", fig.align='center', echo=FALSE, message=FALSE, warning=FALSE, fig.height=3}
+library(ggplot2)
+library(dplyr)
+library(ineq)
+par(family = "serif")
+
+set.seed(2024)
+
+# Datos de ejemplo
+renta <- runif(100, min = 1, max = 100)  # Datos de renta
+renta <- renta[order(renta)]
+poblacion <- seq(1, 100) / 100  # Población acumulada
+
+# Cálculo de la curva de Lorenz
+curva_lorenz <- ineq::Lc(renta)$L
+poblacion_acumulada <- ineq::Lc(renta)$p
+
+# Datos para el gráfico
+data <- data.frame(poblacion = c(0, poblacion_acumulada), renta = c(0, curva_lorenz))
+
+# Crear el gráfico
+ggplot(data, aes(x = poblacion, y = renta)) +
+  geom_ribbon(aes(ymin = renta, ymax = poblacion), fill = "#d4dff0", alpha = 0.7) +  # Área de desigualdad
+  geom_line(color = "#543786", size = 1.0) +  # Curva de Lorenz
+  geom_abline(intercept = 0, slope = 1, color = "#7bb8c0", linetype = "dashed", size = 1.0) +  # Recta de igualdad
+  labs(title = "", x = "Población", y = "Renta") +
+  geom_segment(aes(x = 0.8, xend = 0.60, y = 0.8, yend =0.8), color = "#7bb8c0") +
+  geom_label(aes(x = 0.55,y=0.8,label="Recta de igualdad"), 
+             family = "serif",fill = "#7bb8c0", color = "white",
+             label.size = 0)+
+  geom_segment(aes(x = 0.6, xend =0.40, y = 0.55, yend = 0.55), color = "#d4dff0") +
+  geom_label(aes(x = 0.35, y = 0.55, label ="Desigualdad"),
+             family = "serif",fill = "#d4dff0", color = "white",
+             label.size = 0) +
+  geom_segment(aes(x = 0.5, xend =0.60, y = 0.25, yend = 0.25), color = "#543786") +
+  geom_label(aes(x = 0.70, y = 0.25, label ="Curva de Lorenz"),
+             family = "serif",fill = "#543786", color = "white",
+             label.size = 0) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10))
+  )
+```
+
+Para comprender la lógica, se puede observar en la Figura 1 que el 50% alcanza un 25% del ingreso mientras que un 75% de la población llega a más del 50% del ingreso, es decir, el ingreso que logra el 50% de la población lo alcanza el 20% contiguo, lo cual indica desigualdad ya que el ingreso no estaría equitativamente distribuído.
+
+Se propone incorporar el índice de Gini al cálculo del IDH como (1-GINI) para que un país más desigual en términos salariales tenga menos desarrollo.
+
+### Modificación en el cálculo del IDH
+
+**completar** -------------------------------
 
 ### Modificación 
 
