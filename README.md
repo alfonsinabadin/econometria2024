@@ -35,4 +35,6 @@ alfon:
 
 - CÁLCULO DE LOS ÍNDICES DE DESARROLLO HUMANO: https://www.undp.org/sites/g/files/zskgke326/files/2023-09/notas_tecnicas.pdf
 
-- Esperanza de vida escolar: https://uis.unesco.org/sites/default/files/documents/education-indicators-technical-guidelines-sp.pdf
+- Human Development report 2019 https://hdr.undp.org/content/human-development-report-2019
+
+- Human Development report 2010 https://hdr.undp.org/content/human-development-report-2010
