@@ -110,7 +110,19 @@ El bajo valor mínimo para el Producto Nacional Bruto per cápita se considera e
 
 \pagebreak
 
-# Modificaciones previas del IDH
+## Modificaciones previas o alternativas al IDH[^2]
+
+[^2]: Fuente: [\textcolor{blue}{\underline{Cálculo de los índices de desarrollo humano, United Nations Development Programme.}}](https://www.undp.org/sites/g/files/zskgke326/files/2023-09/notas_tecnicas.pdf
+).
+
+* **Índice de Desarrollo Humano ajustado por la Desigualdad (IDH-D)**: El IDH-D es una medida que complementa al Índice de Desarrollo Humano (IDH) tradicional al incorporar la desigualdad existente dentro de un país. Tiene en cuenta las desigualdades existentes en las tres dimensiones: salud, educación e ingresos. Para ello, hace uso de la familia de mediciones de desigualdad de Atkinson (1970) y fija el parámetro de aversión ε en uno.
+
+* **Índice de Desarrollo de Género (IDG)**: El IDG refleja las desigualdades entre hombres y mujeres realizando el cálculo de las tres dimensiones básicas de desarrollo humano por género, y luego calcula una razón entre el IDH de las mujeres y el de los hombres. 
+
+* **Índice de Desigualdad de Género (IDG-D)**: El IDG-D refleja la desigualdad en tres dimensiones: salud reproductiva, medida por la tasa de mortalidad materna y la tasa de natalidad entre las adolescentes; empoderamiento, medido por el porcentaje de regidoras y regidores, y la población con al menos algún tipo de educación secundaria; mercado de trabajo, medido por la tasa de participación en la fuerza de trabajo.
+
+* **Índice de Pobreza Multidimensional (IPM)**: El Índice de Pobreza Multidimensional (IPM) identifica múltiples privaciones individuales en materia de educación, vivienda y uso de internet, salud y protección social. Cada persona de un determinado hogar se clasifica como pobre o no, dependiendo de la cantidad de privaciones a las que está sometida su familia.
+
 
 \pagebreak 
 
