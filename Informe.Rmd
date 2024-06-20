@@ -128,7 +128,7 @@ En esta sección se explica cada una de las modificaciones propuestas para este 
 
 ### Debate
 
-Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida saludable al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida saludable al nacer__ o __Esperanza de vida en buena salud al nacer__  para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
 
 Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. *La esperanza de vida saludable al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan ( a traves de tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).*
 
@@ -157,6 +157,7 @@ La esperanza de vida saludable al nacer se podría considerar una variable que c
 **completar segun descriptivo**
 
 - Reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer directamente en el cálculo del índice de salud. Para la transformación de dicha métrica en índice se calculó el mínimo y máximo de esta variable buscando que sea proporcional con el mínimo y máximo de la esperanza de vida al nacer.
+
 $$min_{esp\;salud} = min_{esp\;vida}*\frac{min(esp\;salud)}{min(esp\;vida)}$$
 Siendo:
 - $min_{esp\;salud}$: valor fijado para el cero natural de la esperanza de vida saludable al nacer.
@@ -166,10 +167,9 @@ Siendo:
 
 De igual manera, se calcula el objetivo aspiracional para la esperanza de vida saludable al nacer. Y, una vez obtenidos ambos valores, se logra calcular el índice de la dimensión salud.
 
-Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. **De esta forma, se estaría subestimando el valor del IDH para aquellos países que no tienen la posibilidad de aportar un índice de salud, aún así teniendo un resultado alto en la esperanza de vida al nacer.**
+Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. Sin embargo, se podría imputar aproximando este valor para los países que no los tienen a través de una modificación la esperanza de vida, de todas formas, no se lleva a cabo en el presente trabajo.
 
-- Tomar ambas variables y promediarlas. Una vez obtenido el promedio se calcula el índice de este eligiendo el cero natural y objetivo aspiracional con el criterio utilizado anteriormente. Explicar por qué lo descartamos
-**Esta opción fue rápidamente descartada por el hecho de que ambas variables resumen aspectos muy similares, están muy relacionadas.**
+- Tomar ambas variables y promediarlas. Una vez obtenido el promedio se calcula el índice de este eligiendo el cero natural y objetivo aspiracional con el criterio utilizado anteriormente. 
 $$prom=\frac{esp\;vida+esp\;salud}{2} \quad Dim_{salud} = \frac{prom-min}{max-min}$$
 
 - Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida saludable al nacer es notablemente menor. Esta opción se lleva a cabo tranformando los dos valores en índices y después multiplicándolos. Sin embargo, esto causa que se penalice mucho el valor de la dimensión salud en aquellos países donde la esperanza de vida saludable es considerablemente menor que la esperanza de vida. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
@@ -351,6 +351,7 @@ sobre el desarrollo.
 El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado solamente en el ingreso.
 
 *VER A PARTIR DE LA PAG 29 DE INFORME 2020*
+
 ### Modificación IDH 
 
 # Cálculo de IDH modif
