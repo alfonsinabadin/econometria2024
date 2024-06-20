@@ -322,10 +322,45 @@ Se propone incorporar el índice de Gini al cálculo del IDH como (1-GINI) para 
 
 ### Modificación 
 
-**explicar diferentes formas de meter indice de gini a esta dimension y cual se elige y porque**
+**explicar diferentes formas de meter indice de gini a esta dimensión y cual se elige y porque**
 
-## RAMA NUEVA
-Cosas para justificar la rama nueva
+
+## Una nueva rama para el IDH
+
+### Libertad: derechos políticos y libertades civiles
+
+A pesar de la importancia de las métricas económicas, índices de salud y de educación, se ignora una dimensión fundamental del desarrollo humano: la libertad. En esta sección se propone implementar este concepto como una nueva dimensión del desarrollo humano, entendiendo como libertad al pleno ejercicio de los derechos políticos y de las libertades civiles, bajo un régimen libre, democrático y plural. La libertad permite a las personas tomar decisiones sobre sus vidas, perseguir sus objetivos y contribuir a la sociedad. La falta de ella puede obstaculizar el acceso a la educación, la salud y otras oportunidades, perpetuando desigualdades.
+
+Se propone un enfoque innovador que complemente a las dimensiones existentes del IDH: salud, educación e ingreso per cápita. Al incorporar la libertad, el IDH puede reflejar una imagen más completa del bienestar de las naciones, teniendo en cuenta cuestiones sociales que no están contempladas actualmente. Si bien la incorporación de la libertad como nueva dimensión del desarrollo humano puede generar debates sobre su naturaleza ideológica o subjetiva, este informe defiende su inclusión considerando, bajo esta mirada, los potenciales beneficios que tal enfoque conlleva para el progreso de una nación y el bienestar de sus habitantes. Se busca implementar una metodología que cuantifique estas problemáticas, mediante un índice que permita una evaluación integral y completa de cada territorio, considerando sus particularidades.
+
+Para su aplicación se toma el índice de libertad “Freedom in the World”, publicado por la organización Freedom House. Este puntaje se centra sobre dos ejes principales, derechos políticos y libertades civiles, y tiene en cuenta los siguientes factores:
+
+#### Derechos políticos
+
+* **Proceso electoral**: elecciones que cumplen con estándares democráticos reconocidos, transparentes, libres, universales, etc.
+
+* **Pluralismo y participación política**: ausencia de obstáculos o restricciones discriminatorias, intimidación, violencia contra miembros o líderes políticos; oportunidad realista de alternancia en el poder; elecciones libres de poderes externos; diversos segmentos de la población (incluidos grupos étnicos, raciales, religiosos, de género, LGBT+ y otros relevantes) tienen plenos derechos políticos,  oportunidades electorales, etc.
+
+* **Funcionamiento del gobierno**: se evalúa si los representantes elegidos libremente pueden determinar las políticas del gobierno sin interferencia de actores estatales y no estatales en la adopción y ejecución de políticas, así como el control de las fuerzas armadas y la influencia extranjera sobre las decisiones gubernamentales; la existencia de mecanismos efectivos contra la corrupción y la transparencia de las decisiones tomadas. 
+
+#### Libertades civiles
+
+* **Libertad de expresión y creencias**: medios de comunicación libres e independientes; libertad de culto en público y privado; libertad académica, educación libre de adoctrinamiento político; libertad de expresión sin represalias.
+
+* **Derecho de asociación y organización**: se evalúa si las protestas pacíficas están prohibidas o restringidas; si existe libre funcionamiento de las ONG; libertad para los sindicatos y asociaciones laborales sin interferencia del gobierno, y sin presiones de parte de los sindicatos hacia los trabajadores; derecho de huelga.
+
+* **Estado de derecho**: poder judicial independiente; asignación y destitución de jueces de manera justa e imparcial; prevalece el debido proceso, defendiendo los derechos del acusado y de la población carcelaria; protección contra el uso ilegítimo de la fuerza física de parte de las fuerzas policiales; igualdad ante la ley y ausencia de discriminación legal o de facto para grupos étnicos, raciales, religiosos, de género, LGBT+ y otros.
+
+* **Autonomía personal y derechos individuales**: libertad de circulación; derecho de propiedad; igualdad de oportunidades, derechos laborales y movilidad social; tiene en consideración la existencia de violencia doméstica, mutilación genital femenina, abuso sexual y violación, con justicia efectiva para los perpetradores; si el gobierno impone restricciones sobre anticonceptivos o aborto; si se controla la vestimenta, la expresión de género o prohibe el matrimonio igualitario; si interviene en la elección de parejas o relaciones personales mediante leyes restrictivas, si garantiza igualdad en procedimientos de divorcio y custodia, y si protege las libertades personales frente a instituciones privadas o grupos sociales.
+
+* **Derechos políticos discrecionales**: indaga si el gobierno o una potencia ocupante están alterando deliberadamente la composición étnica de un país o territorio para destruir una cultura o inclinar el equilibrio político a favor de otro grupo.
+
+### Cálculo del nuevo índice
+
+Esta dimensión está formada por 25 indicadores relacionados a los factores descritos anteriormente, donde cada uno de ellos toma un valor discreto de 0 a 4, formando un puntaje para cada país y territorio, con una pregunta extra que penaliza por este último tópico, restando hasta 4 puntos. De esto surge un puntaje, en principio de 0 a 100 por país, que es dividido por 100 e incorporado al IDH como una nueva rama independiente de las ya existentes, con el mismo peso.
+
+Para su incorporación al IDH propuesto, surge el debate entre incorporar a todas las preguntas o incluir sólo las referidas a las libertades civiles, dejando de lado a las que se refieren al tipo de gobierno adoptado de cada territorio por las diferencias culturales que existen entre las distintas regiones del mundo, que pueden influir en los sistemas de gobierno adoptados. Al comparar el puntaje recibido únicamente referido a derechos políticos con el puntaje de libertades civiles se obtiene una alta correlación (0.96), por lo que muy posiblemente se llegue a los mismos resultados. Además de eso, en este informe se considera a los valores democráticos y al Estado de derecho como factores positivos para el pleno desarrollo humano y posibilitar el ejercicio del bienestar del mismo, por lo tanto, se decide incorporar a la totalidad de las preguntas en este indicador.
+
 
 ## Debate 
 
