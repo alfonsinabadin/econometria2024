@@ -93,58 +93,54 @@ $$\text{Índice de educación} = \frac{\text{Índice años esperados de escolari
 ## Nivel estándar de vida decente
 
 Se considera que un nivel estándar de vida se puede alcanzar cuando la nación en la que se reside tiene un alto producto bruto interno per cápita, que refiere al valor monetario de la producción de bienes y servicios de demanda final de un país o región durante un período determinado para cada habitante de la población. Es por eso que el PBI fue la variable considerada en el cálculo del IDH en un principio.
+
 Sin embargo, a partir del año 2010, para medir el nivel de vida, el producto nacional bruto (PNB) per cápita reemplaza al producto interno bruto (PIB) per cápita. Esto se debe a que en un mundo globalizado, suele haber grandes diferencias entre los ingresos de los residentes de un país y su producto interno. Parte de lo que ganan los habitantes se envía al extranjero, algunas personas reciben remesas del exterior y algunos países reciben considerables flujos de ayuda. 
 
 Se define al producto nacional bruto (PNB) per cápita como los ingresos totales de una economía generados por su producción y la propiedad de los factores de producción, menos los ingresos pagados por el uso de factores de producción que son propiedad del resto del mundo, convertidos a dólares internacionales usando las tasas de la PPA, y divididos por la población a mitad del año.
 
-Para comparar el estándar de vida entre los países, los datos deben ajustarse por la paridad del poder adquisitivo (PPA) a fin de eliminar las diferencias en el valor de un dólar entre países. Se entiende por paridad de poder adquisitivo (PPA) al tipo de cambio que refleja las diferencias de precios entre países y permite hacer comparaciones internacionales del producto e ingreso reales. En la tasa de PPA en US$ (utilizada en este Informe), US$1 en PPA tiene el mismo poder adquisitivo en la economía de cualquier país que US$1 en los Estados Unidos de América.
-
- En el _IDH_ se calcula el índice de ingreso como
-
-$$\text{Índice de ingreso} = \frac{PNB - 100}{75.000-100}$$
-
-El bajo valor mínimo para el Producto Nacional Bruto (en inglés Gross Nacional Income GNI) per cápita se considera en los 100 dólares, el uso de este valor se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. Por otro lado, el valor máximo se establece en 75.000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. Actualmente solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
-
-DESDE ACÁ REVISAR
-_Lo que sigue está sacado de lo de 2022_
-
-La base de datos de Indicadores del Desarrollo Mundial del Banco Mundial de 2022 contiene estimaciones del GNI per cápita en términos de paridad de poder adquisitivo (PPP) constantes de 2017 para muchos países. Para los países que no tienen este indicador (total o parcialmente), la Oficina del Informe sobre Desarrollo Humano (HDRO) lo calcula convirtiendo el GNI per cápita en moneda local de términos corrientes a términos constantes usando dos pasos. Primero, el valor del GNI per cápita en términos corrientes se convierte en términos PPP para el año base (2017). Segundo, se construye una serie temporal del GNI per cápita en términos constantes de PPP de 2017 aplicando las tasas de crecimiento real al GNI per cápita en términos de PPP para el año base. La tasa de crecimiento real se implica por la proporción del crecimiento nominal del GNI per cápita en moneda local corriente al deflactor del PIB.
-
-Para varios países sin un valor de GNI per cápita en términos constantes de PPP de 2017 para 2021 reportado en la base de datos de Indicadores del Desarrollo Mundial, se aplican tasas de crecimiento real del PIB per cápita disponibles en la base de datos de Indicadores del Desarrollo Mundial o en la base de datos Perspectivas de la Economía Mundial del Fondo Monetario Internacional a los valores más recientes de GNI en términos constantes de PPP. Las tasas de conversión oficiales de PPP son producidas por el Programa de Comparación Internacional, cuyas encuestas recolectan periódicamente miles de precios de bienes y servicios comparables en muchos países. La última ronda de este ejercicio se refiere a 2017 y cubrió 176 economías.
-
-Las tasas de conversión oficiales de PPP son producidas por el Programa de Comparación Internacional, cuyas encuestas recolectan periódicamente miles de precios de bienes y servicios comparables en muchos países. 
+Para comparar el estándar de vida entre los países, los datos deben ajustarse por la paridad del poder adquisitivo (PPA) a fin de eliminar las diferencias en el valor de un dólar entre países. Se entiende por paridad de poder adquisitivo (PPA) al tipo de cambio que refleja las diferencias de precios entre países y permite hacer comparaciones internacionales del producto e ingreso reales. En la tasa de PPA en US\$ (utilizada en este Informe), US\$1 en PPA tiene el mismo poder adquisitivo en la economía de cualquier país que US\$1 en los Estados Unidos de América. Para los datos correspondientes al 2019 se utiliza el PPA en US\$ base de 2011 para ajustar los valores de PNB per cápita.
 
 
-—--
-Durante la investigación se debate cada una de estas dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
+**OJOTAAA CORREGIR FALTA LOGARITMO**
+En el _IDH_ se calcula el índice de PNB como
+
+$$ Índice_{PNB} = \frac{PNB - 100}{75.000-100} $$
+
+El bajo valor mínimo para el Producto Nacional Bruto per cápita se considera en los 100 dólares, el uso de este valor se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. Por otro lado, el valor máximo se establece en 75.000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. Actualmente solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
 
 \pagebreak
 
+# Modificaciones previas del IDH
+
+\pagebreak 
+
 # Cuestionamiento
+
+Durante la investigación se debate cada una de las dimensiones que componen el IDH con la finalidad de cuestionarlos e intentar una reformulación que sea más realista para los tiempos que corren.
 
 Si bien se piensa que el calculo del IDH actual logra reflejar muchas cuestiones vinculadas a lo que hace que un país se pueda considerar con mayor o menor desarrollo humano, hay otros aspectos de lo que se define como desarrollo humano que no son tenidos en cuenta. 
 
-En primer lugar, se menciona que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos sino que los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo. Esto indica que si bien una medida como el Producto Nacional Bruto podría ser un medio para explicar si un país esta más o menos desarrollado no podría definir esto por completo, ya que el tener un valor alto de _PBI_ no garantizaría el bienestar de toda la población. A partir de esta problemática surge la idea de implementar otra variable de corrección en esta dimensión para así poder tener en cuenta otras cuestiones del desarrollo humano para el nivel de vida de las personas.
+En primer lugar, se menciona que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos sino que los ingresos se consideran un medio para el desarrollo, más que un fin en sí mismo. Esto indica que si bien una medida como el Producto Nacional Bruto podría ser un medio para explicar si un país esta más o menos desarrollado no podría definir esto por completo, ya que el tener un valor alto de _PNB_ no garantizaría el bienestar de toda la población. A partir de esta problemática surge la idea de implementar otra variable de corrección en esta dimensión para así poder tener en cuenta otras cuestiones del desarrollo humano para el nivel de vida de las personas.
 
-Poniendo el foco en la dimensión de una vida larga y saludable, se puede identificar que en un principio el mismo nombre de esta dimensión no esta completamente explicado por la variable que se utiliza ya que la esperanza de vida solo indicaría si las personas tienen una vida larga o corta, pero no se determina qué tan saludable es. Por esta razón, en esta dimensión se considera importante incorporar otra variable que pueda tener en cuenta las condiciones en las que se viven, en cuanto a salud, en los distintos países.
+Poniendo el foco en la dimensión de una vida larga y saludable, se puede identificar que en un principio el mismo nombre de esta dimensión no esta completamente explicado por la variable que se utiliza ya que la esperanza de vida solo indicaría si las personas tienen una vida larga o corta, pero no se determina qué tan saludable es. Por esta razón, en esta dimensión se considera importante incorporar otra variable que pueda tener en cuenta las condiciones en las que se vive, en cuanto a salud, en los distintos países.
 
-Por otro lado, la definición de desarrollo humano menciona que este consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles cómo vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al indice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad de las personas en su día a día. 
+Por otro lado, la definición de desarrollo humano menciona que este consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles cómo vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al indice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad y los derechos de las personas en su día a día. 
 
 # Propuestas y modificaciones 
 
-En esta sección se explica cada una de las modificaciones propuestas para este nuevo índice, acompañado del razonamiento realizado. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o descartadas del presente desarrollo por diversas razones.
+En esta sección se explica cada una de las modificaciones propuestas para este nuevo índice, acompañado del razonamiento realizado. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o descartadas del presente informe por diversas razones.
 
 ## Vida larga y saludable
 
 ### Debate
 
-Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida en buena salud al nacer__ para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida saludable al nacer__ o __Esperanza de vida en buena salud al nacer__  para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
 
-Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida en buena salud al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan ( a traves de tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).
+Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. *La esperanza de vida saludable al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan ( a traves de tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).*
 
 El método de Sullivan es un método estadístico que combina la información de las tablas de mortalidad con datos sobre la prevalencia de morbilidades o limitaciones en la actividad. Ajustando las tablas de mortalidad con la prevalencia de morbilidad, se calcula la esperanza de vida libre de limitaciones, sumando los años de vida ajustados para obtener una medida integral de salud poblacional. Este método proporciona una visión clara de los años que se espera que una persona viva en buena salud, combinando la cantidad y calidad de vida.
 
-En resumen, la organización mundial de la salud define al calculo de la esperanza de vida en buena salud al nacer de la siguiente manera: 
+En resumen, la organización mundial de la salud define al cálculo de la esperanza de vida saludable al nacer de la siguiente manera: 
 
 $$HALE_x = \Biggl[\sum_{i=x}^w YWD_i\Biggl] \Bigl/ I_x$$
 
@@ -158,53 +154,74 @@ donde:
 
 - $D_x$ es la proporción de gente con discapacidad entre los años $x$ y $x+5$ 
 
-También se investigaron medidas alternativas sobre la capacidad de disfrutar de una vida saludable, pero no se ha encontrado ninguna opción mejor o más viable que la esperanza de vida al nacer.
+Además, se evalúo la posible incorporación en el cálculo de esperanza de vida y de vida saludable a los 60 años para considerar el impacto de la salud en la población mayor en los distintos países. Sin embargo, se terminó considerado más sencillo utilizar unicamente los indicadores al nacer dado que se facilita la interpretación de la dimensión y estas medidas otorgan una visión más amplia de la longevidad y salud de la población a lo largo de toda su vida.
 
 ### Modificación en el cálculo del IDH
 
-La esperanza de vida en buena salud al nacer es una variable que contiene más información e identifica mejor a la dimensión "tener una vida larga y saludable". Ahora bien, ¿cómo incluirla al cálculo de IDH? Se han barajado algunas opciones:
+La esperanza de vida saludable al nacer se podría considerar una variable que contiene más información e identifica mejor a la dimensión "tener una vida larga y saludable". Ahora bien, ¿cómo incluirla al cálculo de IDH? Se han barajado algunas opciones:
 
 **completar segun descriptivo**
 
-- Reemplazar la esperanza de vida al nacer por la esperanza de vida en buena salud al nacer directamente en el cálculo del índice de salud. Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. De esta forma, se estaría subestimando el valor del IDH para aquellos países que no tienen la posibilidad de aportar un índice de salud, aún así teniendo un resultado alto en la esperanza de vida al nacer.
+- Reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer directamente en el cálculo del índice de salud. Para la transformación de dicha métrica en índice se calculó el mínimo y máximo de esta variable buscando que sea proporcional con el mínimo y máximo de la esperanza de vida al nacer.
 
-- Tomar ambas variables y promediarlas previo al cálculo del índice. Esta opción fue rápidamente descartada por el hecho de que ambas variables resumen aspectos muy similares, están muy relacionadas.
+$$min_{esp\;salud} = min_{esp\;vida}*\frac{min(esp\;salud)}{min(esp\;vida)}$$
 
-- Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida en buena salud al nacer es notablemente menor. La determinación de la penalización propuesta y la elección de valores mínimo y máximo involucraría pensamientos subjetivos. Esta opción se lleva a cabo tranformando los dos valores en indicadores y despues multipliacandolos, de este forma el valor anteriormente obtenido para el índice de salud baja apenas en aquellos paises con esperanza de vida saludable mucho menor a la esperanza de vida.
+Siendo:
 
-- Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la espereranza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente.
+- $min_{esp\;salud}$: valor fijado para el cero natural de la esperanza de vida saludable al nacer.
+
+- $min_{esp\;vida}$: valor fijado para el cero natural de la esperanza de vida al nacer (20 años).
+
+- $min(esp\;salud)$: valor mínimo observado de la esperanza de vida saludable al nacer entre los países evaluados.
+
+- $min(esp\;vida)$: valor mínimo observado de la esperanza de vida al nacer entre los países evaluados.
+
+De igual manera, se calcula el objetivo aspiracional para la esperanza de vida saludable al nacer. Y, una vez obtenidos ambos valores, se logra calcular el índice de la dimensión salud.
+
+Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. Sin embargo, se podría imputar aproximando este valor para los países que no los tienen a través de una modificación la esperanza de vida, de todas formas, no se lleva a cabo en el presente trabajo.
+
+- Tomar ambas variables y promediarlas. Una vez obtenido el promedio se calcula el índice de este eligiendo el cero natural y objetivo aspiracional con el criterio utilizado anteriormente. 
+$$prom=\frac{esp\;vida+esp\;salud}{2} \quad Dim_{salud} = \frac{prom-min}{max-min}$$
+
+- Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida saludable al nacer es notablemente menor. Esta opción se lleva a cabo tranformando los dos valores en índices y después multiplicándolos. Sin embargo, esto causa que se penalice mucho el valor de la dimensión salud en aquellos países donde la esperanza de vida saludable es considerablemente menor que la esperanza de vida. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
+
+$$Dim_{salud}=Índice_{esp\;vida}Índice_{esp\;salud}$$
+
+- Otra opción es tomar los índices de esperanza de vida al nacer y esperanza de vida saludable al nacer, ya calculados con sus respectivos mínimos y máximos, y promediarlos.
+
+$$Dim_{salud}=\frac{Índice_{esp\;vida}+Índice_{esp\;salud}}{2}$$
+
+- Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la esperanza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente. Dada la complejidad y subjetividad del idea propuesta se decidió no incorporarla pero se deja plasmada la misma para profundizar este análisis en futuras investigaciones.
+
+**Después de descartar las que no explicar por qué nos quedamos con salud (simplicidad ...)**
 
 ## Conocimiento
 
-JUSTIFICCACIÓN DE NO CAMBIO CONOC
+Antes del año 2010, en el cálculo del IDH se tenían en cuenta las variables alfabetización y matriculación bruta en la dimensión de conocimiento. A partir de la publicación del Informe de Desarrollo Humano en el año 2010, los años promedio de escolaridad sustituyeron a la alfabetización y la matriculación bruta se replanteó como los años esperados de escolaridad. 
 
-*Falta explicar cómo era antes de la modificación porque estamos de acuerdo*
-Antes del año 2010, se tenían en cuenta las variables alfabetización y matriculación bruta en la dimensión de conocimientos.
+En el 2010, se vio que desde el primer Informe sobre Desarrollo Humano publicado en 1990, los años promedio de escolaridad habían aumentado en dos años y la proporción bruta de matriculación, en 12 puntos porcentuales. Las tasas de alfabetismo, por su parte, habían crecido de 73% a 84%. Esto significaba que muchos países habían tenido éxito en el campo de la enseñanza, al menos según en las mediciones del IDH convencional. Esto explica una de las principales motivaciones para realizar los ajustes en el campo de conocimiento.
 
-En el ámbito de los conocimientos, los años promedio de instrucción
-sustituyen a la alfabetización y la matriculación bruta se replanteó como
-los años esperados de instrucción, es decir, los años de educación que un
-niño puede esperar recibir dada la tasa de matriculación vigente. Cada
-vez más países calculan con mayor frecuencia los años promedio de instrucción. Dicha medida permite distinguir mejor entre países, mientras que los años esperados de instrucción son consistentes con la reformulación de esta dimensión en términos de años. 
+El alfabetismo y los años de instrucción reflejaban el acceso (o la falta de acceso) a la educación por parte del segmento de la población que en su momento habían llegado a la adultez.
+Por consiguiente, el progreso registrado quizás no refleje los adelantos recientes en escolaridad de los jóvenes. Dadas las mejoras mencionadas en educación, parecía que la falta de habilidades básicas de redacción dejarían de ser un obstáculo importante para acceder al conocimiento.
 
-Lo ideal sería que las mediciones de la dimensión de conocimientos incorporasen evaluaciones de calidad, tal como se ha hecho en varios informes sobre desarrollo humano nacionales y regionales. Por ejemplo, el Informe de los Estados Árabes de 2003 creó una medida tanto de la cantidad como de la calidad de la educación. Ésta ajusta los años promedio de instrucción con puntajes promedio en pruebas e incluye indicadores vinculados con medios de difusión, comunicaciones y científicos capacitados. Pero no existen buenas
-medidas sobre la calidad de la educación para una cantidad suficiente de
-países; las evaluaciones internacionales sobre conocimientos científicos
-y matemáticos y habilidades de lecto-escritura de los jóvenes son instrumentos de gran valor, pero su cobertura es baja y su frecuencia, irregular.
+Los años promedio de escolaridad y los años esperados de escolaridad ilustran mejor el acceso a educación del que gozan los niños, lo cual justifica el cambio en el cálculo de la dimensión. Se piensa que, hoy en día, estas métricas siguen reflejando la situación actual de la educación por lo que se decide no modificar las variables de la rama conocimiento en el presente informe.
 
-Es por lo dicho anteriormente, que se decide dejar esta dimensión sin modificaciones pero con una propuesta futura de encontrar algún tipo de medición que pueda reflejar la calidad de la educación en los distintos paises.
+Lo ideal sería que las mediciones de la dimensión de conocimiento incorporasen evaluaciones de calidad. Pero las variables halladas que podrían reflejar esta característica de la educación tienen una cobertura baja y una frecuencia irregular. Es por lo dicho anteriormente, que se decide dejar esta dimensión sin modificaciones pero con una propuesta futura de encontrar algún tipo de medición que represente la calidad de la educación en los distintos paises.
 
 ## Nivel estándar de vida decente
+ACORDARNOS EN EL CALCULO ACLARAR PPA CONSTANTE 2011 (XQ CALCULAMOS 2019)
 
 ### Debate 
 
-Una de las principales preocupaciones al analizar el cálculo del índice de desarrollo humano actual fue la falta de consideración de uno de los primeros aspectos que se mencionan en la definición de desarrollo humano el cual establece que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos. Al utilizar el _PNB_ para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar que tan bueno es el nivel de vida de este. 
+Al utilizar el _PNB_ ajustado por PPA para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar que tan bueno es el nivel de vida de este. La definición de desarrollo humano, mencionada al principio del presente informe, establece que el crecimiento económico no necesariamente conduce a un mayor bienestar **para todos**.
 
-Se piensa que en ciertas situaciones puede haber un país con un gran valor de PNB pero en donde las riquezas no estén distribuidas equitativamente. Es decir, quizás este valor de PNB es alto por un bajo porcentaje de la población quien lo acumula mientras que existe un gran porcentaje de personas que no viven un nivel de vida decente. Es por esta razón que se considera incorporar en esta dimensión el indice de Gini. 
+En ciertas situaciones puede haber un país con un gran valor de PNB donde las riquezas no estén distribuidas equitativamente. Es decir, quizás este valor de PNB alto es acumulado por un bajo porcentaje de la población mientras que existe un gran porcentaje de personas que no tienen un nivel de vida decente. El producto nacional bruto no logra reflejar la distribución de los ingresos de un país, es por esta razón que se considera incorporar en esta dimensión el coeficiente de Gini. 
 
-El coeficiente Gini es el método más utilizado para medir la desigualdad salarial. Es una herramienta analítica que suele emplearse para medir la concentración de ingresos entre los habitantes de una región, en un periodo de tiempo determinado. Fue desarrollada por el estadístico italiano Corrado Gini en 1912, representando con 0 a una igualdad perfecta y con un 100 a una desigualdad perfecta.
+El coeficiente Gini es el indicador más utilizado para medir la desigualdad salarial. Es una herramienta analítica que suele emplearse para medir la concentración de ingresos entre los habitantes de una región, en un periodo de tiempo determinado. Representa con 0 a una igualdad perfecta y con un 100 a una desigualdad perfecta.
 
-Este indicador se calcula como el área entre la curva de Lorenz y una línea hipotética que representa la igualdad total. Esta gráfica se utiliza a través de dos ejes de coordenadas, para identificar de forma sencilla el porcentaje de ingresos que corresponde a un porcentaje de población.
+Este indicador se calcula como el área entre la curva de Lorenz, representación gráfica de la distribución de los ingresos, y una línea hipotética que representa la igualdad total (área A) dividido el área bajo esta línea de igualdad total (área B). De esta forma el coeficiente de Gini es igual a:
+$$Coef\;Gini=\frac{A}{A+B}$$
+Esta gráfica se utiliza a través de dos ejes de coordenadas, para identificar de forma sencilla el porcentaje de ingresos que corresponde a un porcentaje de población.
 
 ```{r fig.cap= "Índice de Gini en un caso hipotético", fig.align='center', echo=FALSE, message=FALSE, warning=FALSE, fig.height=3}
 library(ggplot2)
@@ -224,25 +241,31 @@ curva_lorenz <- ineq::Lc(renta)$L
 poblacion_acumulada <- ineq::Lc(renta)$p
 
 # Datos para el gráfico
-data <- data.frame(poblacion = c(0, poblacion_acumulada), renta = c(0, curva_lorenz))
+data <- data.frame(poblacion = c(0, poblacion_acumulada*100), renta = c(0, curva_lorenz*100))
 
 # Crear el gráfico
 ggplot(data, aes(x = poblacion, y = renta)) +
   geom_ribbon(aes(ymin = renta, ymax = poblacion), fill = "#d4dff0", alpha = 0.7) +  # Área de desigualdad
   geom_line(color = "#543786", size = 1.0) +  # Curva de Lorenz
   geom_abline(intercept = 0, slope = 1, color = "#7bb8c0", linetype = "dashed", size = 1.0) +  # Recta de igualdad
-  labs(title = "", x = "Población", y = "Renta") +
-  geom_segment(aes(x = 0.8, xend = 0.60, y = 0.8, yend =0.8), color = "#7bb8c0") +
-  geom_label(aes(x = 0.55,y=0.8,label="Recta de igualdad"), 
+  labs(title = "", x = "Población (%)", y = "Renta (%)") +
+  geom_segment(aes(x = 80, xend = 60, y = 80, yend =80), color = "#7bb8c0") +
+  geom_label(aes(x = 55,y=80,label="Recta de igualdad"), 
              family = "serif",fill = "#7bb8c0", color = "white",
              label.size = 0)+
-  geom_segment(aes(x = 0.6, xend =0.40, y = 0.55, yend = 0.55), color = "#d4dff0") +
-  geom_label(aes(x = 0.35, y = 0.55, label ="Desigualdad"),
+  geom_segment(aes(x = 60, xend =40, y = 55, yend = 55), color = "#d4dff0") +
+  geom_label(aes(x = 35, y = 55, label ="Desigualdad"),
              family = "serif",fill = "#d4dff0", color = "white",
              label.size = 0) +
-  geom_segment(aes(x = 0.5, xend =0.60, y = 0.25, yend = 0.25), color = "#543786") +
-  geom_label(aes(x = 0.70, y = 0.25, label ="Curva de Lorenz"),
+  geom_segment(aes(x = 50, xend =60, y = 25, yend = 25), color = "#543786") +
+  geom_label(aes(x = 70, y = 25, label ="Curva de Lorenz"),
              family = "serif",fill = "#543786", color = "white",
+             label.size = 0) +
+  geom_label(aes(x = 45, y = 30, label ="A"),
+             family = "serif",fill = "#d4dff0", color = "black",
+             label.size = 0) +
+  geom_label(aes(x = 90, y = 45, label ="B"),
+             family = "serif", color = "black",
              label.size = 0) +
   theme_minimal() +
   theme(
@@ -252,19 +275,62 @@ ggplot(data, aes(x = poblacion, y = renta)) +
   )
 ```
 
-Para comprender la lógica, se puede observar en la Figura 1 que el 50% alcanza un 25% del ingreso mientras que un 75% de la población llega a más del 50% del ingreso, es decir, el ingreso que logra el 50% de la población lo alcanza el 20% contiguo, lo cual indica desigualdad ya que el ingreso no estaría equitativamente distribuído.
+Para comprender la lógica, se puede observar en la Figura 1 que el 50% de la población alcanza un 25% del ingreso mientras que un 75% de la población llega a más del 50% del ingreso, es decir, el ingreso que logra el 50% de la población lo alcanza el 25% contiguo, lo cual indica desigualdad ya que el ingreso no estaría equitativamente distribuído.
 
-Se propone incorporar el índice de Gini al cálculo del IDH como (1-GINI) para que un país más desigual en términos salariales tenga menos desarrollo.
+Se propone incorporar el índice de Gini al cálculo del IDH como $(1-\frac{GINI}{100})$ para que un país más desigual en términos salariales tenga menos desarrollo.
 
 ### Modificación en el cálculo del IDH
 
-**completar** -------------------------------
+A continuación se presentan las distintas maneras de incorporar el coeficiente de Gini al cálculo de la dimensión de nivel estándar de vida decente analizadas.
 
-### Modificación 
+- Se planteo multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice. Para ello se considero el cero natural del cálculo del índice de PNB y como objetivo aspiracional se tomó el valor máximo observado de la nueva variable calculada. De esta forma el cálculo es el siguiente:
 
-**explicar diferentes formas de meter indice de gini a esta dimension y cual se elige y porque**
-## RAMA NUEVA
-Cosas para justificar la rama nueva
+$$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
+
+$$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(max(PNB_{Gini}))-\ln(100)}$$
+- Una segunda opción considerada fue calcular el índice de PNB y luego multiplicarlo por $1-\frac{GINI}{100}$. Esta opción disminuía demasiado los valores de esta dimensión por lo que también se probó aplicarle la raíz $1-\frac{GINI}{100}$, logrando que tenga menos peso esta penalización.
+
+$$Dim_{Ing} = Índice_{PNB} * \sqrt{1-\frac{GINI}{100}}$$
+
+**explicar cual se elige y porque Y que se consideró la opción de truncar valores de gini**
+
+
+## Una nueva rama para el IDH
+
+### Libertad: derechos políticos y libertades civiles
+
+A pesar de la importancia de las métricas económicas, índices de salud y de educación, se ignora una dimensión fundamental del desarrollo humano: la libertad. En esta sección se propone implementar este concepto como una nueva dimensión del desarrollo humano, entendiendo como libertad al pleno ejercicio de los derechos políticos y de las libertades civiles, bajo un régimen libre, democrático y plural. La libertad permite a las personas tomar decisiones sobre sus vidas, perseguir sus objetivos y contribuir a la sociedad. La falta de ella puede obstaculizar el acceso a la educación, la salud y otras oportunidades, perpetuando desigualdades.
+
+Se propone un enfoque innovador que complemente a las dimensiones existentes del IDH: salud, educación e ingreso per cápita. Al incorporar la libertad, el IDH puede reflejar una imagen más completa del bienestar de las naciones, teniendo en cuenta cuestiones sociales que no están contempladas actualmente. Si bien la incorporación de la libertad como nueva dimensión del desarrollo humano puede generar debates sobre su naturaleza ideológica o subjetiva, este informe defiende su inclusión considerando, bajo esta mirada, los potenciales beneficios que tal enfoque conlleva para el progreso de una nación y el bienestar de sus habitantes. Se busca implementar una metodología que cuantifique estas problemáticas, mediante un índice que permita una evaluación integral y completa de cada territorio, considerando sus particularidades.
+
+Para su aplicación se toma el índice de libertad “Freedom in the World”, publicado por la organización Freedom House. Este puntaje se centra sobre dos ejes principales, derechos políticos y libertades civiles, y tiene en cuenta los siguientes factores:
+
+#### Derechos políticos
+
+* **Proceso electoral**: elecciones que cumplen con estándares democráticos reconocidos, transparentes, libres, universales, etc.
+
+* **Pluralismo y participación política**: ausencia de obstáculos o restricciones discriminatorias, intimidación, violencia contra miembros o líderes políticos; oportunidad realista de alternancia en el poder; elecciones libres de poderes externos; diversos segmentos de la población (incluidos grupos étnicos, raciales, religiosos, de género, LGBT+ y otros relevantes) tienen plenos derechos políticos,  oportunidades electorales, etc.
+
+* **Funcionamiento del gobierno**: se evalúa si los representantes elegidos libremente pueden determinar las políticas del gobierno sin interferencia de actores estatales y no estatales en la adopción y ejecución de políticas, así como el control de las fuerzas armadas y la influencia extranjera sobre las decisiones gubernamentales; la existencia de mecanismos efectivos contra la corrupción y la transparencia de las decisiones tomadas. 
+
+#### Libertades civiles
+
+* **Libertad de expresión y creencias**: medios de comunicación libres e independientes; libertad de culto en público y privado; libertad académica, educación libre de adoctrinamiento político; libertad de expresión sin represalias.
+
+* **Derecho de asociación y organización**: se evalúa si las protestas pacíficas están prohibidas o restringidas; si existe libre funcionamiento de las ONG; libertad para los sindicatos y asociaciones laborales sin interferencia del gobierno, y sin presiones de parte de los sindicatos hacia los trabajadores; derecho de huelga.
+
+* **Estado de derecho**: poder judicial independiente; asignación y destitución de jueces de manera justa e imparcial; prevalece el debido proceso, defendiendo los derechos del acusado y de la población carcelaria; protección contra el uso ilegítimo de la fuerza física de parte de las fuerzas policiales; igualdad ante la ley y ausencia de discriminación legal o de facto para grupos étnicos, raciales, religiosos, de género, LGBT+ y otros.
+
+* **Autonomía personal y derechos individuales**: libertad de circulación; derecho de propiedad; igualdad de oportunidades, derechos laborales y movilidad social; tiene en consideración la existencia de violencia doméstica, mutilación genital femenina, abuso sexual y violación, con justicia efectiva para los perpetradores; si el gobierno impone restricciones sobre anticonceptivos o aborto; si se controla la vestimenta, la expresión de género o prohibe el matrimonio igualitario; si interviene en la elección de parejas o relaciones personales mediante leyes restrictivas, si garantiza igualdad en procedimientos de divorcio y custodia, y si protege las libertades personales frente a instituciones privadas o grupos sociales.
+
+* **Derechos políticos discrecionales**: indaga si el gobierno o una potencia ocupante están alterando deliberadamente la composición étnica de un país o territorio para destruir una cultura o inclinar el equilibrio político a favor de otro grupo.
+
+### Cálculo del nuevo índice
+
+Esta dimensión está formada por 25 indicadores relacionados a los factores descritos anteriormente, donde cada uno de ellos toma un valor discreto de 0 a 4, formando un puntaje para cada país y territorio, con una pregunta extra que penaliza por este último tópico, restando hasta 4 puntos. De esto surge un puntaje, en principio de 0 a 100 por país, que es dividido por 100 e incorporado al IDH como una nueva rama independiente de las ya existentes, con el mismo peso.
+
+Para su incorporación al IDH propuesto, surge el debate entre incorporar a todas las preguntas o incluir sólo las referidas a las libertades civiles, dejando de lado a las que se refieren al tipo de gobierno adoptado de cada territorio por las diferencias culturales que existen entre las distintas regiones del mundo, que pueden influir en los sistemas de gobierno adoptados. Al comparar el puntaje recibido únicamente referido a derechos políticos con el puntaje de libertades civiles se obtiene una alta correlación (0.96), por lo que muy posiblemente se llegue a los mismos resultados. Además de eso, en este informe se considera a los valores democráticos y al Estado de derecho como factores positivos para el pleno desarrollo humano y posibilitar el ejercicio del bienestar del mismo, por lo tanto, se decide incorporar a la totalidad de las preguntas en este indicador.
+
 
 ## Debate 
 
@@ -290,6 +356,7 @@ sobre el desarrollo.
 El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado solamente en el ingreso.
 
 *VER A PARTIR DE LA PAG 29 DE INFORME 2020*
+
 ### Modificación IDH 
 
 # Cálculo de IDH modif
