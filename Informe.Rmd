@@ -100,13 +100,19 @@ Se define al producto nacional bruto (PNB) per cápita como los ingresos totales
 
 Para comparar el estándar de vida entre los países, los datos deben ajustarse por la paridad del poder adquisitivo (PPA) a fin de eliminar las diferencias en el valor de un dólar entre países. Se entiende por paridad de poder adquisitivo (PPA) al tipo de cambio que refleja las diferencias de precios entre países y permite hacer comparaciones internacionales del producto e ingreso reales. En la tasa de PPA en US\$ (utilizada en este Informe), US\$1 en PPA tiene el mismo poder adquisitivo en la economía de cualquier país que US\$1 en los Estados Unidos de América. Para los datos correspondientes al 2019 se utiliza el PPA en US\$ base de 2011 para ajustar los valores de PNB per cápita.
 
-En el _IDH_ se calcula el índice de ingreso como
 
-$$\text{Índice de ingreso} = \frac{PNB - 100}{75.000-100}$$
+**OJOTAAA CORREGIR FALTA LOGARITMO**
+En el _IDH_ se calcula el índice de PNB como
+
+$$ Índice_{PNB} = \frac{PNB - 100}{75.000-100} $$
 
 El bajo valor mínimo para el Producto Nacional Bruto per cápita se considera en los 100 dólares, el uso de este valor se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. Por otro lado, el valor máximo se establece en 75.000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. Actualmente solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
 
 \pagebreak
+
+# Modificaciones previas del IDH
+
+\pagebreak 
 
 # Cuestionamiento
 
@@ -159,10 +165,15 @@ La esperanza de vida saludable al nacer se podría considerar una variable que c
 - Reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer directamente en el cálculo del índice de salud. Para la transformación de dicha métrica en índice se calculó el mínimo y máximo de esta variable buscando que sea proporcional con el mínimo y máximo de la esperanza de vida al nacer.
 
 $$min_{esp\;salud} = min_{esp\;vida}*\frac{min(esp\;salud)}{min(esp\;vida)}$$
+
 Siendo:
+
 - $min_{esp\;salud}$: valor fijado para el cero natural de la esperanza de vida saludable al nacer.
+
 - $min_{esp\;vida}$: valor fijado para el cero natural de la esperanza de vida al nacer (20 años).
+
 - $min(esp\;salud)$: valor mínimo observado de la esperanza de vida saludable al nacer entre los países evaluados.
+
 - $min(esp\;vida)$: valor mínimo observado de la esperanza de vida al nacer entre los países evaluados.
 
 De igual manera, se calcula el objetivo aspiracional para la esperanza de vida saludable al nacer. Y, una vez obtenidos ambos valores, se logra calcular el índice de la dimensión salud.
@@ -173,9 +184,11 @@ Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los
 $$prom=\frac{esp\;vida+esp\;salud}{2} \quad Dim_{salud} = \frac{prom-min}{max-min}$$
 
 - Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida saludable al nacer es notablemente menor. Esta opción se lleva a cabo tranformando los dos valores en índices y después multiplicándolos. Sin embargo, esto causa que se penalice mucho el valor de la dimensión salud en aquellos países donde la esperanza de vida saludable es considerablemente menor que la esperanza de vida. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
-$$Dim_{salud}=Indice_{esp\;vida}*Indice_{esp\;salud}$$
+
+$$Dim_{salud}=Índice_{esp\;vida}Índice_{esp\;salud}$$
 
 - Otra opción es tomar los índices de esperanza de vida al nacer y esperanza de vida saludable al nacer, ya calculados con sus respectivos mínimos y máximos, y promediarlos.
+
 $$Dim_{salud}=\frac{Índice_{esp\;vida}+Índice_{esp\;salud}}{2}$$
 
 - Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la esperanza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente. Dada la complejidad y subjetividad del idea propuesta se decidió no incorporarla pero se deja plasmada la misma para profundizar este análisis en futuras investigaciones.
@@ -184,87 +197,31 @@ $$Dim_{salud}=\frac{Índice_{esp\;vida}+Índice_{esp\;salud}}{2}$$
 
 ## Conocimiento
 
-JUSTIFICCACIÓN DE NO CAMBIO CONOC
+Antes del año 2010, en el cálculo del IDH se tenían en cuenta las variables alfabetización y matriculación bruta en la dimensión de conocimiento. A partir de la publicación del Informe de Desarrollo Humano en el año 2010, los años promedio de escolaridad sustituyeron a la alfabetización y la matriculación bruta se replanteó como los años esperados de escolaridad. 
 
-*Falta explicar cómo era antes de la modificación porque estamos de acuerdo*
-Antes del año 2010, en el cálculo del IDH se tenían en cuenta las variables alfabetización y matriculación bruta en la dimensión de conocimientos.
-A partir de la publicación del Informe de Desarrollo Humano en el año 2010, los años promedio de escolaridad sustituyeron a la alfabetización y la matriculación bruta se replanteó como los años esperados de escolaridad. Cada vez más países calculan con mayor frecuencia los años promedio de escolaridad. Dicha medida permite distinguir mejor entre países, mientras que los años esperados de escolaridad son consistentes con la reformulación de esta dimensión en términos de años. 
+En el 2010, se vio que desde el primer Informe sobre Desarrollo Humano publicado en 1990, los años promedio de escolaridad habían aumentado en dos años y la proporción bruta de matriculación, en 12 puntos porcentuales. Las tasas de alfabetismo, por su parte, habían crecido de 73% a 84%. Esto significaba que muchos países habían tenido éxito en el campo de la enseñanza, al menos según en las mediciones del IDH convencional. Esto explica una de las principales motivaciones para realizar los ajustes en el campo de conocimiento.
 
-En todo el mundo, las personas hoy tienen el
-mayor nivel de educación de la historia y este
-resultado es válido para muchas mediciones
-diferentes. Tomemos, por ejemplo, los años de
-instrucción: una persona de 15 años de edad
-o más en 1960 había cursado menos de cuatro
-años de escuela. En 2010, esta cantidad se había
-duplicado en todo el mundo y más que triplicado en los países en desarrollo (de 1,9 a 6,4
-años). Desde el primer Informe sobre Desarrollo
-Humano publicado en 1990, los años promedio
-de escolaridad han aumentado en dos años y la
-proporción bruta de matriculación, en 12 puntos porcentuales. Las tasas de alfabetismo, por
-su parte, han crecido de 73% a 84%.
-El progreso ha sido generalizado en este
-campo. Desde 1970, el alfabetismo o los años
-de instrucción no han disminuido en ningún
-país. Y la educación ha llegado a muchas más
-personas: desde 1960, la proporción de la población que ha asistido a la escuela ha aumentado
-de 57% a 85%. Esto significa que muchos países
-han tenido éxito en el campo de la enseñanza, al
-menos según se desprende de las mediciones del
-IDH convencional. Esto explica una de las principales motivaciones para realizar los ajustes que
-analizamos en el recuadro 1.2 del capítulo 1.
-El índice de educación promedio utilizado en el IDH, que combina información sobre
-matriculación y alfabetismo, captura esta imagen general de avances masivos (figura 2.7). Al igual que en el caso de la salud, el gráfico térmico en el panel derecho muestra una fuerte
-concentración en el tope de la distribución.
-Pero incluso estos aumentos pueden subestimar los verdaderos avances. El alfabetismo y los
-años de instrucción reflejan el acceso (o la falta
-de acceso) a la educación por parte del segmento
-de la población que hoy ha llegado a la adultez.
-Por consiguiente, el progreso registrado quizás
-no refleje los adelantos recientes en escolaridad
-de los jóvenes. Las personas que no han asistido
-a la escuela suelen tener más edad: en los países
-en desarrollo, casi 36% de quienes hoy tienen
-65 a 74 años nunca asistió a la escuela, cifra que
-baja a sólo 7% entre quienes tienen 15 a 24 años.
-La tasa de alfabetismo entre los jóvenes es superior a 95% en 63 de los 104 países de los cuales
-disponemos información y es de 99% en otros
-35 (incluso en naciones de ingreso medio como
-Moldova y Samoa). A juzgar por estos resultados, pareciera que la falta de habilidades básicas
-de redacción dejará de ser un obstáculo importante para acceder al conocimiento.
-Las tasas de matriculación y los años esperados de escolaridad, es decir, los años de instrucción que pueden esperar tener quienes hoy son
-niños una vez que hayan crecido, dadas las tasas
-actuales, ilustran mejor el acceso a educación del
-que hoy gozan los niños. Las tasas mundiales de
-escolaridad promedio son de 100% o más en
-educación primaria, tanto en los países desarrollados como en desarrollo, y ambos grupos han dado pasos gigantescos en los niveles de educación superiores, aunque los segundos aún tienen
-grandes brechas que acortar (figura 2.8)54. Y no
-sólo hay más niños en la escuela, sino que además, desde 1991, las tasas de quienes terminan la
-educación primaria aumentaron de 84% a 94%.
-La mayor matriculación también se refleja en los
-años esperados de instrucción, que ascendieron
-de nueve a 11 años entre 1980 y la fecha actual y
-de cinco a ocho años en los países de IDH bajo.
+El alfabetismo y los años de instrucción reflejaban el acceso (o la falta de acceso) a la educación por parte del segmento de la población que en su momento habían llegado a la adultez.
+Por consiguiente, el progreso registrado quizás no refleje los adelantos recientes en escolaridad de los jóvenes. Dadas las mejoras mencionadas en educación, parecía que la falta de habilidades básicas de redacción dejarían de ser un obstáculo importante para acceder al conocimiento.
 
-Lo ideal sería que las mediciones de la dimensión de conocimientos incorporasen evaluaciones de calidad, tal como se ha hecho en varios informes sobre desarrollo humano nacionales y regionales. Por ejemplo, el Informe de los Estados Árabes de 2003 creó una medida tanto de la cantidad como de la calidad de la educación. Ésta ajusta los años promedio de instrucción con puntajes promedio en pruebas e incluye indicadores vinculados con medios de difusión, comunicaciones y científicos capacitados. Pero no existen buenas
-medidas sobre la calidad de la educación para una cantidad suficiente de
-países; las evaluaciones internacionales sobre conocimientos científicos
-y matemáticos y habilidades de lecto-escritura de los jóvenes son instrumentos de gran valor, pero su cobertura es baja y su frecuencia, irregular.
+Los años promedio de escolaridad y los años esperados de escolaridad ilustran mejor el acceso a educación del que gozan los niños, lo cual justifica el cambio en el cálculo de la dimensión. Se piensa que, hoy en día, estas métricas siguen reflejando la situación actual de la educación por lo que se decide no modificar las variables de la rama conocimiento en el presente informe.
 
-Es por lo dicho anteriormente, que se decide dejar esta dimensión sin modificaciones pero con una propuesta futura de encontrar algún tipo de medición que pueda reflejar la calidad de la educación en los distintos paises.
+Lo ideal sería que las mediciones de la dimensión de conocimiento incorporasen evaluaciones de calidad. Pero las variables halladas que podrían reflejar esta característica de la educación tienen una cobertura baja y una frecuencia irregular. Es por lo dicho anteriormente, que se decide dejar esta dimensión sin modificaciones pero con una propuesta futura de encontrar algún tipo de medición que represente la calidad de la educación en los distintos paises.
 
 ## Nivel estándar de vida decente
 ACORDARNOS EN EL CALCULO ACLARAR PPA CONSTANTE 2011 (XQ CALCULAMOS 2019)
 
 ### Debate 
 
-Una de las principales preocupaciones al analizar el cálculo del índice de desarrollo humano actual fue la falta de consideración de uno de los primeros aspectos que se mencionan en la definición de desarrollo humano el cual establece que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos. Al utilizar el _PNB_ para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar que tan bueno es el nivel de vida de este. 
+Al utilizar el _PNB_ ajustado por PPA para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar que tan bueno es el nivel de vida de este. La definición de desarrollo humano, mencionada al principio del presente informe, establece que el crecimiento económico no necesariamente conduce a un mayor bienestar **para todos**.
 
-Se piensa que en ciertas situaciones puede haber un país con un gran valor de PNB pero en donde las riquezas no estén distribuidas equitativamente. Es decir, quizás este valor de PNB es alto por un bajo porcentaje de la población quien lo acumula mientras que existe un gran porcentaje de personas que no viven un nivel de vida decente. Es por esta razón que se considera incorporar en esta dimensión el indice de Gini. 
+En ciertas situaciones puede haber un país con un gran valor de PNB donde las riquezas no estén distribuidas equitativamente. Es decir, quizás este valor de PNB alto es acumulado por un bajo porcentaje de la población mientras que existe un gran porcentaje de personas que no tienen un nivel de vida decente. El producto nacional bruto no logra reflejar la distribución de los ingresos de un país, es por esta razón que se considera incorporar en esta dimensión el coeficiente de Gini. 
 
-El coeficiente Gini es el método más utilizado para medir la desigualdad salarial. Es una herramienta analítica que suele emplearse para medir la concentración de ingresos entre los habitantes de una región, en un periodo de tiempo determinado. Fue desarrollada por el estadístico italiano Corrado Gini en 1912, representando con 0 a una igualdad perfecta y con un 100 a una desigualdad perfecta.
+El coeficiente Gini es el indicador más utilizado para medir la desigualdad salarial. Es una herramienta analítica que suele emplearse para medir la concentración de ingresos entre los habitantes de una región, en un periodo de tiempo determinado. Representa con 0 a una igualdad perfecta y con un 100 a una desigualdad perfecta.
 
-Este indicador se calcula como el área entre la curva de Lorenz y una línea hipotética que representa la igualdad total. Esta gráfica se utiliza a través de dos ejes de coordenadas, para identificar de forma sencilla el porcentaje de ingresos que corresponde a un porcentaje de población.
+Este indicador se calcula como el área entre la curva de Lorenz, representación gráfica de la distribución de los ingresos, y una línea hipotética que representa la igualdad total (área A) dividido el área bajo esta línea de igualdad total (área B). De esta forma el coeficiente de Gini es igual a:
+$$Coef\;Gini=\frac{A}{A+B}$$
+Esta gráfica se utiliza a través de dos ejes de coordenadas, para identificar de forma sencilla el porcentaje de ingresos que corresponde a un porcentaje de población.
 
 ```{r fig.cap= "Índice de Gini en un caso hipotético", fig.align='center', echo=FALSE, message=FALSE, warning=FALSE, fig.height=3}
 library(ggplot2)
@@ -284,25 +241,31 @@ curva_lorenz <- ineq::Lc(renta)$L
 poblacion_acumulada <- ineq::Lc(renta)$p
 
 # Datos para el gráfico
-data <- data.frame(poblacion = c(0, poblacion_acumulada), renta = c(0, curva_lorenz))
+data <- data.frame(poblacion = c(0, poblacion_acumulada*100), renta = c(0, curva_lorenz*100))
 
 # Crear el gráfico
 ggplot(data, aes(x = poblacion, y = renta)) +
   geom_ribbon(aes(ymin = renta, ymax = poblacion), fill = "#d4dff0", alpha = 0.7) +  # Área de desigualdad
   geom_line(color = "#543786", size = 1.0) +  # Curva de Lorenz
   geom_abline(intercept = 0, slope = 1, color = "#7bb8c0", linetype = "dashed", size = 1.0) +  # Recta de igualdad
-  labs(title = "", x = "Población", y = "Renta") +
-  geom_segment(aes(x = 0.8, xend = 0.60, y = 0.8, yend =0.8), color = "#7bb8c0") +
-  geom_label(aes(x = 0.55,y=0.8,label="Recta de igualdad"), 
+  labs(title = "", x = "Población (%)", y = "Renta (%)") +
+  geom_segment(aes(x = 80, xend = 60, y = 80, yend =80), color = "#7bb8c0") +
+  geom_label(aes(x = 55,y=80,label="Recta de igualdad"), 
              family = "serif",fill = "#7bb8c0", color = "white",
              label.size = 0)+
-  geom_segment(aes(x = 0.6, xend =0.40, y = 0.55, yend = 0.55), color = "#d4dff0") +
-  geom_label(aes(x = 0.35, y = 0.55, label ="Desigualdad"),
+  geom_segment(aes(x = 60, xend =40, y = 55, yend = 55), color = "#d4dff0") +
+  geom_label(aes(x = 35, y = 55, label ="Desigualdad"),
              family = "serif",fill = "#d4dff0", color = "white",
              label.size = 0) +
-  geom_segment(aes(x = 0.5, xend =0.60, y = 0.25, yend = 0.25), color = "#543786") +
-  geom_label(aes(x = 0.70, y = 0.25, label ="Curva de Lorenz"),
+  geom_segment(aes(x = 50, xend =60, y = 25, yend = 25), color = "#543786") +
+  geom_label(aes(x = 70, y = 25, label ="Curva de Lorenz"),
              family = "serif",fill = "#543786", color = "white",
+             label.size = 0) +
+  geom_label(aes(x = 45, y = 30, label ="A"),
+             family = "serif",fill = "#d4dff0", color = "black",
+             label.size = 0) +
+  geom_label(aes(x = 90, y = 45, label ="B"),
+             family = "serif", color = "black",
              label.size = 0) +
   theme_minimal() +
   theme(
@@ -312,17 +275,24 @@ ggplot(data, aes(x = poblacion, y = renta)) +
   )
 ```
 
-Para comprender la lógica, se puede observar en la Figura 1 que el 50% alcanza un 25% del ingreso mientras que un 75% de la población llega a más del 50% del ingreso, es decir, el ingreso que logra el 50% de la población lo alcanza el 20% contiguo, lo cual indica desigualdad ya que el ingreso no estaría equitativamente distribuído.
+Para comprender la lógica, se puede observar en la Figura 1 que el 50% de la población alcanza un 25% del ingreso mientras que un 75% de la población llega a más del 50% del ingreso, es decir, el ingreso que logra el 50% de la población lo alcanza el 25% contiguo, lo cual indica desigualdad ya que el ingreso no estaría equitativamente distribuído.
 
-Se propone incorporar el índice de Gini al cálculo del IDH como (1-GINI) para que un país más desigual en términos salariales tenga menos desarrollo.
+Se propone incorporar el índice de Gini al cálculo del IDH como $(1-\frac{GINI}{100})$ para que un país más desigual en términos salariales tenga menos desarrollo.
 
 ### Modificación en el cálculo del IDH
 
-**completar** -------------------------------
+A continuación se presentan las distintas maneras de incorporar el coeficiente de Gini al cálculo de la dimensión de nivel estándar de vida decente analizadas.
 
-### Modificación 
+- Se planteo multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice. Para ello se considero el cero natural del cálculo del índice de PNB y como objetivo aspiracional se tomó el valor máximo observado de la nueva variable calculada. De esta forma el cálculo es el siguiente:
 
-**explicar diferentes formas de meter indice de gini a esta dimensión y cual se elige y porque**
+$$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
+
+$$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(max(PNB_{Gini}))-\ln(100)}$$
+- Una segunda opción considerada fue calcular el índice de PNB y luego multiplicarlo por $1-\frac{GINI}{100}$. Esta opción disminuía demasiado los valores de esta dimensión por lo que también se probó aplicarle la raíz $1-\frac{GINI}{100}$, logrando que tenga menos peso esta penalización.
+
+$$Dim_{Ing} = Índice_{PNB} * \sqrt{1-\frac{GINI}{100}}$$
+
+**explicar cual se elige y porque Y que se consideró la opción de truncar valores de gini**
 
 
 ## Una nueva rama para el IDH
