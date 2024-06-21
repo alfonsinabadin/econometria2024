@@ -66,6 +66,7 @@ datos_juntos <- merge(datos_juntos, datos_gini, by = "codigo", all.x = TRUE)
 library(readxl)
 libertadOG <- read_excel("All_data_FIW_2013-2024.xlsx", sheet = "FIW13-24")
 libertad <- libertadOG |> filter(Edition == 2019)
+libertad <- libertad |> filter(`C/T` == "c")
 libertad <- libertad |> select("Country/Territory", "Total", "PR", "CL")
 colnames(libertad) <- c("country", "lpts", "political_rights", "civil_liberties")
 
