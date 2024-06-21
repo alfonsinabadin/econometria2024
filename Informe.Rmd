@@ -2,7 +2,9 @@
 title: "Trabajo Práctico Final"
 author: "Econometría"
 fontsize: 10pt
-output: pdf_document
+output: 
+  pdf_document:
+      latex_engine: xelatex
 header-includes:
 - \usepackage{setspace}
 - \doublespacing

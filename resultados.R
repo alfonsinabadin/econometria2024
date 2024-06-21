@@ -46,8 +46,6 @@ res <- res %>%
 # Unir los datos del mapa con los datos del IDH
 map_data <- left_join(world_map_data, res, by = "codigo")
 
-options(device = "jpeg")  # Establecer el dispositivo gráfico a JPEG
-
 # Crear el gráfico
 graf_IDH <- ggplot(map_data, aes(x = long, y = lat, group = group, fill = IDH)) +
   geom_polygon(color = "black") +
@@ -107,8 +105,7 @@ ggsave("Resultados/mapa_IDH1.jpg", plot = graf_IDH, width = 3840, height = 2160,
 ggsave("Resultados/mapa_IDH2.jpg", plot = graf_IDH2, width = 3840, height = 2160, units = "px")
 ggsave("Resultados/mapa_IDH3.jpg", plot = graf_IDH3, width = 3840, height = 2160, units = "px")
 
-# Revertir el dispositivo gráfico a su configuración predeterminada
-options(device = NULL)
+
 
 library(magick)
 # Leer las imágenes usando magick
