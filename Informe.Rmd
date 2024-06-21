@@ -42,9 +42,9 @@ En lugar de dar por sentado que el crecimiento económico conducirá, automátic
 
 En 1990 se calcula por primera vez por el Programa de las Naciones Unidas para el Desarrollo un indicador del desarollo humano bajo la definición mencionada, denominado Índice de Desarrollo Humano (IDH). Este es un indicador compuesto, extensamente utilizado a nivel internacional, que relaciona tres dimensiones para dar cuenta del grado de oportunidad efectiva de expandir las capacidades de las personas: una vida larga y saludable, el acceso al conocimiento y el tener un nivel estándar de vida decente. Es una forma de obtener el promedio de los logros de un área geográfica específica.
 
-Para calcularlo, se toman las variables esperanza de vida, años esperados de escolaridad, años promedio de escolaridad y PBN per cápita de cada país. Se propone cuestionar el uso de estas variables o si es necesario incluir nuevas en el cálculo, ya que gracias a la facilidad que internet ofrece, se podrían tener en cuenta nuevas medidas de facil acceso.
+Para calcularlo, se toman las variables esperanza de vida, años esperados de escolaridad, años promedio de escolaridad y PBN per cápita de cada país. Se propone cuestionar el uso de estas variables o si es necesario incluir nuevas en el cálculo, ya que gracias a la facilidad que internet ofrece, se podrían tener en cuenta nuevas medidas de fácil acceso.
 
-El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que refleje en un sentido más integrado la naturaleza de cada país en relación al desarrollo humano. Dada la definición de desarollo humano antes mencionada, se propone tener en cuenta para el cálculo del IDH también aspectos sobre la sociedad, la discriminación, los derechos, la calidad de vida, desigualdades y las libertades civiles.
+El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que refleje en un sentido más integrado la naturaleza de cada país en relación al desarrollo humano. Dada la definición de desarrollo humano antes mencionada, se propone tener en cuenta para el cálculo del IDH también aspectos sobre la sociedad, la discriminación, los derechos, la calidad de vida, desigualdades y las libertades civiles.
 
 \pagebreak
 
@@ -102,20 +102,22 @@ Se define al producto nacional bruto (PNB) per cápita como los ingresos totales
 
 Para comparar el estándar de vida entre los países, los datos deben ajustarse por la paridad del poder adquisitivo (PPA) a fin de eliminar las diferencias en el valor de un dólar entre países. Se entiende por paridad de poder adquisitivo (PPA) al tipo de cambio que refleja las diferencias de precios entre países y permite hacer comparaciones internacionales del producto e ingreso reales. En la tasa de PPA en US\$ (utilizada en este Informe), US\$1 en PPA tiene el mismo poder adquisitivo en la economía de cualquier país que US\$1 en los Estados Unidos de América. Para los datos correspondientes al 2019 se utiliza el PPA en US\$ base de 2011 para ajustar los valores de PNB per cápita.
 
+Para el cálculo de este índice se considera el logaritmo de los valores ya que el PNB tiene una distribución asimétrica. Además, una vez alcanzado determinado nivel de vida se necesitan grandes cambios en el ingreso para mejorarlo aún más, por lo cual se tiene atenuar el efecto del aumento de ingresos en países más desarrollados.**LEER ESTOOOO**
 
-**OJOTAAA CORREGIR FALTA LOGARITMO**
 En el _IDH_ se calcula el índice de PNB como
 
-$$ Índice_{PNB} = \frac{PNB - 100}{75.000-100} $$
+$$Índice_{PNB} = \frac{ln(PNB) - ln(100)}{ln(75.000)-ln(100)}$$
 
 El bajo valor mínimo para el Producto Nacional Bruto per cápita se considera en los 100 dólares, el uso de este valor se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. Por otro lado, el valor máximo se establece en 75.000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. Actualmente solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
 
 \pagebreak
 
-## Modificaciones previas o alternativas al IDH[^2]
+# Otras alternativas al cálculo del IDH[^2]
 
 [^2]: Fuente: [\textcolor{blue}{\underline{Cálculo de los índices de desarrollo humano, United Nations Development Programme.}}](https://www.undp.org/sites/g/files/zskgke326/files/2023-09/notas_tecnicas.pdf
 ).
+
+A través de los años las Naciones Unidas defendieron diversos índices intentando ampliar el ... del IDH original. En esta sección se mencionan algunos de ellos:
 
 * **Índice de Desarrollo Humano ajustado por la Desigualdad (IDH-D)**: El IDH-D es una medida que complementa al Índice de Desarrollo Humano (IDH) tradicional al incorporar la desigualdad existente dentro de un país. Tiene en cuenta las desigualdades existentes en las tres dimensiones: salud, educación e ingresos. Para ello, hace uso de la familia de mediciones de desigualdad de Atkinson (1970) y fija el parámetro de aversión ε en uno.
 
@@ -125,6 +127,7 @@ El bajo valor mínimo para el Producto Nacional Bruto per cápita se considera e
 
 * **Índice de Pobreza Multidimensional (IPM)**: El Índice de Pobreza Multidimensional (IPM) identifica múltiples privaciones individuales en materia de educación, vivienda y uso de internet, salud y protección social. Cada persona de un determinado hogar se clasifica como pobre o no, dependiendo de la cantidad de privaciones a las que está sometida su familia.
 
+Estos son utilizados como punto de partida de nuestra búsqueda y propuestas para un nuevo IDH ajustado que integre aspectos sobre la sociedad, sus derechos y libertades, calidad de vida, desigualdades, etc. 
 
 \pagebreak 
 
@@ -306,24 +309,29 @@ $$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(max(PNB_{Gini}))-\ln(100)}$$
 
 $$Dim_{Ing} = Índice_{PNB} * \sqrt{1-\frac{GINI}{100}}$$
 
-**explicar cual se elige y porque Y que se consideró la opción de truncar valores de gini**
+Después de analizar ambas opciones, se consideró mejor la multiplicación del coeficiente de Gini previo al cálculo del índice. **La otra forma penalizaba considerablemnete los valores del indice de dimensión de nivel estandar de vida decente****REVISAR ESTOOOO**
 
+## Una nueva rama para el IDH: Libertad, derechos políticos y libertades civiles
 
-## Una nueva rama para el IDH
+### Debate 
 
-### Libertad: derechos políticos y libertades civiles
+A pesar de la importancia de las métricas económicas, índices de salud y de educación, el IDH no considera un aspecto relevante del desarrollo humano: la libertad. En esta sección se propone implementar este concepto como una nueva dimensión, entendiendo como libertad al pleno ejercicio de los derechos políticos y de las libertades civiles, bajo un régimen libre, democrático y plural. La libertad permite a las personas tomar decisiones sobre sus vidas, perseguir sus objetivos y contribuir a la sociedad. La falta de ella puede obstaculizar el acceso a la educación, la salud y otras oportunidades, perpetuando desigualdades.
 
-A pesar de la importancia de las métricas económicas, índices de salud y de educación, se ignora una dimensión fundamental del desarrollo humano: la libertad. En esta sección se propone implementar este concepto como una nueva dimensión del desarrollo humano, entendiendo como libertad al pleno ejercicio de los derechos políticos y de las libertades civiles, bajo un régimen libre, democrático y plural. La libertad permite a las personas tomar decisiones sobre sus vidas, perseguir sus objetivos y contribuir a la sociedad. La falta de ella puede obstaculizar el acceso a la educación, la salud y otras oportunidades, perpetuando desigualdades.
+Los mismos autores del IDH reconocieron, en el informe de desarollo humano de 2010, que el cálculo no contaba con una “medida cuantitativa de la libertad humana”. 
 
-Se propone un enfoque innovador que complemente a las dimensiones existentes del IDH: salud, educación e ingreso per cápita. Al incorporar la libertad, el IDH puede reflejar una imagen más completa del bienestar de las naciones, teniendo en cuenta cuestiones sociales que no están contempladas actualmente. Si bien la incorporación de la libertad como nueva dimensión del desarrollo humano puede generar debates sobre su naturaleza ideológica o subjetiva, este informe defiende su inclusión considerando, bajo esta mirada, los potenciales beneficios que tal enfoque conlleva para el progreso de una nación y el bienestar de sus habitantes. Se busca implementar una metodología que cuantifique estas problemáticas, mediante un índice que permita una evaluación integral y completa de cada territorio, considerando sus particularidades.
+### Modificación en el cálculo del IDH
 
-Para su aplicación se toma el índice de libertad “Freedom in the World”, publicado por la organización Freedom House. Este puntaje se centra sobre dos ejes principales, derechos políticos y libertades civiles, y tiene en cuenta los siguientes factores:
+Se propone un enfoque innovador que complemente a las dimensiones existentes del IDH: salud, educación e ingreso per cápita. Al incorporar la libertad, el IDH puede reflejar una imagen más completa del bienestar de las naciones, teniendo en cuenta cuestiones sociales que no están contempladas actualmente. Si bien la incorporación de la libertad como nueva dimensión del desarrollo humano puede generar debates sobre su naturaleza ideológica o subjetiva, se piensa que su inclusión es necesaria para medir el progreso de una nación y el bienestar de sus habitantes. Se busca implementar una metodología que cuantifique estas problemáticas, mediante un índice que permita una evaluación integral y completa de cada territorio, considerando sus particularidades.
+
+Para su aplicación se toma el índice de libertad “Freedom in the World”, publicado por la organización Freedom House. La misma es una ONG estadounidense fundada en 1941 con el fin de reunir políticos y al público del país en torno a la lucha contra la Alemania nazi y para crear conciencia sobre la amenaza facista a la seguridad y a los valores estadounidenses. En las décadas posteriores, Freedom House se estableció, a través de sus programas e investigaciones, como la principal organización estadounidense dedicada al apoyo y la defensa de la democracia y la libertad en todo el mundo. A pesar de que esta visión tiene un enfoque puramente occidental, se considera su inclusión dado que es una medida abarcativa de esta problemática.
+
+Este puntaje se centra en dos ejes principales, derechos políticos y libertades civiles, y tiene en cuenta los siguientes factores:
 
 #### Derechos políticos
 
 * **Proceso electoral**: elecciones que cumplen con estándares democráticos reconocidos, transparentes, libres, universales, etc.
 
-* **Pluralismo y participación política**: ausencia de obstáculos o restricciones discriminatorias, intimidación, violencia contra miembros o líderes políticos; oportunidad realista de alternancia en el poder; elecciones libres de poderes externos; diversos segmentos de la población (incluidos grupos étnicos, raciales, religiosos, de género, LGBT+ y otros relevantes) tienen plenos derechos políticos,  oportunidades electorales, etc.
+* **Pluralismo y participación política**: ausencia de obstáculos o restricciones discriminatorias, intimidación, violencia contra miembros o líderes políticos; oportunidad realista de alternancia en el poder; elecciones libres de poderes externos; diversos segmentos de la población (incluidos grupos étnicos, raciales, religiosos, de género, LGBT+ y otros relevantes) tienen plenos derechos políticos, oportunidades electorales, etc.
 
 * **Funcionamiento del gobierno**: se evalúa si los representantes elegidos libremente pueden determinar las políticas del gobierno sin interferencia de actores estatales y no estatales en la adopción y ejecución de políticas, así como el control de las fuerzas armadas y la influencia extranjera sobre las decisiones gubernamentales; la existencia de mecanismos efectivos contra la corrupción y la transparencia de las decisiones tomadas. 
 
@@ -341,39 +349,16 @@ Para su aplicación se toma el índice de libertad “Freedom in the World”, p
 
 ### Cálculo del nuevo índice
 
-Esta dimensión está formada por 25 indicadores relacionados a los factores descritos anteriormente, donde cada uno de ellos toma un valor discreto de 0 a 4, formando un puntaje para cada país y territorio, con una pregunta extra que penaliza por este último tópico, restando hasta 4 puntos. De esto surge un puntaje, en principio de 0 a 100 por país, que es dividido por 100 e incorporado al IDH como una nueva rama independiente de las ya existentes, con el mismo peso.
+Esta dimensión está formada por 25 indicadores relacionados a los factores descritos anteriormente. Los puntajes de cada uno de ellos son definidos por un equipo de analistas internos y externos de la organización y de asesores expertos de comunidades académicas y de derechos humanos. Ellos usan una gran variedad de recursos que incluyen artículos de noticias, análisis académicos, reportes de ONGs e investigaciones del campo. El puntaje se determina basándose en las condiciones o eventos dentro del país en un año determinado. El producto final se define a partir del consenso de los analistas quienes proponen puntajes que son discutidos y defendidos a través de una serie de encuentros del equipo nombrado dentro de Freedom House. 
 
-Para su incorporación al IDH propuesto, surge el debate entre incorporar a todas las preguntas o incluir sólo las referidas a las libertades civiles, dejando de lado a las que se refieren al tipo de gobierno adoptado de cada territorio por las diferencias culturales que existen entre las distintas regiones del mundo, que pueden influir en los sistemas de gobierno adoptados. Al comparar el puntaje recibido únicamente referido a derechos políticos con el puntaje de libertades civiles se obtiene una alta correlación (0.96), por lo que muy posiblemente se llegue a los mismos resultados. Además de eso, en este informe se considera a los valores democráticos y al Estado de derecho como factores positivos para el pleno desarrollo humano y posibilitar el ejercicio del bienestar del mismo, por lo tanto, se decide incorporar a la totalidad de las preguntas en este indicador.
+Cada uno de los indicadores toma un valor discreto de 0 a 4, formando un puntaje para cada país y territorio. La pregunta relacionada con los derechos políticos discrecionales penaliza dicho puntaje obtenido con el resto de las preguntas, restando hasta 4 puntos. De esto surge un puntaje, en principio de 0 a 100 por país, que es dividido por 100 e incorporado al IDH como una nueva rama independiente de las ya existentes, con el mismo peso.
 
+Para su incorporación al IDH propuesto, surge el debate entre incorporar a todas las preguntas o incluir sólo las referidas a las libertades civiles. De esta manera, se dejaría de lado a las que se refieren al tipo de gobierno adoptado de cada territorio por las diferencias culturales que existen entre las distintas regiones del mundo, que pueden influir en los sistemas de gobierno adoptados. Al comparar el puntaje recibido únicamente referido a derechos políticos con el puntaje de libertades civiles se obtiene una alta correlación (0.96), por lo que muy posiblemente se llegue a los mismos resultados. Además de eso, en este informe se considera a los valores democráticos y al Estado de derecho como factores positivos para el pleno desarrollo humano y para posibilitar el ejercicio del bienestar del mismo, por lo tanto, se decide incorporar a la totalidad de las preguntas en este indicador.
 
-## Debate 
-
-*Informe IDH 2010*
-El nuevo IDH poseía algunas debilidades, como lo reconocieron los autores; entre ellas, la dependencia de los promedios nacionales —que ocultaban sesgos de distribución— y la falta de una “medida cuantitativa de la libertad humana”. No obstante, logró plantear sin problemas la tesis central del Informe, declarada brevemente ya en la primera frase: “La verdadera riqueza de una nación está en su gente”.
-Veinte años después, la brillantez conceptual y la importancia del paradigma original del desarrollo humano siguen siendo indiscutibles. Existe un consenso casi universal sobre la imposibilidad de medir el éxito de un país o el bienestar de un individuo únicamente a partir de su ingreso. Si bien el ingreso es fundamental, ya que sin recursos cualquier avance es difícil de lograr, también debemos tomar en cuenta si la gente puede llevar una vida saludable y prolongada, si tiene oportunidad de recibir educación y si es libre de aplicar sus conocimientos y talentos para configurar su propio destino. 
-Hacia el futuro, los próximos informes deberán lidiar con temas aún más
-complejos, entre ellos el ámbito cada vez más crítico de la sostenibilidad, la desigualdad y nociones más amplias de empoderamiento.
-Mientras eso sucede, los nuevos desafíos que enfrentamos son aún más graves, como aquellos relacionados con la conservación del medio ambiente y la sostenibilidad de nuestro bienestar y de las libertades básicas. 
-
-Durante los últimos 20 años, el IDH ha sido objeto de críticas. Algunas se relacionan con su construcción y composición, mientras
-otras sugieren que debería ampliarse e incluir
-más dimensiones, desde igualdad de género
-hasta biodiversidad. Muchas de las inquietudes
-son válidas. Pero, el objetivo no es crear un indicador incuestionable del bienestar, sino reorientar la atención hacia un desarrollo enfocado en
-el ser humano y alimentar el debate sobre cómo
-propiciar el progreso de las sociedades. Mientras más discutimos sobre qué debe incluirse o
-no en el IDH —ya sea si tiene sentido agrupar
-distintas categorías, cuánta importancia darle
-a cada una o cómo conseguir más y mejores
-datos— más se aleja el debate del estrecho enfoque en el crecimiento que dominó la reflexión
-sobre el desarrollo.
-El IDH ha resultado tremendamente fructífero como alternativa al enfoque basado solamente en el ingreso.
-
-*VER A PARTIR DE LA PAG 29 DE INFORME 2020*
-
-### Modificación IDH 
+A pesar de que este índice posee cierto grado de subjetividad con tendencia a la ideología estadounidense, este fue el resultado de una búsqueda profunda de una medida que logre cuantificar la presente dimensión y que sea comparable en los distintos países. Lo ideal sería poder formar un índice con un enfoque más objetivo considerando indicadores que demuestren concretamente las libertades de una población. Sin embargo, dada la falta de variables que logren abarcar esta amplia problemática y que estén cuantificadas en variedad de países, sumado a la complejidad que conllevaría formar este índice desde cero, este acercamiento es una buena aproximación de lo que se considera como un ideal de un país libre y democrático. Queda propuesto el análisis de esta nueva dimensión para una futura investigación.
 
 # Cálculo de IDH modif
+
 Antes o como secciones de esta explicar de dónde sacamos los datos, qué hicimos con los datos faltantes.
 
 ## Estimación de datos faltantes
