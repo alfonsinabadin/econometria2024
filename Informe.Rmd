@@ -143,6 +143,8 @@ Poniendo el foco en la dimensión de una vida larga y saludable, se puede identi
 
 Por otro lado, la definición de desarrollo humano menciona que este consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles cómo vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al indice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad y los derechos de las personas en su día a día. 
 
+# Datos
+
 # Propuestas y modificaciones 
 
 En esta sección se explica cada una de las modificaciones propuestas para este nuevo índice, acompañado del razonamiento realizado. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o descartadas del presente informe por diversas razones.
@@ -193,6 +195,7 @@ Siendo:
 
 De igual manera, se calcula el objetivo aspiracional para la esperanza de vida saludable al nacer. Y, una vez obtenidos ambos valores, se logra calcular el índice de la dimensión salud.
 
+$$Dim_{salud} = \frac{esp\;salud-min_{esp\;salud}}{max_{esp\;salud}-min_{esp\;salud}}$$
 En la Figura 1 se puede identificar que los resultado del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios, ambos cálculos parecen obtener prácticamente los mismos resultados.
 
 \pagebreak
@@ -511,16 +514,97 @@ A pesar de que este índice posee cierto grado de subjetividad con tendencia a l
 
 # Cálculo de IDH modif
 
-Antes o como secciones de esta explicar de dónde sacamos los datos, qué hicimos con los datos faltantes.
+Los índices elegidos resultan:
 
-## Estimación de datos faltantes
+-	Índice de salud: reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer [^1].
+$$Dim_{salud} = \frac{esp\;salud-min_{esp\;salud}}{max_{esp\;salud}-min_{esp\;salud}}$$
+[^1]: Fuente: [\textcolor{blue}{\underline{World Health Organization, The Global Health Observatory. }}] (https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/life-expectancy-and-healthy-life-expectancy).
 
-For a small number of countries missing one of the four indicators, the HDRO estimated the missing values using crosscountry regression models.
-In this Report expected years of schooling were estimated for
-Bahamas, Dominica, Equatorial Guinea, Haiti, Libya, Papua
-New Guinea, Tonga, Trinidad and Tobago, and Vanuatu. Mean
-years of schooling were estimated for Eritrea, Grenada and Saint
-Kitts and Nevis.
+-	Índice económico: multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice[^2].
+$$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
+$$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(max(PNB_{Gini}))-\ln(100)}$$
+[^2]: Fuente: [\textcolor{blue}{\underline{Banco Mundial.}}] (https://datos.bancomundial.org/indicator/SI.POV.GINI).
+
+-	Índice de Conocimiento: permanece sin modificaciones.
+
+-	Índice de Libertad: Se toma en consideración a la totalidad de las preguntas realizadas en el índice de libertad “Freedom in the World” del año 2019 (ACLARAR EL AÑO TAMBIEN ARRIBA QUE NO ESTA), publicado por la organización Freedom House[^3].
+
+$$Dim_{Libertad} = Puntaje/100$$
+[^3]: Fuente: [\textcolor{blue}{\underline{Freedom House.}}] (https://freedomhouse.org/report/freedom-world).
+
+Una vez obtenido los índices de cada dimensión, se decide calcular dos nuevos índices de Desarrollo Humano, uno sin incluir a la nueva rama de Libertad y otro que la incluya. Se toma esta decisión para observar cómo las modificaciones a las ramas ya existentes del IDH alteran los resultados y, por otro lado, evaluar si la inclusión de esta nueva dimensión cambia las conclusiones, sugiriendo que hasta ahora podría haberse estado ignorando un aspecto crucial del desarrollo humano.
+Los nuevos IDH modificados se calculan mediante una media geométrica de los respectivos índices obtenidos, de igual forma que en el IDH original.
+
+Índice sin Libertad:
+$$IDH_{sin \ Libertad} = (Índice_{Salud \ modificado}*Índice_{Educación}*Índice_{Ingresos \ modificado})^{1/3}$$
+
+Índice con Libertad:
+$$IDH_{con \ Libertad} = (Índice_{Salud \ modificado}*Índice_{Educación}*Índice_{Ingresos \ modificado}*Índice_{Libertad})^{1/4}$$
+
+Los datos obtenidos corresponden al año 2019. Se selecciona dicho año por ser el más reciente previo a la pandemia de COVID-19, con el fin de evitar posibles valores atípicos o cambios abruptos en determinados países. La pandemia desarrollada en 2020, puede haber afectado el Índice de Desarrollo Humano de los países, reduciendo la esperanza de vida debido a la mortalidad, interrumpiendo la educación por el cierre de escuelas y exacerbando las diferencias por el acceso desigual a la virtualidad. Además, la recesión económica aumentó el desempleo y la pobreza, afectando especialmente a los trabajadores informales y amplificando las desigualdades preexistentes, impactando negativamente los componentes clave del IDH en muchos países.
+En cuanto al índice de Gini utilizado en la dimensión económica, se dispone de pocos datos correspondientes al año 2019, ya que este indicador no se mide de manera uniforme en todos los países. Por ello, se elabora un gráfico a modo exploratorio para observar la variabilidad del índice a lo largo de los años. Si se observa que el índice se mantiene relativamente constante, se podrían utilizar valores de años anteriores para completar los datos y obtener un análisis más completo.
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+gini_sucia <- read_excel("Bases/Indice de GINI por país.xls", 
+                         sheet = "Data", skip = 3)
+esperanza_de_vida <- read_csv("Bases/Esperanza de vida.csv")
+
+names(gini_sucia)[names(gini_sucia) == "Country Name"] <- "Pais"
+names(gini_sucia)[names(gini_sucia) == "Country Code"] <- "Codigo"
+
+# Creo tabla de paises y codigos y le agrego una indicadora q vale 1
+paises <- read_csv("Bases/HDR23-24_Composite_indices_complete_time_series.csv")
+
+paises <- paises %>% select(1)
+
+paises <- paises %>% slice(1:195)
+
+names(paises)[names(paises) == "iso3"] <- "Codigo"
+
+paises <- paises %>% mutate(indicadora = 1)
+
+# Junto ambas tablas para dejar solo los paises
+
+gini <- left_join(gini_sucia, paises, by = "Codigo")
+
+gini <- gini[!is.na(gini$indicadora), ]
+
+#sum(esperanza_de_vida$`Location type`!= "Country")
+codigo_paises <- esperanza_de_vida$SpatialDimValueCode
+
+#grafico de series por pais para demostrar por que tomar el valor de 2019 o mas reciente
+#hasta 2010
+
+
+# Transformar los datos de formato ancho a formato largo
+gini_long <- gini_sucia %>% pivot_longer(
+  cols = starts_with("20"), # Selecciona las columnas que representan los años
+  names_to = "Año",         # Nuevo nombre para las columnas
+  values_to = "Gini"        # Nuevo nombre para los valores
+)
+
+ggplot(gini_long, aes(x = Año, y = Gini, group = Pais, color = Pais)) +
+  geom_line(size = 0.5) +  # Línea para cada serie temporal de cada país
+  geom_point(size = 1) + # Puntos en cada año para cada país
+  theme_minimal() +  # Estilo de gráfico limpio y minimalista
+  labs(
+    title = "Índice de Gini por país (2010-2023)",
+    x = "Año",
+    y = "Índice de Gini (%)"
+  ) +
+  theme(legend.position = "none")
+
+```
+
+Se observa una notable estabilidad en los valores del índice de Gini desde el año 2010 hasta el 2019, con algunos cambios más importantes identificados en el año 2020. Además se tienen pocos datos en los años posteriores a la pandemia. Por lo tanto, se decide utilizar el dato de Gini de 2019 o el más reciente disponible de cada país, hasta el año 2010 como máximo, para garantizar que todos los datos sean lo más actualizados posibles, anulando el efecto de la pandemia y la poca cantidad de observaciones de los años más recientes 2022 y 2023.
+
+Cabe aclarar que los países que presentan al menos un valor faltante de las variables consideradas en el estudio fueron descartadas del mismo. Al recolectar todos los datos para el año 2019 finalmente se cuenta con 151 países de un total de 195 para los cuales fue calculado el IDH original en el Informe de Desarrollo Humano del mismo año. 
 
 # Resultados
 
