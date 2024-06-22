@@ -516,21 +516,18 @@ A pesar de que este índice posee cierto grado de subjetividad con tendencia a l
 
 Los índices elegidos resultan:
 
--	Índice de salud: reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer [^1].
+-	Índice de salud: reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer.
 $$Dim_{salud} = \frac{esp\;salud-min_{esp\;salud}}{max_{esp\;salud}-min_{esp\;salud}}$$
-[^1]: Fuente: [\textcolor{blue}{\underline{World Health Organization, The Global Health Observatory. }}] (https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/life-expectancy-and-healthy-life-expectancy).
 
--	Índice económico: multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice[^2].
+-	Índice económico: multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice.
 $$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
 $$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(max(PNB_{Gini}))-\ln(100)}$$
-[^2]: Fuente: [\textcolor{blue}{\underline{Banco Mundial.}}] (https://datos.bancomundial.org/indicator/SI.POV.GINI).
 
 -	Índice de Conocimiento: permanece sin modificaciones.
 
--	Índice de Libertad: Se toma en consideración a la totalidad de las preguntas realizadas en el índice de libertad “Freedom in the World” del año 2019 (ACLARAR EL AÑO TAMBIEN ARRIBA QUE NO ESTA), publicado por la organización Freedom House[^3].
+-	Índice de Libertad: Se toma en consideración a la totalidad de las preguntas realizadas en el índice de libertad “Freedom in the World” del año 2019 (ACLARAR EL AÑO TAMBIEN ARRIBA QUE NO ESTA), publicado por la organización Freedom House.
 
 $$Dim_{Libertad} = Puntaje/100$$
-[^3]: Fuente: [\textcolor{blue}{\underline{Freedom House.}}] (https://freedomhouse.org/report/freedom-world).
 
 Una vez obtenido los índices de cada dimensión, se decide calcular dos nuevos índices de Desarrollo Humano, uno sin incluir a la nueva rama de Libertad y otro que la incluya. Se toma esta decisión para observar cómo las modificaciones a las ramas ya existentes del IDH alteran los resultados y, por otro lado, evaluar si la inclusión de esta nueva dimensión cambia las conclusiones, sugiriendo que hasta ahora podría haberse estado ignorando un aspecto crucial del desarrollo humano.
 Los nuevos IDH modificados se calculan mediante una media geométrica de los respectivos índices obtenidos, de igual forma que en el IDH original.
@@ -540,69 +537,6 @@ $$IDH_{sin \ Libertad} = (Índice_{Salud \ modificado}*Índice_{Educación}*Índ
 
 Índice con Libertad:
 $$IDH_{con \ Libertad} = (Índice_{Salud \ modificado}*Índice_{Educación}*Índice_{Ingresos \ modificado}*Índice_{Libertad})^{1/4}$$
-
-Los datos obtenidos corresponden al año 2019. Se selecciona dicho año por ser el más reciente previo a la pandemia de COVID-19, con el fin de evitar posibles valores atípicos o cambios abruptos en determinados países. La pandemia desarrollada en 2020, puede haber afectado el Índice de Desarrollo Humano de los países, reduciendo la esperanza de vida debido a la mortalidad, interrumpiendo la educación por el cierre de escuelas y exacerbando las diferencias por el acceso desigual a la virtualidad. Además, la recesión económica aumentó el desempleo y la pobreza, afectando especialmente a los trabajadores informales y amplificando las desigualdades preexistentes, impactando negativamente los componentes clave del IDH en muchos países.
-En cuanto al índice de Gini utilizado en la dimensión económica, se dispone de pocos datos correspondientes al año 2019, ya que este indicador no se mide de manera uniforme en todos los países. Por ello, se elabora un gráfico a modo exploratorio para observar la variabilidad del índice a lo largo de los años. Si se observa que el índice se mantiene relativamente constante, se podrían utilizar valores de años anteriores para completar los datos y obtener un análisis más completo.
-
-```{r message=FALSE, warning=FALSE, echo=FALSE}
-library(readxl)
-library(readr)
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-
-gini_sucia <- read_excel("Bases/Indice de GINI por país.xls", 
-                         sheet = "Data", skip = 3)
-esperanza_de_vida <- read_csv("Bases/Esperanza de vida.csv")
-
-names(gini_sucia)[names(gini_sucia) == "Country Name"] <- "Pais"
-names(gini_sucia)[names(gini_sucia) == "Country Code"] <- "Codigo"
-
-# Creo tabla de paises y codigos y le agrego una indicadora q vale 1
-paises <- read_csv("Bases/HDR23-24_Composite_indices_complete_time_series.csv")
-
-paises <- paises %>% select(1)
-
-paises <- paises %>% slice(1:195)
-
-names(paises)[names(paises) == "iso3"] <- "Codigo"
-
-paises <- paises %>% mutate(indicadora = 1)
-
-# Junto ambas tablas para dejar solo los paises
-
-gini <- left_join(gini_sucia, paises, by = "Codigo")
-
-gini <- gini[!is.na(gini$indicadora), ]
-
-#sum(esperanza_de_vida$`Location type`!= "Country")
-codigo_paises <- esperanza_de_vida$SpatialDimValueCode
-
-#grafico de series por pais para demostrar por que tomar el valor de 2019 o mas reciente
-#hasta 2010
-
-
-# Transformar los datos de formato ancho a formato largo
-gini_long <- gini_sucia %>% pivot_longer(
-  cols = starts_with("20"), # Selecciona las columnas que representan los años
-  names_to = "Año",         # Nuevo nombre para las columnas
-  values_to = "Gini"        # Nuevo nombre para los valores
-)
-
-ggplot(gini_long, aes(x = Año, y = Gini, group = Pais, color = Pais)) +
-  geom_line(size = 0.5) +  # Línea para cada serie temporal de cada país
-  geom_point(size = 1) + # Puntos en cada año para cada país
-  theme_minimal() +  # Estilo de gráfico limpio y minimalista
-  labs(
-    title = "Índice de Gini por país (2010-2023)",
-    x = "Año",
-    y = "Índice de Gini (%)"
-  ) +
-  theme(legend.position = "none")
-
-```
-
-Se observa una notable estabilidad en los valores del índice de Gini desde el año 2010 hasta el 2019, con algunos cambios más importantes identificados en el año 2020. Además se tienen pocos datos en los años posteriores a la pandemia. Por lo tanto, se decide utilizar el dato de Gini de 2019 o el más reciente disponible de cada país, hasta el año 2010 como máximo, para garantizar que todos los datos sean lo más actualizados posibles, anulando el efecto de la pandemia y la poca cantidad de observaciones de los años más recientes 2022 y 2023.
 
 Cabe aclarar que los países que presentan al menos un valor faltante de las variables consideradas en el estudio fueron descartadas del mismo. Al recolectar todos los datos para el año 2019 finalmente se cuenta con 151 países de un total de 195 para los cuales fue calculado el IDH original en el Informe de Desarrollo Humano del mismo año. 
 
@@ -667,6 +601,137 @@ by population ages 25 and older.
 Elección: el desarrollo humano consiste, fundamentalmente, en una mayor capacidad de elección. Se trata de ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Nadie puede garantizar la felicidad humana, y las decisiones que tomen las personas son asunto suyo. El proceso de desarrollo -desarrollo humano- debería al menos crear un entorno para que las personas, individual y colectivamente, desarrollen todo su potencial y tengan una oportunidad razonable de llevar una vida productiva y creativa que valoren.
 
 
-#Bibliografia
+# Referencias
 
-De donde sacamos los datos y lugares con info, informe idh...
+## Origen de los datos
+
+Los datos obtenidos corresponden al año 2019. Se selecciona dicho año por ser el más reciente previo a la pandemia de COVID-19, con el fin de evitar posibles valores atípicos o cambios abruptos en determinados países. La pandemia desarrollada en 2020, puede haber afectado el Índice de Desarrollo Humano de los países, reduciendo la esperanza de vida debido a la mortalidad, interrumpiendo la educación por el cierre de escuelas y exacerbando las diferencias por el acceso desigual a la virtualidad. Además, la recesión económica aumentó el desempleo y la pobreza, afectando especialmente a los trabajadores informales y amplificando las desigualdades preexistentes, impactando negativamente los componentes clave del IDH en muchos países.
+
+La base de datos fue armada en torno al Metadata original de las Naciones Unidas, en la oficina de Reportes de Desarrollo Humano. De aquí se obtiene toda la información oficial del IDH. En la base se tienen todos los componentes del índice desde 1990 hasta el 2022. Para el presente trabajo se tomaron los datos del año 2019. También desde el mismo sitio se puede descargar cada uno de los informes, notas técnicas, metodología, modificaciones del índice y otras publicaciones. 
+
+En la base final se tiene de esta fuente las siguientes variables:
+
+* La esperanza de vida
+
+* Años de escolaridad esperados
+
+* Años de escolaridad promedio
+
+* Ingreso Nacional Bruto ajustado por paridad de poder adquisitivo
+
+* El Indice de Desarrollo Humano original
+
+Con estos datos se logró replicar el índice original, lo cual habla de que se entendió la metodología utilizada, y se logró reproducir los resultados oficiales. 
+
+Por otro lado, los datos de las modificaciones fueron importados de distintas fuentes.
+
+Para empezar, los datos de esperanza de salud fueron obtenidos desde la página de la Organización Mundial de la Salud. Este es un indicador calculado por dicho organismo, que se implementa en la dimensión modificada. Sus últimas actualizaciones fueron realizadas en el año 2020, tomando la esperanza de salud para el 2019.
+
+La información del índice de Gini se obtuvo de las bases de datos del Grupo Banco Mundial. De este coeficiente utilizado en la dimensión económica se dispone de pocos datos correspondientes al año 2019, ya que este indicador no se mide de manera uniforme en todos los países. Por ello, se elabora un gráfico a modo exploratorio para observar la variabilidad del índice a lo largo de los años. Si se observa que el índice se mantiene relativamente constante, se podrían utilizar valores de años anteriores para completar los datos y obtener un análisis más completo.
+
+
+```{r message=FALSE, warning=FALSE, echo=FALSE}
+library(readxl)
+library(readr)
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+
+gini_sucia <- read_excel("Bases/Indice de GINI por país.xls", 
+                         sheet = "Data", skip = 3)
+esperanza_de_vida <- read_csv("Bases/Esperanza de vida.csv")
+
+names(gini_sucia)[names(gini_sucia) == "Country Name"] <- "Pais"
+names(gini_sucia)[names(gini_sucia) == "Country Code"] <- "Codigo"
+
+# Creo tabla de paises y codigos y le agrego una indicadora q vale 1
+paises <- read_csv("Bases/HDR23-24_Composite_indices_complete_time_series.csv")
+
+paises <- paises %>% select(1)
+
+paises <- paises %>% slice(1:195)
+
+names(paises)[names(paises) == "iso3"] <- "Codigo"
+
+paises <- paises %>% mutate(indicadora = 1)
+
+# Junto ambas tablas para dejar solo los paises
+
+gini <- left_join(gini_sucia, paises, by = "Codigo")
+
+gini <- gini[!is.na(gini$indicadora), ]
+
+#sum(esperanza_de_vida$`Location type`!= "Country")
+codigo_paises <- esperanza_de_vida$SpatialDimValueCode
+
+#grafico de series por pais para demostrar por que tomar el valor de 2019 o mas reciente
+#hasta 2010
+
+
+# Transformar los datos de formato ancho a formato largo
+gini_long <- gini_sucia %>% pivot_longer(
+  cols = starts_with("20"), # Selecciona las columnas que representan los años
+  names_to = "Año",         # Nuevo nombre para las columnas
+  values_to = "Gini"        # Nuevo nombre para los valores
+)
+
+ggplot(gini_long, aes(x = Año, y = Gini, group = Pais, color = Pais)) +
+  geom_line(size = 0.5) +  # Línea para cada serie temporal de cada país
+  geom_point(size = 1) + # Puntos en cada año para cada país
+  theme_minimal() +  # Estilo de gráfico limpio y minimalista
+  labs(
+    title = "Índice de Gini por país (2010-2023)",
+    x = "Año",
+    y = "Índice de Gini (%)"
+  ) +
+  theme(legend.position = "none")
+
+
+# library(joineR)
+# vgm <- variogram(gini_long$Codigo, as.numeric(gini_long$Año), gini_long$Gini)
+# # id, medida repetida y residuo o variable respuesta que estoy analizando
+# 
+# plot(vgm, smooth=TRUE)
+# title("Variograma muestral. peso")
+```
+
+Se observa una notable estabilidad en los valores del índice de Gini desde el año 2010 hasta el 2019, con algunos cambios más importantes identificados en el año 2020. También realizando un análisis longitudinal exploratorio, la variabilidad entre países es la dominante, con muy poca variabilidad intra. Esto se puede ver en el gráfico de perfiles individuales con las lineas de cada país prácticamente constantes. Cabe destacar que se tienen pocos datos en los años posteriores a la pandemia. Por lo tanto, se decide utilizar el dato de Gini de 2019 o el más reciente disponible de cada país, hasta el año 2010 como máximo, para garantizar que todos los datos sean lo más actualizados posibles, anulando el efecto de la pandemia y la poca cantidad de observaciones de los años más recientes 2022 y 2023.
+
+Finalmente, en la nueva dimensión denominada Libertad, los datos utilizados son los del informe creado por Freedom House. La base de datos con todos los puntajes de los indicadores desde 2013 se encuentra en la página web de la organización. 
+
+
+## Links de descarga de bases:
+
+1. Programa de las Naciones Unidas para el Desarrollo. (2022). Documentation and Downloads. Human Development Reports. https://hdr.undp.org/data-center/documentation-and-downloads (consultado en junio de 2024).
+
+2. World Health Organization. (2020). Healthy Life Expectancy (HALE) Data. WHO. https://apps.who.int/gho/data/node.main.HALE?lang=en (consultado en junio de 2024).
+
+3. Banco Mundial. (2024). GINI Index. World Bank Data. https://datos.bancomundial.org/indicator/SI.POV.GINI (consultado en junio de 2024).
+
+4. Freedom House. (2024). Freedom in the World. https://freedomhouse.org/report/freedom-world (consultado en junio de 2024).
+
+## Bibliografía
+
+1. Banco Mundial. (2024). GINI Index. World Bank Data. https://datos.bancomundial.org/indicator/SI.POV.GINI
+
+2. Eustat. (2023). Índice de Desarrollo Humano por Indicadores según Países 2022. https://es.eustat.eus/elementos/ele0013500/ti_indice-de-desarrollo-humano-por-indicadores-segun-paises-2022/tbl0013566_c.html
+
+3. Freedom House. (2024). Freedom in the World 2024. https://freedomhouse.org/report/freedom-world
+
+4. Instituto Nacional de Estadística (España). (2023). Esperanza de Vida en Buena Salud. INE. https://www.ine.es/ss/Satellite?L=es_ES&c=INESeccion_C&cid=1259926378861&p=%5C&pagename=ProductosYServicios%2FPYSLayout&param1=PYSDetalle&param3=1259924822888
+
+5. Programa de las Naciones Unidas para el Desarrollo. (2010). Human Development Report 2010. https://hdr.undp.org/content/human-development-report-2010
+
+6. Programa de las Naciones Unidas para el Desarrollo. (2019). Human Development Report 2019. https://hdr.undp.org/content/human-development-report-2019
+
+7. Programa de las Naciones Unidas para el Desarrollo. (2023). Notas Técnicas sobre el Cálculo de los Índices de Desarrollo Humano. https://www.undp.org/sites/g/files/zskgke326/files/2023-09/notas_tecnicas.pdf
+
+8. Programa de las Naciones Unidas para el Desarrollo. (2024). About Human Development. Human Development Reports. https://hdr.undp.org/about/human-development
+
+9. Sullivan, D. (2014). Guide to Using the Sullivan Method for Calculating Healthy Life Expectancy. https://reves.site.ined.fr/fichier/s_rubrique/20182/sullivan.guide.pre.final.oct2014.en.pdf
+
+10. Verywell Health. (2022). Understanding Healthy Life Expectancy. https://www.verywellhealth.com/understanding-healthy-life-expectancy-2223919#toc-how-hale-is-calculated
+
+11. World Health Organization. (2020). Healthy Life Expectancy (HALE) Metadata. https://cdn.who.int/media/docs/default-source/gho-documents/metadata/hale-metadata.pdf?sfvrsn=4f47fd43_1&download=true
+
+12. World Health Organization. (2020). Life Expectancy and Healthy Life Expectancy. WHO. https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/life-expectancy-and-healthy-life-expectancy

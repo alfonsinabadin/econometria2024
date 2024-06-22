@@ -7,9 +7,13 @@ Cosas que faltan:
 
 Link de descarga de bases:
 
+- https://hdr.undp.org/data-center/documentation-and-downloads
+
 - https://apps.who.int/gho/data/node.main.HALE?lang=en
--
--
+
+- https://datos.bancomundial.org/indicator/SI.POV.GINI
+
+- https://freedomhouse.org/report/freedom-world
 
 Bibliografía:
 
@@ -26,6 +30,8 @@ Bibliografía:
 - Archivo explicación índice de Salud https://reves.site.ined.fr/fichier/s_rubrique/20182/sullivan.guide.pre.final.oct2014.en.pdf
 
 - Metadata HALE (OMS) https://cdn.who.int/media/docs/default-source/gho-documents/metadata/hale-metadata.pdf?sfvrsn=4f47fd43_1&download=true
+
+- Freedom in the World 2024 | Freedom House https://freedomhouse.org/report/freedom-world
 
 alfon:
 
