@@ -134,7 +134,7 @@ res <- res %>%
   arrange(desc(row_number()))
 
 library("openxlsx")
-write.xlsx(res, "Resultados/resultados.xlsx")
+#write.xlsx(res, "Resultados/resultados.xlsx")
 
 
 #00770E
@@ -153,4 +153,8 @@ ggplot(res)+
 
 ggplot(res)+
   geom_point(aes(IDH2,IDH3), color="blue")+
+  geom_abline(slope=1, intercept = 0)
+
+ggplot(res)+
+  geom_point(aes(rank_IDH1,rank_IDH3), color="blue")+
   geom_abline(slope=1, intercept = 0)

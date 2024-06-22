@@ -442,7 +442,7 @@ $$Dim_{Ing} = Índice_{PNB} * \sqrt{1-\frac{GINI}{100}}$$
 
 En la figura \ref{fig:Figura7} se puede observar el cambio abrupto mencionado al no utilizar la raíz en la corrección y cómo la incorporación de la misma diminuir esta penalización. De todas formas, el cambio con esta opción continúa siendo abrupto en comparación con la opción 1. 
 
-```{r Frigura7, fig.cap="Índice de PNB obtenido con la metodología original y los diferentes enfoques de la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+```{r Figura7, fig.cap="Índice de PNB obtenido con la metodología original y los diferentes enfoques de la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 bbddescrip_nuevo <- readRDS("Figuras Informe/econ_base_box_2.rds")
 
 ggplot(bbddescrip_nuevo) +
@@ -466,6 +466,7 @@ En el siguiente cuadro donde se muestran los 5 países con menor PNB ajustado po
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
 library(kableExtra)
+library(readxl)
 bbdd_descrip <- read_xlsx("bbdd_descrip.xlsx")
 
 tabla_resultado <- bbdd_descrip %>%
@@ -540,11 +541,11 @@ A pesar de que este índice posee cierto grado de subjetividad con tendencia a l
 Los índices elegidos resultan:
 
 -	Índice de salud: reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer.
-$$Dim_{salud} = \frac{esp\;salud-min_{esp\;salud}}{max_{esp\;salud}-min_{esp\;salud}}$$
+$$Dim_{salud} = \frac{esp\;salud-17.41872}{74.75077-17.41872}$$
 
 -	Índice económico: multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice.
 $$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
-$$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(max(PNB_{Gini}))-\ln(100)}$$
+$$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(53377.0398)-\ln(100)}$$
 
 -	Índice de Conocimiento: permanece sin modificaciones.
 
@@ -564,6 +565,56 @@ $$IDH_{con \ Libertad} = (Índice_{Salud \ modificado}*Índice_{Educación}*Índ
 Cabe aclarar que los países que presentan al menos un valor faltante de las variables consideradas en el estudio fueron descartadas del mismo. Al recolectar todos los datos para el año 2019 finalmente se cuenta con 151 países de un total de 195 para los cuales fue calculado el IDH original en el Informe de Desarrollo Humano del mismo año. 
 
 # Resultados
+
+Una vez determinadas todas las modificaciones a las dimensiones, se procede a aplicarlas al cálculo de los IDH modificados mencionados en la sección anterior. Se denomina `IDH2` al índice con modificaciones sin Libertad e `IDH3` al que sí tiene incluído la nueva dimensión. 
+
+Los resultados obtenidos se muestran en la siguiente tabla, donde los países se encuentran ordenados según el IDH original y se muestran los 3 índices, con una escala de color y sus respectivos ranqueos y cambios de puestos.
+
+\pagebreak
+
+Tabla 1: Índices de Desarrollo Humano por país
+
+```{r mapa1, echo=FALSE, fig.align='center', out.width='75%'}
+knitr::include_graphics("Resultados/Tabla_IDH1.png")
+```
+
+\pagebreak
+
+```{r mapa2, echo=FALSE, fig.align='center'}
+knitr::include_graphics("Resultados/Tabla_IDH2.png")
+```
+\pagebreak
+
+```{r mapa3, echo=FALSE, fig.align='center'}
+knitr::include_graphics("Resultados/Tabla_IDH3.png")
+```
+
+\pagebreak
+
+La escala de color es de gran ayuda para facilitar la visualización de las variaciones en los países. Por ejemplo, en la parte superior del ranking, destacan países como Emiratos Árabes Unidos, donde se observa claramente cómo la incorporación de la dimensión Libertad afecta en gran medida su puntaje. Por otro lado, países como Costa Rica, Uruguay, Chile y España suben su puntaje al agregar esta dimensión. 
+
+En el Anexo se encuentran las tablas con los países ordenados según estas nuevas propuestas del IDH. 
+
+Además se muestran mapas con los países coloreados según una escala continua del IDH.
+
+```{r echo=FALSE, fig.align='center', fig.cap="Índice de Desarrollo Humano original por país", out.width='100%' }
+knitr::include_graphics("Resultados/mapa_IDH1.jpg")
+```
+
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado sin Libertad por país"}
+knitr::include_graphics("Resultados/mapa_IDH2.jpg")
+```
+
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado con Libertad por país"}
+knitr::include_graphics("Resultados/mapa_IDH3.jpg")
+```
+
+## Análisis comparativo entre los índices. 
+
+Se calcula la correlación entre los valores de los índices y el de los puestos. Estos se muestran en la siguiente tabla
+
+
+
 
 - Rankear los países con IDH modificado y comparar (2 graficos países colores)
 
@@ -591,44 +642,11 @@ by population ages 25 and older.
 \pagebreak
 
 
-
-
-# GUÍA DE COSAS QUE TIENEN QUE ESTAR
-
-- *Antes de nombrar la modificación que proponemos deberíamos nombrar algo de críticas al IDH y otras modificaciones que ya se hicieron (Informe ver en Documentos) y por qué buscamos una distinta que queremos mostrar.*
- EN 2010, se incorporan tres nuevos indicadores que capturan la desigualdad multidimensional, las disparidades de género y las privaciones extremas. El Índice de Desarrollo Humano ajustado por la Desigualdad, el Índice de Desigualdad de Género, así como el Índice de Pobreza Multidimensional
- *CAP 5 P106 DEL INFORME 2010*
-
-- Orden posible:
-    - *Intro + objetivo: definicion del desarrollo humano segun idh y segun nosotros*
-    - terminos
-    - Definición del calculo IDH actual y calculo de cada dimensión y explicación
-    - Críticas / Otas modificaciones que ya se hicieron + Por qué proponemos igual hacer uno nuevo
-    https://www.undp.org/sites/g/files/zskgke326/files/2023-09/notas_tecnicas.pdf
-    - Explicación de modificaciones en cada dimensión (incluyendo posibilidades que se nos ocurrieron pero no hicimos o que descartamos o que estarían bueno hacer). Explicar tmb la de Derechos y libertades.
-    - Cálculo final IDH modif (1 o los que sean) Aclarar acá o arriba de donde se obtuvieron los datos
-    - Resultados (ver abajo opciones)
-    - Conclusiones
-    - En algún lado un apartado con cosas que quedan propuestas si es necesario.
-    - Bibliografía
-    
-    
-- Acordarnos de explicar para las variables que lo hayamos hecho que tomamos valores 2019 o más cercano
-
-
-
-
-
-## eleccion 
-
-Elección: el desarrollo humano consiste, fundamentalmente, en una mayor capacidad de elección. Se trata de ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Nadie puede garantizar la felicidad humana, y las decisiones que tomen las personas son asunto suyo. El proceso de desarrollo -desarrollo humano- debería al menos crear un entorno para que las personas, individual y colectivamente, desarrollen todo su potencial y tengan una oportunidad razonable de llevar una vida productiva y creativa que valoren.
-
-
 # Referencias
 
 ## Origen de los datos
 
-Los datos obtenidos corresponden al año 2019. Se selecciona dicho año por ser el más reciente previo a la pandemia de COVID-19, con el fin de evitar posibles valores atípicos o cambios abruptos en determinados países. La pandemia desarrollada en 2020, puede haber afectado el Índice de Desarrollo Humano de los países, reduciendo la esperanza de vida debido a la mortalidad, interrumpiendo la educación por el cierre de escuelas y exacerbando las diferencias por el acceso desigual a la virtualidad. Además, la recesión económica aumentó el desempleo y la pobreza, afectando especialmente a los trabajadores informales y amplificando las desigualdades preexistentes, impactando negativamente los componentes clave del IDH en muchos países.
+Los datos obtenidos corresponden al año 2019. Se selecciona dicho año por ser el más reciente previo a la pandemia de COVID-19, con el fin de evitar posibles valores atípicos o cambios abruptos en determinados países. La pandemia desarrollada en 2020 puede haber afectado el Índice de Desarrollo Humano de los países, reduciendo la esperanza de vida debido a la mortalidad, interrumpiendo la educación por el cierre de escuelas y exacerbando las diferencias por el acceso desigual a la virtualidad. Además, la recesión económica aumentó el desempleo y la pobreza, afectando especialmente a los trabajadores informales y amplificando las desigualdades preexistentes, impactando negativamente los componentes clave del IDH en muchos países.
 
 La base de datos fue armada en torno al Metadata original de las Naciones Unidas, en la oficina de Reportes de Desarrollo Humano. De aquí se obtiene toda la información oficial del IDH. En la base se tienen todos los componentes del índice desde 1990 hasta el 2022. Para el presente trabajo se tomaron los datos del año 2019. También desde el mismo sitio se puede descargar cada uno de los informes, notas técnicas, metodología, modificaciones del índice y otras publicaciones. 
 
@@ -640,13 +658,11 @@ En la base final se tiene de esta fuente las siguientes variables:
 
 * Años de escolaridad promedio
 
-* Ingreso Nacional Bruto ajustado por paridad de poder adquisitivo
+* Ingreso Nacional Bruto ajustado por paridad de poder adquisitivo (constante 2011)
 
 * El Indice de Desarrollo Humano original
 
-Con estos datos se logró replicar el índice original, lo cual habla de que se entendió la metodología utilizada, y se logró reproducir los resultados oficiales. 
-
-Por otro lado, los datos de las modificaciones fueron importados de distintas fuentes.
+Con estos datos se logró replicar el índice original, lo cual habla de que se entendió la metodología utilizada, y se logró reproducir los resultados oficiales. Por otro lado, los datos de las modificaciones fueron importados de distintas fuentes.
 
 Para empezar, los datos de esperanza de salud fueron obtenidos desde la página de la Organización Mundial de la Salud. Este es un indicador calculado por dicho organismo, que se implementa en la dimensión modificada. Sus últimas actualizaciones fueron realizadas en el año 2020, tomando la esperanza de salud para el 2019.
 
