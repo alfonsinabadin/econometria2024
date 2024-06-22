@@ -542,6 +542,56 @@ Cabe aclarar que los países que presentan al menos un valor faltante de las var
 
 # Resultados
 
+Una vez determinadas todas las modificaciones a las dimensiones, se procede a aplicarlas al cálculo de los IDH modificados mencionados en la sección anterior. Se denomina `IDH2` al índice con modificaciones sin Libertad e `IDH3` al que sí tiene incluído la nueva dimensión. 
+
+Los resultados obtenidos se muestran en la siguiente tabla, donde los países se encuentran ordenados según el IDH original y se muestran los 3 índices, con una escala de color y sus respectivos ranqueos y cambios de puestos.
+
+\pagebreak
+
+Tabla 1: Índices de Desarrollo Humano por país
+
+```{r echo=FALSE, fig.align='center', out.width='75%'}
+knitr::include_graphics("Resultados/Tabla_IDH1.png")
+```
+
+\pagebreak
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("Resultados/Tabla_IDH2.png")
+```
+\pagebreak
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("Resultados/Tabla_IDH3.png")
+```
+
+\pagebreak
+
+La escala de color es de gran ayuda para facilitar la visualización de las variaciones en los países. Por ejemplo, en la parte superior del ranking, destacan países como Emiratos Árabes Unidos, donde se observa claramente cómo la incorporación de la dimensión Libertad afecta en gran medida su puntaje. Por otro lado, países como Costa Rica, Uruguay, Chile y España suben su puntaje al agregar esta dimensión. 
+
+En el Anexo se encuentran las tablas con los países ordenados según estas nuevas propuestas del IDH. 
+
+Además se muestran mapas con los países coloreados según una escala continua del IDH.
+
+```{r echo=FALSE, fig.align='center', fig.cap="Índice de Desarrollo Humano original por país", out.width='100%' }
+knitr::include_graphics("Resultados/mapa_IDH1.jpg")
+```
+
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado sin Libertad por país"}
+knitr::include_graphics("Resultados/mapa_IDH2.jpg")
+```
+
+```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado con Libertad por país"}
+knitr::include_graphics("Resultados/mapa_IDH3.jpg")
+```
+
+## Análisis comparativo entre los índices. 
+
+Se calcula la correlación entre los valores de los índices y el de los puestos. Estos se muestran en la siguiente tabla
+
+
+
+
 - Rankear los países con IDH modificado y comparar (2 graficos países colores)
 
 - Corr entre los IDH y el/los modificados

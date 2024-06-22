@@ -154,3 +154,7 @@ ggplot(res)+
 ggplot(res)+
   geom_point(aes(IDH2,IDH3), color="blue")+
   geom_abline(slope=1, intercept = 0)
+
+ggplot(res)+
+  geom_point(aes(rank_IDH1,rank_IDH3), color="blue")+
+  geom_abline(slope=1, intercept = 0)
