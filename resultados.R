@@ -158,3 +158,48 @@ ggplot(res)+
 ggplot(res)+
   geom_point(aes(rank_IDH1,rank_IDH3), color="blue")+
   geom_abline(slope=1, intercept = 0)
+
+
+
+
+### Creación de las categorías IDH modificados
+res <- res |> mutate(
+  hdicode = case_when(
+    IDH < 0.55 ~ 1,
+    IDH >= 0.55 & IDH < 0.7 ~ 2,
+    IDH >= 0.7 & IDH < 0.8 ~ 3,
+    IDH > 0.8 ~ 4
+  )
+)
+
+res <- res |> mutate(
+  hdi2code = case_when(
+    IDH2 < 0.55 ~ 1,
+    IDH2 >= 0.55 & IDH2 < 0.7 ~ 2,
+    IDH2 >= 0.7 & IDH2 < 0.8 ~ 3,
+    IDH2 > 0.8 ~ 4
+  )
+)
+
+res <- res |> mutate(
+  hdi3code = case_when(
+    IDH3 < 0.55 ~ 1,
+    IDH3 >= 0.55 & IDH3 < 0.7 ~ 2,
+    IDH3 >= 0.7 & IDH3 < 0.8 ~ 3,
+    IDH3 > 0.8 ~ 4
+  )
+)
+
+
+data <- table(factor(c(res$hdicode)), factor(c(res$hdi2code)))
+data2 <- table(factor(c(res$hdicode)), factor(c(res$hdi3code)))
+
+bowker <- 3^2/5+4^2/6+5^2/5
+bowker2 <- 10^2/14+5+8+6+5
+# Calcular valor p
+p_value <- 1 - pchisq(bowker, 6)
+p_value2 <- 1 - pchisq(bowker2, 6)
+
+# Mostrar resultado
+cat("Estadístico de Bowker (cambio IDH 1-2):", bowker, "\n", "P-Value =", p_value)
+cat("Estadístico de Bowker (cambio IDH 1-3):", bowker2, "\n", "P-Value =", p_value2)
