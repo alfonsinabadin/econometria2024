@@ -340,7 +340,7 @@ ACORDARNOS EN EL CALCULO ACLARAR PPA CONSTANTE 2011 (XQ CALCULAMOS 2019)
 
 ### Debate 
 
-Al utilizar el _PNB_ ajustado por PPA para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar que tan bueno es el nivel de vida de este. La definición de desarrollo humano, mencionada al principio del presente informe, establece que el crecimiento económico no necesariamente conduce a un mayor bienestar **para todos**.
+Al utilizar el _PNB_ ajustado por PPA para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar qué tan bueno es el nivel de vida de este. La definición de desarrollo humano, mencionada al principio del presente informe, establece que el crecimiento económico no necesariamente conduce a un mayor bienestar **para todos**.
 
 En ciertas situaciones puede haber un país con un gran valor de PNB donde las riquezas no estén distribuidas equitativamente. Es decir, quizás este valor de PNB alto es acumulado por un bajo porcentaje de la población mientras que existe un gran porcentaje de personas que no tienen un nivel de vida decente. El producto nacional bruto no logra reflejar la distribución de los ingresos de un país, es por esta razón que se considera incorporar en esta dimensión el coeficiente de Gini. 
 
@@ -388,10 +388,10 @@ ggplot(data, aes(x = poblacion, y = renta)) +
   geom_label(aes(x = 70, y = 25, label ="Curva de Lorenz"),
              family = "serif",fill = "#543786", color = "white",
              label.size = 0) +
-  geom_label(aes(x = 45, y = 30, label ="A"),
+  geom_label(aes(x = 45, y = 30, label ="Área A"),
              family = "serif",fill = "#d4dff0", color = "black",
              label.size = 0) +
-  geom_label(aes(x = 90, y = 45, label ="B"),
+  geom_label(aes(x = 90, y = 45, label ="Área B"),
              family = "serif", color = "black",
              label.size = 0) +
   theme_minimal() +
@@ -410,16 +410,58 @@ Se propone incorporar el índice de Gini al cálculo del IDH como $(1-\frac{GINI
 
 A continuación se presentan las distintas maneras de incorporar el coeficiente de Gini al cálculo de la dimensión de nivel estándar de vida decente analizadas.
 
-- Se planteo multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice. Para ello se considero el cero natural del cálculo del índice de PNB y como objetivo aspiracional se tomó el valor máximo observado de la nueva variable calculada. De esta forma el cálculo es el siguiente:
+1. Se planteo multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice. Para ello se considero el cero natural del cálculo del índice de PNB y como objetivo aspiracional se tomó el valor máximo observado de la nueva variable calculada. De esta forma el cálculo es el siguiente:
 
 $$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
 
 $$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(max(PNB_{Gini}))-\ln(100)}$$
-- Una segunda opción considerada fue calcular el índice de PNB y luego multiplicarlo por $1-\frac{GINI}{100}$. Esta opción disminuía demasiado los valores de esta dimensión por lo que también se probó aplicarle la raíz $1-\frac{GINI}{100}$, logrando que tenga menos peso esta penalización.
+
+\pagebreak
+
+```{r fig.cap="Índice de PNB obtenido con la metodología original y la opción 1", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+bbddescrip_nuevo <- readRDS("Figuras Informe/econ_base_box_1.rds")
+ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
+  labs(x = "Indice", y = "Valor") + 
+  scale_fill_manual(values = c("#d4dff0", "#543786")) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "none"
+  ) +
+  coord_flip()
+```
+
+Esta modificación del cálculo, en comparación con el original, devuelve valores menores y cambian sus medidas descriptivas de posición, como la mediana, lo cual es satisfactorio a fines del objetivo propuesto. Esto se puede observar en la Figura 6.
+
+2. Una segunda opción considerada fue calcular el índice de PNB y luego multiplicarlo por $1-\frac{GINI}{100}$. Esta opción disminuía demasiado los valores de esta dimensión por lo que también se probó aplicarle la raíz $1-\frac{GINI}{100}$, logrando que tenga menos peso esta penalización.
 
 $$Dim_{Ing} = Índice_{PNB} * \sqrt{1-\frac{GINI}{100}}$$
 
-Después de analizar ambas opciones, se consideró mejor la multiplicación del coeficiente de Gini previo al cálculo del índice. **La otra forma penalizaba considerablemnete los valores del indice de dimensión de nivel estandar de vida decente****REVISAR ESTOOOO**
+En la Figura 7 se puede observar el cambio abrupto mencionado al no utilizar la raíz en la corrección y cómo la segunda opción logra ser un "equilibrio" entre la versión original y la primera modificación realizada con este enfoque.
+
+```{r fig.cap="Índice de PNB obtenido con la metodología original y los diferentes enfoques de la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+bbddescrip_nuevo <- readRDS("Figuras Informe/econ_base_box_2.rds")
+
+ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
+  labs(x = "Indice", y = "Valor") +
+  scale_fill_manual(values = c("#d4dff0", "#543786", "#543786")) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "none"
+  ) +
+  coord_flip()
+```
+
+Después de analizar ambas opciones, se consideró mejor la multiplicación del coeficiente de Gini previo al cálculo del índice es decir la opción 1, ya que la otra opción penaliza considerablmenete los valores del indice de dimensión de nivel estandar de vida decente.
+
+
 
 ## Una nueva rama para el IDH: Libertad, derechos políticos y libertades civiles
 

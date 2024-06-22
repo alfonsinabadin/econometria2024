@@ -253,3 +253,62 @@ tabla_resultado <- tabla_resultado %>%
 
 # DIMENSION ECONÓMICA ----------------------------------------------------------
 
+# OPCIÓN 1
+
+bbdd_descrip$GNIPCA <- bbdd_descrip$GNIPC * (1- bbdd_descrip$G / 100)
+bbdd_descrip$Dim_Econ1 <- (log(bbdd_descrip$GNIPCA)-log(100))/(log(53377.0398)-log(100))
+
+bbddescrip_nuevo <- data.frame(
+  idpais = rep(bbdd_descrip$Codigo, 2),
+  valor = c(bbdd_descrip$Dim_Econ, bbdd_descrip$Dim_Econ1),
+  tipo_variable = factor(rep(c("Indice Original", "Indice Opcion 1"), each = nrow(bbdd_descrip)),
+                         levels = c("Indice Original", "Indice Opcion 1"), ordered = TRUE)
+)
+
+saveRDS(bbddescrip_nuevo, "Figuras Informe/econ_base_box_1.rds")
+
+ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
+  labs(x = "Indice", y = "Valor") + 
+  scale_fill_manual(values = c("#d4dff0", "#543786")) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "none"
+  ) +
+  coord_flip()
+
+# OPCION 2
+
+# opcion 2 sin raiz
+bbdd_descrip$Dim_Econ2_1 <- bbdd_descrip$Dim_Econ*(1-bbdd_descrip$G/100)
+# opcion 2 con raiz
+bbdd_descrip$Dim_Econ2 <- bbdd_descrip$Dim_Econ*sqrt(1-bbdd_descrip$G/100)
+
+
+#Boxplot
+
+#Formato largo
+bbddescrip_nuevo <- data.frame(
+  idpais = rep(bbdd_descrip$Codigo, 3),
+  valor = c(bbdd_descrip$Dim_Econ, bbdd_descrip$Dim_Econ2_1, bbdd_descrip$Dim_Econ2),
+  tipo_variable = factor(rep(c("Indice Original", "Indice Opcion 2 sin raiz", "Indice Opcion 2 con raiz"),each = nrow(bbdd_descrip)),
+                      levels =c("Indice Original", "Indice Opcion 2 sin raiz", "Indice Opcion 2 con raiz"),
+                      ordered = TRUE))
+
+saveRDS(bbddescrip_nuevo, "Figuras Informe/econ_base_box_2.rds")
+
+ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
+  labs(title = "Comparación indice económico original y opción 2", x = "Indice", y = "Valor") +
+  scale_fill_manual(values = c("#d4dff0", "#543786", "#543786")) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "none"
+  ) +
+  coord_flip()
