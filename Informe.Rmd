@@ -151,7 +151,7 @@ En esta sección se explica cada una de las modificaciones propuestas para este 
 
 ### Debate
 
-Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida saludable al nacer__ o __Esperanza de vida en buena salud al nacer__  para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida saludable al nacer__ (o __Esperanza de vida en buena salud al nacer__)  para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
 
 Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. *La esperanza de vida saludable al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula, según el Instituto de Estadística español, en base al método Sullivan ( a traves de tablas de mortalidad) y al indicador de limitaciones generales de actividad de Euro-REVES (Network on Health Expectancy).*
 
@@ -171,15 +171,13 @@ donde:
 
 - $D_x$ es la proporción de gente con discapacidad entre los años $x$ y $x+5$ 
 
-Además, se evalúo la posible incorporación en el cálculo de esperanza de vida y de vida saludable a los 60 años para considerar el impacto de la salud en la población mayor en los distintos países. Sin embargo, se terminó considerado más sencillo utilizar unicamente los indicadores al nacer dado que se facilita la interpretación de la dimensión y estas medidas otorgan una visión más amplia de la longevidad y salud de la población a lo largo de toda su vida.
+Además, se evalúo la posible incorporación en el cálculo de esperanza de vida y de vida saludable a los 60 años para considerar el impacto de la salud en la población mayor en los distintos países. Sin embargo, se terminó considerado más sencillo utilizar únicamente los indicadores al nacer dado que se facilita la interpretación de la dimensión y estas medidas otorgan una visión más amplia de la longevidad y salud de la población a lo largo de toda su vida.
 
 ### Modificación en el cálculo del IDH
 
 La esperanza de vida saludable al nacer se podría considerar una variable que contiene más información e identifica mejor a la dimensión "tener una vida larga y saludable". Ahora bien, ¿cómo incluirla al cálculo de IDH? Se han barajado algunas opciones:
 
-**completar segun descriptivo**
-
-- Reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer directamente en el cálculo del índice de salud. Para la transformación de dicha métrica en índice se calculó el mínimo y máximo de esta variable buscando que sea proporcional con el mínimo y máximo de la esperanza de vida al nacer.
+1. Reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer directamente en el cálculo del índice de salud. Para la transformación de dicha métrica en índice se calculó el mínimo y máximo de esta variable buscando que sea proporcional con el mínimo y máximo de la esperanza de vida al nacer.
 
 $$min_{esp\;salud} = min_{esp\;vida}*\frac{min(esp\;salud)}{min(esp\;vida)}$$
 
@@ -195,22 +193,134 @@ Siendo:
 
 De igual manera, se calcula el objetivo aspiracional para la esperanza de vida saludable al nacer. Y, una vez obtenidos ambos valores, se logra calcular el índice de la dimensión salud.
 
+En la Figura 1 se puede identificar que los resultado del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios, ambos cálculos parecen obtener prácticamente los mismos resultados.
+
+\pagebreak
+
+```{r fig.cap="Índice de salud obtenido con la metodología original y la opción 1", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_1.rds")
+
+ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
+  labs(x = " ", y = "Valor") + 
+  scale_fill_manual(values = c("#d4dff0", "#543786")) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "none"
+  ) +
+  coord_flip()
+```
+
+
 Algunas cuestiones que limitaron esta decisión fue el hecho de que no todos los países tienen esta medida, mientras que la esperanza de vida al nacer es más común y accesible. Sin embargo, se podría imputar aproximando este valor para los países que no los tienen a través de una modificación la esperanza de vida, de todas formas, no se lleva a cabo en el presente trabajo.
 
-- Tomar ambas variables y promediarlas. Una vez obtenido el promedio se calcula el índice de este eligiendo el cero natural y objetivo aspiracional con el criterio utilizado anteriormente. 
+2. Tomar ambas variables y promediarlas. Una vez obtenido el promedio se calcula el índice de este eligiendo el cero natural y objetivo aspiracional con el criterio utilizado anteriormente. 
+
 $$prom=\frac{esp\;vida+esp\;salud}{2} \quad Dim_{salud} = \frac{prom-min}{max-min}$$
 
-- Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida saludable al nacer es notablemente menor. Esta opción se lleva a cabo tranformando los dos valores en índices y después multiplicándolos. Sin embargo, esto causa que se penalice mucho el valor de la dimensión salud en aquellos países donde la esperanza de vida saludable es considerablemente menor que la esperanza de vida. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
+En la Figura 2 se puede identificar que, nuevamente, el cálculo no parece cambiar notablemente los resultados. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto lo que indica que se está "penalizando" aquellos países con baja esperanza de vida saludable. Sin embargo, se explorarán más alternativas para encontrar una superadora.
+
+```{r fig.cap="Índice de salud obtenido con la metodología original y la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_2.rds")
+
+ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
+  labs(x = " ", y = "Valor") + 
+  scale_fill_manual(values = c("#d4dff0", "#543786")) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "none"
+  ) +
+  coord_flip()
+```
+
+3. Penalizar la esperanza de vida al nacer, disminuyendo su valor en aquellos países donde la esperanza de vida saludable al nacer es notablemente menor. Esta opción se lleva a cabo tranformando los dos valores en índices y después multiplicándolos. Sin embargo, esto causa que se penalice mucho el valor de la dimensión salud en aquellos países donde la esperanza de vida saludable es considerablemente menor que la esperanza de vida. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
 
 $$Dim_{salud}=Índice_{esp\;vida}Índice_{esp\;salud}$$
 
-- Otra opción es tomar los índices de esperanza de vida al nacer y esperanza de vida saludable al nacer, ya calculados con sus respectivos mínimos y máximos, y promediarlos.
+```{r fig.cap="Índice de salud obtenido con la metodología original y la opción 3", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_3.rds")
+
+ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
+  labs(x = " ", y = "Valor") + 
+  scale_fill_manual(values = c("#d4dff0", "#543786")) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "none"
+  ) +
+  coord_flip()
+```
+
+4. Otra opción es tomar los índices de esperanza de vida al nacer y esperanza de vida saludable al nacer, ya calculados con sus respectivos mínimos y máximos, y promediarlos.
 
 $$Dim_{salud}=\frac{Índice_{esp\;vida}+Índice_{esp\;salud}}{2}$$
 
-- Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la esperanza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primarimente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente. Dada la complejidad y subjetividad del idea propuesta se decidió no incorporarla pero se deja plasmada la misma para profundizar este análisis en futuras investigaciones.
+En la Figura 4 es evidente que los resultados no cambian notablemente, pero que al menos hay una disminución del índice al incorporar la esperanza de vida saludable.
 
-**Después de descartar las que no explicar por qué nos quedamos con salud (simplicidad ...)**
+\pagebreak
+
+```{r fig.cap="Índice de salud obtenido con la metodología original y la opción 4", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_4.rds")
+
+ggplot(bbddescrip_nuevo) +
+  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
+  labs(x = " ", y = "Valor") + 
+  scale_fill_manual(values = c("#d4dff0", "#543786")) +
+  theme_minimal() +
+  theme(
+    text = element_text(family = "serif"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "none"
+  ) +
+  coord_flip()
+```
+
+5. Se podría pensar incoporar tambien la diferencia entre esperanza de vida al nacer y la esperanza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se vea. Si bien primeramente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente. Dada la complejidad y subjetividad del idea propuesta se decidió no incorporarla pero se deja plasmada la misma para profundizar este análisis en futuras investigaciones.
+
+En base al recorrido realizado, se selecciona a la Opción 1 como la modificación del cálculo del Índice de Salud. Este enfoque logró disminuir el valor del índice para aquellos países con menor esperanza de vida saludable, sin alterar la distribución original notablemente. Este cambio resulta más representativo para la dimensión "Vida larga y saludable".
+
+En el Cuadro 1 se pueden visualizar los países con menor esperanza de vida saludable junto al cálculo del Índice Original y el Índice Modificado. La diferencia entre las variables Esperanza de vida y Esperanza de vida saludable ocasionan diferencias en los Índices calculados, que a fin de cuentas generarán el cambio en el cálculo final del IDH para cada país.  
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(dplyr)
+library(kableExtra)
+bbdd_descrip <- readRDS("Figuras Informe/Base_tabla.rds")
+
+tabla_resultado <- bbdd_descrip %>%
+  arrange(Salud_nacer) %>%
+  select(Pais, Salud_nacer, Vida_nacer, Dim_Salud, Dim_Salud2) %>%
+  head(5)
+
+tabla_resultado <- tabla_resultado %>%
+  select(Pais, Vida_nacer, Salud_nacer, Dim_Salud, Dim_Salud2) %>%
+  rename(
+    `País` = Pais,
+    `Esp. vida` = Vida_nacer,
+    `Esp. vida saludable` = Salud_nacer,
+    `Índice Original` = Dim_Salud,
+    `Índice Modificado` = Dim_Salud2
+  )
+
+knitr::kable(tabla_resultado,
+      align = "c",
+      caption = "Resultados del Índice modificado") %>%
+  kable_styling(latex_options = "HOLD_position")
+``` 
 
 ## Conocimiento
 
