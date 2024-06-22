@@ -134,7 +134,7 @@ res <- res %>%
   arrange(desc(row_number()))
 
 library("openxlsx")
-write.xlsx(res, "Resultados/resultados.xlsx")
+#write.xlsx(res, "Resultados/resultados.xlsx")
 
 
 #00770E

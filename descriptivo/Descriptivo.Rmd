@@ -550,6 +550,7 @@ colnames(bbdd_final) <- c("Codigo","Pais","Dim_Educ","Dim_Econ","Dim_Salud")
 
 # Guardar bbdd3 en un archivo Excel
 write.xlsx(bbdd_final, "bbdd_final.xlsx")
+write.xlsx(bbdd_descrip, "../bbdd_descrip.xlsx")
 
 ```
 
