@@ -53,11 +53,11 @@ El objetivo principal de la presente investigación es proponer una modificació
 
 El IDH se calcula como una media geométrica de índices que representan a las tres dimensiones estudiadas: una vida larga y saludable, el conocimiento y un nivel de vida decente.
 
-(EN LA FOTO cambiar indice de PBI por indice de ingreso para que quede igual a como lo nombramos)
-
 ![](diagrama1.png) 
 
 $$IDH = \Bigl(\text{Índice de esperanza de vida}\times\text{Índice de educación}\times\text{Índice de ingreso}\Bigl)^{1/3}$$
+
+Al considerarse la media geométrica, un mal desempeño en cualquiera de los componentes se refleja directamente en el valor del índice y no existe sustitutibilidad perfecta entre ellos. Así, se captura cuán equilibrado es el desempeño de un país en los tres ámbitos.
 
 Todos estos índices de dimensión se calculan de la siguiente forma:
 
