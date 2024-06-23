@@ -24,7 +24,7 @@ lang: "es-ES"
     \large{Facultad de Ciencias Económicas y Estadística, Universidad Nacional de Rosario}
     
     \vspace{0.5cm}
-    \large{Alfonsina Badin, Ailen Salas, Augusto Raynaudo, Camila Matellicani, Julián L'heureux, Sofia Giaquinta}
+    \large{Alfonsina Badin, Ailén Salas, Augusto Raynaudo, Camila Matellicani, Julián L'heureux, Sofia Giaquinta}
     
     \vspace{0.5cm}
     \large{Junio 2024}
@@ -40,7 +40,7 @@ source("resultados.R")
 
 # Introducción
 
-El desarrollo humano es un aspecto sumamente importante para la vida de las personas y, a nivel país, su nivel es indicador de ciertas características del territorio, de acciones políticas y las oportunidades que alcanza. Este se identifica con la idea de ampliar la riqueza de la vida humana, y no simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones.
+El desarrollo humano es un aspecto sumamente importante para la vida de las personas y, a nivel país, es un indicador de ciertas características del territorio, de acciones políticas y las oportunidades que alcanza. Este se identifica con la idea de ampliar la riqueza de la vida humana, y no simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones.
 
 En lugar de dar por sentado que el crecimiento económico conducirá automáticamente a un mayor bienestar para todas las personas, el desarrollo humano se enfoca en mejorar sus vidas en un sentido más amplio, haciendo del crecimiento de los ingresos un medio para el desarrollo, más que un fin en sí mismo. Bajo esta premisa, se tienen en cuenta también aspectos que impliquen desarrollar las capacidades de las personas, brindando la oportunidad y la libertad de utilizarlas, sin insistir en que las aprovechen.
 
@@ -184,13 +184,13 @@ La esperanza de vida saludable al nacer se podría considerar una variable que c
 
 1. Reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer directamente en el cálculo del índice de salud. Para la transformación de dicha métrica en el índice se calculó el mínimo y máximo de esta variable buscando que sea proporcional con el mínimo y máximo de la esperanza de vida al nacer.
 
-$$\min(\text{esp. salud}) = \min(\text{esp. vida})*\frac{\min(\text{esp. salud})}{\min(\text{esp. vida})}$$
+$$\text{min}_\text{esp. salud} = \text{min}_\text{esp. vida}*\frac{\min(\text{esp. salud})}{\min(\text{esp. vida})}$$
 
 Siendo:
 
-- $\min(\text{esp. salud})$: valor fijado para el cero natural de la esperanza de vida saludable al nacer.
+- $\text{min}_\text{esp. salud}$: valor fijado para el cero natural de la esperanza de vida saludable al nacer.
 
-- $\min(\text{esp. vida})$: valor fijado para el cero natural de la esperanza de vida al nacer (20 años).
+- $\text{min}_\text{esp. vida}$: valor fijado para el cero natural de la esperanza de vida al nacer (20 años).
 
 - $\min(\text{esp. salud})$: valor mínimo observado de la esperanza de vida saludable al nacer entre los países evaluados.
 
@@ -513,7 +513,7 @@ Se propone un enfoque innovador que complemente a las dimensiones existentes del
 
 Si bien la incorporación de la libertad como nueva dimensión del desarrollo humano puede generar debates sobre su naturaleza ideológica o subjetiva, se piensa que su inclusión es necesaria para medir el progreso de una nación y el bienestar de sus habitantes. Se busca implementar una metodología que cuantifique estas problemáticas, mediante un índice que permita una evaluación integral y completa de cada territorio, considerando sus particularidades.
 
-Para su aplicación se toma el índice de libertad “Freedom in the World”, publicado por la organización Freedom House. La misma es una ONG estadounidense fundada en 1941 con el fin de reunir políticos y al público del país en torno a la lucha contra la Alemania nazi y para crear conciencia sobre la amenaza facista a la seguridad y a los valores estadounidenses. En las décadas posteriores, Freedom House se estableció, a través de sus programas e investigaciones, como la principal organización estadounidense dedicada al apoyo y la defensa de la democracia y la libertad en todo el mundo. A pesar de que esta visión tiene un enfoque puramente occidental, se considera su inclusión dado que es una medida abarcativa de esta problemática.
+Para su aplicación se toma el índice de libertad “Freedom in the World”, publicado por la organización Freedom House. La misma es una ONG estadounidense fundada en 1941 con el fin de reunir políticos y al público del país en torno a la lucha contra la Alemania nazi y para crear conciencia sobre la amenaza fascista a la seguridad y a los valores estadounidenses. En las décadas posteriores, Freedom House se estableció, a través de sus programas e investigaciones, como la principal organización estadounidense dedicada al apoyo y la defensa de la democracia y la libertad en todo el mundo. A pesar de que esta visión tiene un enfoque puramente occidental, se considera su inclusión dado que es una medida abarcativa de esta problemática.
 
 Este puntaje se centra en dos ejes principales, derechos políticos y libertades civiles, y tiene en cuenta los siguientes factores:
 
