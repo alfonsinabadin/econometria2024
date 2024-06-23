@@ -595,26 +595,34 @@ La escala de color es de gran ayuda para facilitar la visualización de las vari
 
 En el Anexo se encuentran las tablas con los países ordenados según estas nuevas propuestas del IDH. 
 
+Luego de calcular y analizar los puntajes obtenidos, es posible realizar una comparación de los índices junto con el desempeño de determinados países respecto a estos.
+
 Además se muestran mapas con los países coloreados según una escala continua del IDH.
 
 ```{r echo=FALSE, fig.align='center', fig.cap="Índice de Desarrollo Humano original por país", out.width='100%' }
 knitr::include_graphics("Resultados/mapa_IDH1.jpg")
 ```
 
+Inicialmente, en cuanto al IDH original, se puede observar que en América la mayoría de los países toman valores altos de desarrollo humano, principalmente Estados Unidos, Canadá y el Cono Sur. Europa también toma valores altos de este índice en casi todos sus países, siendo el continente con más países con alto grado de desarrollo humano. En Asia, a pesar de que la gran mayoría tome valores altos destacan principalmente Japón y Corea del Sur y también se encuentran países que toman valores intermedios. En Oceanía, se tiene únicamente información sobre Australia el cual toma un valor alto del idh. Por último,  África es el continente donde hay más variabilidad del índice de idh, presentando valores bajos, medios y altos.
+
+
 ```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado sin Libertad por país"}
 knitr::include_graphics("Resultados/mapa_IDH2.jpg")
 ```
+
+Al calcular el IDH modificado sin considerar la dimensión de libertad, no se observa una diferencia muy grande en cuanto a los valores de IDH de cada país. Se puede notar una leve disminución general de este índice en casi todos los países del mundo.
 
 ```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado con Libertad por país"}
 knitr::include_graphics("Resultados/mapa_IDH3.jpg")
 ```
 
+Por el contrario, al comparar el índice de desarrollo humano que incluye la dimensión de libertad con el original se visualizan cambios sustanciales. En América hay ciertos países que se aprecia una leve o moderada disminución del IDH, principalmente países centroamericanos y Estados Unidos. En Europa se mantienen valores altos para la mayoría de los países, excepto para Rusia y Bielorusia, que bajan notablemente. En Asia parece haber una importante disminución general de los puntajes, excepto para países como Corea del Sur, Japón, India e Indonesia. En África se observa algo similar que en Asia y se destaca a Sudán del Sur por su muy bajo puntaje.
+
+La dimensión de Libertad parece afectar principalmente en las regiones africanas y asiáticas. Podría decirse que el mundo no occidental fue altamente penalizado por posibles cuestiones culturales, principalmente por presentar discrepancias con los pilares ideológicos estadounidenses, que responden a un pensamiento occidental en materia política y social, en los cuales se basa el índice de Libertad implementado.
+
 ## Análisis comparativo entre los índices. 
 
 Se calcula la correlación entre los valores de los índices y el de los puestos. Estos se muestran en la siguiente tabla
-
-
-
 
 - Rankear los países con IDH modificado y comparar (2 graficos países colores)
 
