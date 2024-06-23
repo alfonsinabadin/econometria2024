@@ -693,10 +693,17 @@ Para completar este análisis se concluye con un test no paramétrico de Bowker,
 
 El p-value obtenido para el test sobre la primera tabla fue de `r round(p_value,3)`, lo cual implica el no rechazo de $H_0)$, es decir, que no podemos afirmar que esta modificación cause que las categorías empeoren o mejoren. En contraste a esto, el p-value obtenido para el test sobre la segunda tabla fue $<0.001$, por lo que en este caso sí podemos afirmar que las modificaciones del IDH causaron un efecto en la clasificación de los países, y por lo descripto anteriormente, se ve que es más probable que los países desciendan de categoría al ser clasificados con el IDH que incluye la dimensión Libertad. 
 
+\pagebreak
 
-# Cosas que quedan propuestas
+# Consideraciones finales
 
-# Conclusión 
+A lo largo del trabajo se propusieron cambios al Índice de Desarrollo Humano con respecto a las dimensiones que lo integran. Además se propuso un cambio un poco más profundo con respecto a sus componentes, agregando una dimensión completamente nueva, que se considera importante para el desarrollo de un país. Si bien se tuvo en cuenta una calificación quizás "sesgada" para su incorporación, se plantearon sobre la mesa las cuestiones a tener en cuenta al interpretar los puntajes y resultados finales del agregado de esta nueva componente. En los resultados se ven estos "sesgos", sobre todo al visualizar los cambios en los mapas graficados; en regiones orientales, asiáticas y africanas; y no teniendo gran impacto en regiones occidentales como en Europa, Estados Unidos, Australia y algunos países sudamericanos. 
+
+Por otro lado, la incorporación de los cambios en las dimensiones preexistentes muestran algunas modificaciones más leves en los índices. Se ven algunas disminuciones como por ejemplo en Estados Unidos, donde la esperanza de salud es menor que la esperanza de vida y los cambios en la dimensión económica por desigualdad, altera su puntaje. Y luego, con la dimensión de libertad incorporada, su índice modificado final cae un poco más. En general, estas modificaciones llevaron a que los puntajes del índice de los países disminuya. 
+
+Los objetivos del trabajo fueron cubiertos. Se propusieron distintas alternativas, analizando exploratoriamente sus efectos en el resultado final, para luego elegir algunas opciones para calcular los índices modificados y poder comparar sus efectos en cada país. Se tocaron diversos tópicos de aspectos sobre la sociedad, desigualdades y discriminación, calidad de vida, derechos y libertades.
+
+Se propone para futuras investigaciones del área tener en cuenta estas nuevas propuestas, componentes modificados, formas de incorporación de variables al índice, nuevas dimensiones, etc. como alternativas para el IDH oficial desarrollado por las Naciones Unidas. 
 
 \pagebreak
 

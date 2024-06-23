@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.17)  23 JUN 2024 12:21
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.17)  23 JUN 2024 13:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -970,57 +970,64 @@ File: Informe_files/figure-latex/dispIDH-1.pdf Graphic file (type pdf)
 [32]
 
 [33]
+Overfull \hbox (0.77501pt too wide) in paragraph at lines 1340--1346
+[]\TU/lmr/m/n/10 Los objetivos del trabajo fueron cubiertos. Se propusieron distintas alternativas, analizando exploratoriamente
+ []
+
+
 
 [34]
+
+[35]
 File: Informe_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
 <use Informe_files/figure-latex/unnamed-chunk-4-1.pdf>
 
 
-[35]
-Underfull \hbox (badness 1264) in paragraph at lines 1433--1437
+[36]
+Underfull \hbox (badness 1264) in paragraph at lines 1467--1471
 []\TU/lmr/m/n/10 Eustat. (2023). Índice de Desarrollo Humano por Indicadores según Países 2022. []$[][][][][] [] [] [] [][] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1433--1437
+Underfull \hbox (badness 10000) in paragraph at lines 1467--1471
 $[][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] [][] [] [][][][][][] [][] [][] [][] [][][][][][][][][][] [][] [][][][][][] [][] [][][] [][] [][][][][][][][][][][] [][] [][][][][] [][] [][][][][][] [][]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1440--1444
+Underfull \hbox (badness 10000) in paragraph at lines 1474--1478
 $[] [] [][][] [] [][][] [] [][] [] [][] [] [][][][][][][][][] [] [] [] [][] [] [][][][] [] [][][][][][][][][][] [] [][][][][] [] [][][][][][][][][][][][][][][] [] [][][][][][][][][][][][] []$
  []
 
 
 
-[36]
-Underfull \hbox (badness 1033) in paragraph at lines 1467--1471
+[37]
+Underfull \hbox (badness 1033) in paragraph at lines 1501--1505
 []\TU/lmr/m/n/10 World Health Organization. (2020). Healthy Life Expectancy (HALE) Metadata. []$[][][][][] [] [] [] [][][] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1467--1471
+Underfull \hbox (badness 10000) in paragraph at lines 1501--1505
 $[][][] [] [][][] [] [][][][][] [] [][][][] [] [][][][][][][] [][] [][][][][][] [] [][][] [][] [][][][][][][][][] [] [][][][][][][][] [] [][][][] [][] [][][][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1471--1474
+Underfull \hbox (badness 10000) in paragraph at lines 1505--1508
 $[] [] [][][] [] [][][] [] [][][] [] [][][][] [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][] [][] [][][][][][] [] [][][][][][][][][] [][] [][][][][] [][] [][][][][][][] [] [][][] [] [][][][] [][]$
  []
 
 
 
-[37]
+[38]
 File: Resultados/TablaAnexo1.png Graphic file (type bmp)
 <Resultados/TablaAnexo1.png>
 
 
-[38]
+[39]
 File: Resultados/TablaAnexo2.png Graphic file (type bmp)
 <Resultados/TablaAnexo2.png>
 
 
-[39] (./Informe.aux)
+[40] (./Informe.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -1030,12 +1037,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 20120 strings out of 476254
- 372009 string characters out of 5785481
+ 20118 strings out of 476254
+ 371984 string characters out of 5785481
  1941560 words of memory out of 5000000
- 42340 multiletter control sequences out of 15000+600000
+ 42338 multiletter control sequences out of 15000+600000
  565603 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  90i,8n,123p,406b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Informe.pdf (39 pages).
+Output written on Informe.pdf (40 pages).
