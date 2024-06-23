@@ -35,17 +35,17 @@ lang: "es-ES"
 
 # Introducción
 
-El desarrollo humano consiste en ampliar la riqueza de la vida humana, en lugar de simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones[^1].
+El desarrollo humano es un aspecto súmamente importante para la vida de las personas y, a nivel país, su nivel es indicador de ciertas características del territorio, de acciones políticas y las oportunidades que alcanza. Este se identifica con la idea de ampliar la riqueza de la vida humana, y no simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones[^1].
 
-En lugar de dar por sentado que el crecimiento económico conducirá, automáticamente, a un mayor bienestar para todos, el desarrollo humano se enfoca en mejorar las vidas de las personas en un sentido más amplio. Por lo tanto, el crecimiento de los ingresos se considera un medio para el desarrollo, más que un fin en sí mismo. Bajo esta premisa, se tienen en cuenta también aspectos que impliquen desarrollar las capacidades de las personas, brindando la oportunidad y la libertad de utilizarlas, sin insistir en que las aprovechen.
+En lugar de dar por sentado que el crecimiento económico conducirá automáticamente a un mayor bienestar para todas las personas, el desarrollo humano se enfoca en mejorar sus vidas en un sentido más amplio, haciendo del crecimiento de los ingresos un medio para el desarrollo, más que un fin en sí mismo. Bajo esta premisa, se tienen en cuenta también aspectos que impliquen desarrollar las capacidades de las personas, brindando la oportunidad y la libertad de utilizarlas, sin insistir en que las aprovechen.
 
 [^1]: Fuente: [\textcolor{blue}{\underline{Human Development Reports, United Nations Development Programme.}}](https://hdr.undp.org/about/human-development).
 
-En 1990 se calcula por primera vez por el Programa de las Naciones Unidas para el Desarrollo un indicador del desarollo humano bajo la definición mencionada, denominado Índice de Desarrollo Humano (IDH). Este es un indicador compuesto, extensamente utilizado a nivel internacional, que relaciona tres dimensiones para dar cuenta del grado de oportunidad efectiva de expandir las capacidades de las personas: una vida larga y saludable, el acceso al conocimiento y el tener un nivel estándar de vida decente. Es una forma de obtener el promedio de los logros de un área geográfica específica.
+En 1990 calcula por primera vez el Programa de las Naciones Unidas para el Desarrollo un indicador del desarrollo humano bajo la definición mencionada, denominado Índice de Desarrollo Humano (IDH). Este es un indicador compuesto, extensamente utilizado a nivel internacional, que relaciona tres dimensiones para dar cuenta del grado de oportunidad efectiva de expandir las capacidades de las personas: una vida larga y saludable, el acceso al conocimiento y el tener un nivel estándar de vida decente. Es una forma de obtener el promedio de los logros de un área geográfica específica.
 
-Para calcularlo, se toman las variables esperanza de vida, años esperados de escolaridad, años promedio de escolaridad y PBN per cápita de cada país. Se propone cuestionar el uso de estas variables o si es necesario incluir nuevas en el cálculo, ya que gracias a la facilidad que internet ofrece, se podrían tener en cuenta nuevas medidas de fácil acceso.
+Para calcularlo, se toman las variables esperanza de vida, años esperados de escolaridad, años promedio de escolaridad y producto bruto nacional (PNB) per cápita de cada país. Se propone cuestionar el uso de estas variables o si es necesario incluir nuevas en el cálculo, ya que gracias a la facilidad que Internet ofrece, se podrían tener en cuenta nuevas medidas de fácil acceso.
 
-El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que refleje en un sentido más integrado la naturaleza de cada país en relación al desarrollo humano. Dada la definición de desarrollo humano antes mencionada, se propone tener en cuenta para el cálculo del IDH también aspectos sobre la sociedad, la discriminación, los derechos, la calidad de vida, desigualdades y las libertades civiles.
+El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que refleje, en un sentido más integrado, la naturaleza de cada país en relación al desarrollo humano. Dada la definición de desarrollo humano antes mencionada, se propone tener en cuenta para el cálculo del IDH también aspectos sobre la sociedad, la discriminación, los derechos, la calidad de vida, desigualdades y las libertades civiles.
 
 \pagebreak
 
@@ -63,13 +63,13 @@ Todos estos índices de dimensión se calculan de la siguiente forma:
 
 $$\text{Índice de dimensión}=\frac{\text{valor actual - valor mínimo}}{\text{valor máximo - valor mínimo}}$$
 
-Los valores mínimo y máximo están definidos para transformar la variable en un indicador con valores entre 0 y 1 y se llaman "cero natural" y "objetivo aspiracional", respectivamente.
+donde los valores mínimo y máximo están definidos para transformar la variable en un indicador con valores entre 0 y 1 y se llaman "cero natural" y "objetivo aspiracional", respectivamente.
 
 ### Vida larga y saludable 
 
-La primer componente del IDH es vida larga y saludable, que sin dudas promueve el desarrollo humano y es primordial para mantener un buen estilo de vida. Actualmente, el indicador que representa este aspecto se obtiene a partir de la esperanza de vida al nacer. Entendiendo a la esperanza de vida al nacer como número medio de años que un recién nacido podría esperar vivir, si transcurriera su vida expuesto a las tasas de mortalidad específicas por sexo y edad vigentes en el momento de su nacimiento, para un año concreto, en un país, territorio o zona geográfica determinados.
+La primera dimensión del IDH es vida larga y saludable, que sin dudas promueve el desarrollo humano y es primordial para mantener un buen estilo de vida. Actualmente, el indicador que representa este aspecto se obtiene a partir de la esperanza de vida al nacer: el número medio de años que un recién nacido podría esperar vivir, si transcurriera su vida expuesto a las tasas de mortalidad específicas por sexo y edad vigentes en el momento de su nacimiento, para un año concreto, en un país, territorio o zona geográfica determinados.
 
-Para el cálculo del IDH se transforma la esperanza de vida al nacer en un índice calculado con el índice de dimensión mencionado anteriormente. Para esto se definen valores mínimos y máximos de la esperaza de vida. La elección del cero natural para la esperanza de vida es de 20 años y está basada en evidencia histórica que muestra que ningún país en el siglo 20 ha tenido una esperanza de vida menor a los 20 años. El valor máximo u objetivo aspiracional está definido a los 85 años ya que es un objetivo realista al que muchos países pueden aspirar, especialmente por las constantes mejoras en las condiciones de vida y los avances médicos.
+Para el cálculo del IDH se transforma la esperanza de vida al nacer en un índice calculado con el índice de dimensión mencionado anteriormente, para esto se definen valores mínimos y máximos de la esperaza de vida. La elección del cero natural para la esperanza de vida es de 20 años y está basada en evidencia histórica que muestra que ningún país en el siglo 20 ha tenido una esperanza de vida menor a los 20 años. El valor máximo u objetivo aspiracional está definido a los 85 años ya que es un objetivo realista al que muchos países pueden aspirar, especialmente por las constantes mejoras en las condiciones de vida y los avances médicos.
 
 De esta forma el índice de esperanza de vida se calcula de la siguiente forma:
 
@@ -77,7 +77,7 @@ $$\text{Índice de esperanza de vida} = \frac{\text{Esperanza de vida al nacer}-
 
 ## Conocimiento 
 
-En representación de la dimensión "Conocimiento", se incluye al cálculo del IDH el índice de educación. Este se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
+En representación de la dimensión del conocimiento, se incluye al cálculo del IDH el índice de educación. Este se calcula como una media aritmética entre dos indicadores de dimensión para las variables años esperados de escolaridad y años promedio de escolaridad.
 
 Los años esperados de escolaridad refieren al número de años de escolaridad que puede esperar recibir un niño en edad de comenzar la escuela, si los patrones vigentes de las tasas de matriculación por edad se mantienen a lo largo de su vida. Y los años medios de escolaridad son el  número promedio de años de educación recibidos por las personas de 25 años o más, calculado a partir de los niveles de logros educativos utilizando la duración oficial de cada nivel.
 
@@ -97,17 +97,17 @@ $$\text{Índice de educación} = \frac{\text{Índice años esperados de escolari
 
 Se considera que un nivel estándar de vida se puede alcanzar cuando la nación en la que se reside tiene un alto producto bruto interno per cápita, que refiere al valor monetario de la producción de bienes y servicios de demanda final de un país o región durante un período determinado para cada habitante de la población. Es por eso que el PBI fue la variable considerada en el cálculo del IDH en un principio.
 
-Sin embargo, a partir del año 2010, para medir el nivel de vida, el producto nacional bruto (PNB) per cápita reemplaza al producto interno bruto (PIB) per cápita. Esto se debe a que en un mundo globalizado, suele haber grandes diferencias entre los ingresos de los residentes de un país y su producto interno. Parte de lo que ganan los habitantes se envía al extranjero, algunas personas reciben remesas del exterior y algunos países reciben considerables flujos de ayuda. 
+Sin embargo, a partir del año 2010, para medir el nivel de vida, el producto nacional bruto (PNB) per cápita reemplaza al producto interno bruto (PBI) per cápita. Esto se debe a que en un mundo globalizado, suele haber grandes diferencias entre los ingresos de los residentes de un país y su producto interno. Parte de lo que ganan los habitantes se envía al extranjero, algunas personas reciben remesas del exterior y algunos países reciben considerables flujos de ayuda. 
 
 Se define al producto nacional bruto (PNB) per cápita como los ingresos totales de una economía generados por su producción y la propiedad de los factores de producción, menos los ingresos pagados por el uso de factores de producción que son propiedad del resto del mundo, convertidos a dólares internacionales usando las tasas de la PPA, y divididos por la población a mitad del año.
 
 Para comparar el estándar de vida entre los países, los datos deben ajustarse por la paridad del poder adquisitivo (PPA) a fin de eliminar las diferencias en el valor de un dólar entre países. Se entiende por paridad de poder adquisitivo (PPA) al tipo de cambio que refleja las diferencias de precios entre países y permite hacer comparaciones internacionales del producto e ingreso reales. En la tasa de PPA en US\$ (utilizada en este Informe), US\$1 en PPA tiene el mismo poder adquisitivo en la economía de cualquier país que US\$1 en los Estados Unidos de América. Para los datos correspondientes al 2019 se utiliza el PPA en US\$ base de 2011 para ajustar los valores de PNB per cápita.
 
-Para el cálculo de este índice se considera el logaritmo de los valores ya que el PNB tiene una distribución asimétrica. Además, una vez alcanzado determinado nivel de vida se necesitan grandes cambios en el ingreso para mejorarlo aún más, por lo cual se tiene atenuar el efecto del aumento de ingresos en países más desarrollados.**LEER ESTOOOO**
+Para el cálculo de este índice se considera el logaritmo de los valores ya que el PNB tiene una distribución asimétrica. Además, una vez alcanzado determinado nivel de vida se necesitan grandes cambios en el ingreso para mejorarlo aún más, por lo cual se debe atenuar el efecto del aumento de ingresos en países más desarrollados.
 
 En el _IDH_ se calcula el índice de PNB como
 
-$$Índice_{PNB} = \frac{ln(PNB) - ln(100)}{ln(75.000)-ln(100)}$$
+$$\text{Índice}_{PNB} = \frac{ln(PNB) - ln(100)}{ln(75.000)-ln(100)}$$
 
 El bajo valor mínimo para el Producto Nacional Bruto per cápita se considera en los 100 dólares, el uso de este valor se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. Por otro lado, el valor máximo se establece en 75.000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75,000 dólares. Actualmente solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75,000 dólares.
 
@@ -118,9 +118,9 @@ El bajo valor mínimo para el Producto Nacional Bruto per cápita se considera e
 [^2]: Fuente: [\textcolor{blue}{\underline{Cálculo de los índices de desarrollo humano, United Nations Development Programme.}}](https://www.undp.org/sites/g/files/zskgke326/files/2023-09/notas_tecnicas.pdf
 ).
 
-A través de los años las Naciones Unidas defendieron diversos índices intentando ampliar el ... del IDH original. En esta sección se mencionan algunos de ellos:
+A través de los años, las Naciones Unidas definieron diversos índices intentando ampliar la precisión del IDH original, agregando variables y modificando cálculos a fines de representar mejor el motivo del análisis. En esta sección se mencionan algunos de ellos:
 
-* **Índice de Desarrollo Humano ajustado por la Desigualdad (IDH-D)**: El IDH-D es una medida que complementa al Índice de Desarrollo Humano (IDH) tradicional al incorporar la desigualdad existente dentro de un país. Tiene en cuenta las desigualdades existentes en las tres dimensiones: salud, educación e ingresos. Para ello, hace uso de la familia de mediciones de desigualdad de Atkinson (1970) y fija el parámetro de aversión ε en uno.
+* **Índice de Desarrollo Humano ajustado por la Desigualdad (IDH-D)**: El IDH-D es una medida que complementa al Índice de Desarrollo Humano (IDH) tradicional al incorporar la desigualdad existente dentro de un país. Tiene en cuenta las desigualdades existentes en las tres dimensiones: salud, educación e ingresos. Para ello, hace uso de la familia de mediciones de desigualdad de Atkinson (1970) y fija el parámetro de aversión $\epsilon$ en uno.
 
 * **Índice de Desarrollo de Género (IDG)**: El IDG refleja las desigualdades entre hombres y mujeres realizando el cálculo de las tres dimensiones básicas de desarrollo humano por género, y luego calcula una razón entre el IDH de las mujeres y el de los hombres. 
 
@@ -138,11 +138,11 @@ Durante la investigación se debate cada una de las dimensiones que componen el 
 
 Si bien se piensa que el calculo del IDH actual logra reflejar muchas cuestiones vinculadas a lo que hace que un país se pueda considerar con mayor o menor desarrollo humano, hay otros aspectos de lo que se define como desarrollo humano que no son tenidos en cuenta. 
 
-En primer lugar, se menciona que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos sino que los ingresos se consideran un medio para el desarrollo, más que un fin en sí mismo. Esto indica que si bien una medida como el Producto Nacional Bruto podría ser un medio para explicar si un país esta más o menos desarrollado no podría definir esto por completo, ya que el tener un valor alto de _PNB_ no garantizaría el bienestar de toda la población. A partir de esta problemática surge la idea de implementar otra variable de corrección en esta dimensión para así poder tener en cuenta otras cuestiones del desarrollo humano para el nivel de vida de las personas.
+Poniendo el foco en la dimensión de una vida larga y saludable, se puede identificar que en un principio el mismo nombre de esta dimensión no esta completamente explicado por la variable que se utiliza ya que la esperanza de vida solo indicaría si las personas tienen una vida larga o corta, pero no se determina qué tan saludable es. Por esta razón, en esta dimensión se considera importante incorporar otra variable que pueda tener en cuenta las condiciones en las que se vive, en cuanto a salud, en los distintos países. 
 
-Poniendo el foco en la dimensión de una vida larga y saludable, se puede identificar que en un principio el mismo nombre de esta dimensión no esta completamente explicado por la variable que se utiliza ya que la esperanza de vida solo indicaría si las personas tienen una vida larga o corta, pero no se determina qué tan saludable es. Por esta razón, en esta dimensión se considera importante incorporar otra variable que pueda tener en cuenta las condiciones en las que se vive, en cuanto a salud, en los distintos países.
+En segundo lugar, se menciona que no se toma por sentado que el crecimiento económico conduce a un mayor bienestar para todos sino que los ingresos se consideran un medio para el desarrollo, más que un fin en sí mismo. Esto indica que si bien una medida como el Producto Nacional Bruto podría ser un medio para explicar si un país esta más o menos desarrollado no podría definir esto por completo, ya que el tener un valor alto de PNB no garantizaría el bienestar de toda la población. A partir de esta problemática surge la idea de implementar otra variable de corrección en esta dimensión para así poder tener en cuenta otras cuestiones del desarrollo humano para el nivel de vida de las personas.
 
-Por otro lado, la definición de desarrollo humano menciona que este consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles cómo vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al indice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad y los derechos de las personas en su día a día. 
+Por otro lado, la definición de desarrollo humano menciona que este consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles cómo vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al indice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad y los derechos de las personas en su día a día.
 
 # Propuestas y modificaciones 
 
@@ -152,7 +152,7 @@ En esta sección se explica cada una de las modificaciones propuestas para este 
 
 ### Debate
 
-Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la __Esperanza de vida saludable al nacer__ (o __Esperanza de vida en buena salud al nacer__)  para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
+Como se mencionó anteriormente, tener una alta esperanza de vida sin dudas logra una vida larga, pero no necesariamente saludable. Esta variable no proporciona información sobre la calidad de vida en el horizonte de años de vida y si este horizonte se desarrolla con buena salud o, por el contrario, se desarrolla con alguna discapacidad o dependencia. Es por esto que se propone hacer uso de la Esperanza de vida saludable al nacer (o Esperanza de vida en buena salud al nacer)  para cuantificar este aspecto según la cantidad de años de calidad y no sólo en cantidad de años. 
 
 Se considera condición de buena salud a la ausencia de limitaciones funcionales o de discapacidad ya que las enfermedades crónicas, los problemas mentales y la discapacidad física aumentan su prevalencia con la edad y reducen la calidad de vida de las personas que sufren estas condiciones de salud. La esperanza de vida saludable al nacer es una medida que combina información de mortalidad y de morbilidad y se calcula en base al método Sullivan.
 
@@ -180,29 +180,27 @@ La esperanza de vida saludable al nacer se podría considerar una variable que c
 
 1. Reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer directamente en el cálculo del índice de salud. Para la transformación de dicha métrica en índice se calculó el mínimo y máximo de esta variable buscando que sea proporcional con el mínimo y máximo de la esperanza de vida al nacer.
 
-$$min_{esp\;salud} = min_{esp\;vida}*\frac{min(esp\;salud)}{min(esp\;vida)}$$
+$$\min(\text{esp. salud}) = \min(\text{esp. vida})*\frac{\min(\text{esp. salud})}{\min(\text{esp. vida})}$$
 
 Siendo:
 
-- $min_{esp\;salud}$: valor fijado para el cero natural de la esperanza de vida saludable al nacer.
+- $\min(\text{esp. salud})$: valor fijado para el cero natural de la esperanza de vida saludable al nacer.
 
-- $min_{esp\;vida}$: valor fijado para el cero natural de la esperanza de vida al nacer (20 años).
+- $\min(\text{esp. vida})$: valor fijado para el cero natural de la esperanza de vida al nacer (20 años).
 
-- $min(esp\;salud)$: valor mínimo observado de la esperanza de vida saludable al nacer entre los países evaluados.
+- $\min(\text{esp. salud})$: valor mínimo observado de la esperanza de vida saludable al nacer entre los países evaluados.
 
-- $min(esp\;vida)$: valor mínimo observado de la esperanza de vida al nacer entre los países evaluados.
+- $\min(\text{esp vida})$: valor mínimo observado de la esperanza de vida al nacer entre los países evaluados.
 
 De igual manera, se calcula el objetivo aspiracional para la esperanza de vida saludable al nacer. Y, una vez obtenidos ambos valores, se logra calcular el índice de la dimensión salud.
 
-$$Dim_{salud} = \frac{esp\;salud-min_{esp\;salud}}{max_{esp\;salud}-min_{esp\;salud}}$$
-En la figura \ref{fig:Figura1} se puede identificar que los resultados del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto. Sin embargo, los datos centrales se posicionan en el mismo rango y el máximo valor parecería mantenerse.
-
-
-\pagebreak
+$$\text{Índice de dimensión}_{\text{salud}} = \frac{\text{esp. salud}-\min(\text{esp. salud})}{\max(\text{esp. salud})-\min(\text{esp. salud})}$$
+En la Figura 1 se puede identificar que los resultados del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto, sin embargo, los datos centrales se posicionan en el mismo rango y el máximo valor parecería mantenerse.
 
 ```{r Figura1, fig.cap="Índice de salud obtenido con la metodología original y la opción 1", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_1.rds")
+bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 1")
 
 ggplot(bbddescrip_nuevo) +
   geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
@@ -220,13 +218,14 @@ ggplot(bbddescrip_nuevo) +
 
 2. Tomar ambas variables y promediarlas. Una vez obtenido el promedio se calcula el índice de este eligiendo el cero natural y el objetivo aspiracional con el criterio utilizado anteriormente. 
 
-$$prom=\frac{esp\;vida+esp\;salud}{2} \quad Dim_{salud} = \frac{prom-min}{max-min}$$
+$$\text{Promedio}=\frac{\text{esp. vida}+\text{esp salud}}{2} \quad \text{Índice de dimensión}_\text{salud} = \frac{\text{Promedio}-\min}{\max-\min}$$
 
-En la figura \ref{fig:Figura2} se puede identificar que, nuevamente, el cálculo no parece cambiar notablemente los resultados, disminuyendo el mínimo del índice de salud respecto al original y manteniendo datos centrales y el máximo.
+En la Figura 2 se puede identificar que, nuevamente, el cálculo no parece cambiar notablemente los resultados, disminuyendo el mínimo del índice de salud respecto al original y manteniendo datos centrales y el máximo.
 
 ```{r Figura2, fig.cap="Índice de salud obtenido con la metodología original y la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_2.rds")
+bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 2")
 
 ggplot(bbddescrip_nuevo) +
   geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
@@ -241,13 +240,15 @@ ggplot(bbddescrip_nuevo) +
   ) +
   coord_flip()
 ```
-3. Penalizar la esperanza de vida al nacer. Esta opción se lleva a cabo transformando la esperanza de vida al nacer y la esperanza de vida saludable al nacer en índices y después multiplicándolos. Como era de esperarse, esto causa que se penalice mucho el valor de la dimensión salud, tal como puede observarse en la figura \ref{fig:Figura3}. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Sin embargo, para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
 
-$$Dim_{salud}=Índice_{esp\;vida}*Índice_{esp\;salud}$$
+3. Penalizar la esperanza de vida al nacer. Esta opción se lleva a cabo transformando la esperanza de vida al nacer y la esperanza de vida saludable al nacer en índices y después multiplicándolos. Como era de esperarse, esto causa que se penalice mucho el valor de la dimensión salud, tal como puede observarse en la Figura 3. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Sin embargo, para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
+
+$$\text{Índice de dimensión}_\text{salud}=\text{Índice de esp. vida}\times\text{Índice de esp. salud}$$
 
 ```{r Figura3, fig.cap="Índice de salud obtenido con la metodología original y la opción 3", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_3.rds")
+bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 3")
 
 ggplot(bbddescrip_nuevo) +
   geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
@@ -265,15 +266,14 @@ ggplot(bbddescrip_nuevo) +
 
 4. Otra alternativa resulta al tomar los índices de esperanza de vida al nacer y esperanza de vida saludable al nacer, ya calculados con sus respectivos mínimos y máximos, y promediarlos.
 
-$$Dim_{salud}=\frac{Índice_{esp\;vida}+Índice_{esp\;salud}}{2}$$
+$$\text{Índice de dimensión}_\text{salud}=\frac{\text{Índice de esp. vida}+\text{Índice de esp. salud}}{2}$$
 
-En la figura \ref{fig:Figura4} es evidente que la distribución casi no presenta cambios. Estos son aún más pequeños que en los casos anteriores dado que se está utilizando un promedio de los índices lo cuál aminora el efecto de la nueva variable.
-
-\pagebreak
+En la Figura 4 es evidente que la distribución casi no presenta cambios. Estos son aún más pequeños que en los casos anteriores dado que se está utilizando un promedio de los índices lo cuál aminora el efecto de la nueva variable.
 
 ```{r Figura4, fig.cap="Índice de salud obtenido con la metodología original y la opción 4", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_4.rds")
+bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 4")
 
 ggplot(bbddescrip_nuevo) +
   geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
@@ -293,8 +293,7 @@ ggplot(bbddescrip_nuevo) +
 
 En base al recorrido realizado, se selecciona a la Opción 1 como la modificación del cálculo del Índice de Salud. Se consideró que esta alternativa además de reflejar el cambio que se estaba buscando expresar en esta componente (priorizar no solo la cantidad si no la calidad), resulta la de mayor simplicidad a la hora de interpretar la dimensión.
 
-Si bien la distribución de este índice no parece variar demasiado de la original, hay una variación en el puesto de los países según la dimensión salud. Esto se evidencia en el cuadro donde se pueden visualizar los países con menor esperanza de vida saludable junto al cálculo del Índice Original y el Índice Modificado. La diferencia entre las variables Esperanza de vida y Esperanza de vida saludable ocasionan diferencias en los Índices calculados, que a fin de cuentas generarán el cambio en el cálculo final del IDH para cada país.  
-
+Si bien la distribución de este índice no parece variar demasiado de la original, hay una variación en el puesto de los países según la dimensión salud. Esto se evidencia en el Cuadro 1, donde se pueden visualizar los países con menor esperanza de vida saludable junto al cálculo del Índice Original y el Índice Modificado. La diferencia entre las variables Esperanza de vida y Esperanza de vida saludable ocasionan diferencias en los Índices calculados, que a fin de cuentas generarán el cambio en el cálculo final del IDH para cada país.  
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
@@ -339,7 +338,7 @@ Lo ideal sería que las mediciones de la dimensión de conocimiento incorporasen
 
 ### Debate 
 
-Al utilizar el _PNB_ ajustado por PPA para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar qué tan bueno es el nivel de vida de este. La definición de desarrollo humano, mencionada al principio del presente informe, establece que el crecimiento económico no necesariamente conduce a un mayor bienestar **para todos**.
+Al utilizar el PNB ajustado por PPA para medir la dimensión de nivel estándar de vida decente se esta tomando en cuenta solamente el desarrollo económico de un país para explicar qué tan bueno es el nivel de vida de este. La definición de desarrollo humano, mencionada al principio del presente informe, establece que el crecimiento económico no necesariamente conduce a un mayor bienestar para todas las personas.
 
 En ciertas situaciones puede haber un país con un gran valor de PNB donde las riquezas no estén distribuidas equitativamente. Es decir, quizás este valor de PNB alto es acumulado por un bajo porcentaje de la población mientras que existe un gran porcentaje de personas que no tienen un nivel de vida decente. El producto nacional bruto no logra reflejar la distribución de los ingresos de un país, es por esta razón que se considera incorporar en esta dimensión el coeficiente de Gini. 
 
@@ -388,7 +387,7 @@ ggplot(data, aes(x = poblacion, y = renta)) +
   geom_label(aes(x = 70, y = 25, label ="Curva de Lorenz"),
              family = "serif",fill = "#543786", color = "white",
              label.size = 0) +
-  geom_label(aes(x = 45, y = 30, label ="Área A"),
+  geom_label(aes(x = 43, y = 30, label ="Área A"),
              family = "serif",fill = "#d4dff0", color = "black",
              label.size = 0) +
   geom_label(aes(x = 90, y = 45, label ="Área B"),
@@ -402,7 +401,7 @@ ggplot(data, aes(x = poblacion, y = renta)) +
   )
 ```
 
-Para comprender la lógica, se puede observar en la figura \ref{fig:Figura5} que el 50% de la población alcanza un 25% del ingreso mientras que un 75% de la población llega a más del 50% del ingreso, es decir, el ingreso que logra el 50% de la población lo alcanza el 25% contiguo, lo cual indica desigualdad ya que el ingreso no estaría equitativamente distribuído.
+Para comprender la lógica, se puede observar en la Figura 5 que el 50% de la población alcanza un 25% del ingreso mientras que un 75% de la población llega a más del 50% del ingreso, es decir, el ingreso que logra el 50% de la población lo alcanza el 25% contiguo, lo cual indica desigualdad ya que el ingreso no estaría equitativamente distribuido.
 
 Se propone incorporar el índice de Gini al cálculo del IDH como $(1-\frac{GINI}{100})$ para que un país más desigual en términos salariales tenga menos desarrollo.
 
@@ -414,12 +413,12 @@ A continuación se presentan las distintas maneras de incorporar el coeficiente 
 
 $$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
 
-$$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(max(PNB_{Gini}))-\ln(100)}$$
-
-\pagebreak
+$$\text{Índice de dimensión}_\text{Ingreso}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(\max(PNB_{Gini}))-\ln(100)}$$
 
 ```{r Figura6, fig.cap="Índice de PNB obtenido con la metodología original y la opción 1", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 bbddescrip_nuevo <- readRDS("Figuras Informe/econ_base_box_1.rds")
+bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice Original","Índice Original","Índice Opción 1")
+
 ggplot(bbddescrip_nuevo) +
   geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
   labs(x = "Indice", y = "Valor") + 
@@ -434,16 +433,17 @@ ggplot(bbddescrip_nuevo) +
   coord_flip()
 ```
 
-Esta modificación del cálculo, en comparación con el original, devuelve valores menores y cambian sus medidas descriptivas de posición, como la mediana, lo cual da indicio de que la posición de los países podría cambiar. Esto se puede observar en la figura \ref{fig:Figura6}.
+Esta modificación del cálculo, en comparación con el original, devuelve valores menores y cambian sus medidas descriptivas de posición, como la mediana, lo cual da indicio de que la posición de los países podría cambiar. Esto se puede observar en la Figura 6.
 
 2. Una segunda opción considerada fue calcular el índice de PNB y luego multiplicarlo por $1-\frac{GINI}{100}$. Esta opción disminuía demasiado los valores de esta dimensión por lo que también se probó aplicarle la raíz $1-\frac{GINI}{100}$, logrando que tenga menos peso esta penalización.
 
-$$Dim_{Ing} = Índice_{PNB} * \sqrt{1-\frac{GINI}{100}}$$
+$$\text{Índice de dimensión}_\text{Ingreso} = \text{Índice de PNB} \times \sqrt{1-\frac{GINI}{100}}$$
 
-En la figura \ref{fig:Figura7} se puede observar el cambio abrupto mencionado al no utilizar la raíz en la corrección y cómo la incorporación de la misma diminuir esta penalización. De todas formas, el cambio con esta opción continúa siendo abrupto en comparación con la opción 1. 
+En la Figura 7 se puede observar el cambio abrupto mencionado al no utilizar la raíz en la corrección y cómo la incorporación de la misma diminuir esta penalización. De todas formas, el cambio con esta opción continúa siendo abrupto en comparación con la opción 1. 
 
-```{r Figura7, fig.cap="Índice de PNB obtenido con la metodología original y los diferentes enfoques de la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+```{r Figura7, fig.cap="Índice de PNB obtenido con la metodología original y los diferentes enfoques de la opción 2", fig.height=3, echo=FALSE, message=FALSE, warning=FALSE}
 bbddescrip_nuevo <- readRDS("Figuras Informe/econ_base_box_2.rds")
+bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice Original","Índice Original",ifelse(bbddescrip_nuevo$tipo_variable == "Indice Opcion 2 sin raiz", "Índice Opción 2 sin raíz", "Índice Opción 2 con raíz"))
 
 ggplot(bbddescrip_nuevo) +
   geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
@@ -461,7 +461,7 @@ ggplot(bbddescrip_nuevo) +
 
 Después de analizar ambas opciones, se consideró mejor la multiplicación del coeficiente de Gini previo al cálculo del índice, es decir la opción 1. Puesto que los valores de la segunda opción resultan ser considerablemente menores. Además, otro factor importante es que se intenta que los índices de cada dimensión puedan tomar un valor cercano 1 y esta alternativa no permite esta opción por la naturaleza de su cálculo.  
 
-En el siguiente cuadro donde se muestran los 5 países con menor PNB ajustado por Gini, puede visualizarse que hay una variación puesto de los países según la dimensión salud. Es notable en el cambio de los valores ajustando la variable considerada para esta dimensión por el coeficiente de Gini.
+En el Cuadro 2 donde se muestran los 5 países con menor PNB ajustado por Gini, puede visualizarse que hay una variación en el puesto de los países al comparar el Índice Original y el Modificado. Los cambio con el índice modificado generará una especie de penalización en elcálculo del IDH a aquellos países que no reparten equitativamente sus ingresos.
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 library(dplyr)
@@ -536,31 +536,36 @@ Para su incorporación al IDH propuesto, surge el debate entre incorporar a toda
 
 A pesar de que este índice posee cierto grado de subjetividad con tendencia a la ideología estadounidense, este fue el resultado de una búsqueda profunda de una medida que logre cuantificar la presente dimensión y que sea comparable en los distintos países. Lo ideal sería poder formar un índice con un enfoque más objetivo considerando indicadores que demuestren concretamente las libertades de una población. Sin embargo, dada la falta de variables que logren abarcar esta amplia problemática y que estén cuantificadas en variedad de países, sumado a la complejidad que conllevaría formar este índice desde cero, este acercamiento es una buena aproximación de lo que se considera como un ideal de un país libre y democrático. Queda propuesto el análisis de esta nueva dimensión para una futura investigación.
 
-# Cálculo de IDH modif
+\pagebreak
+
+# IDH modificado: implementación de las propuestas
 
 Los índices elegidos resultan:
 
 -	Índice de salud: reemplazar la esperanza de vida al nacer por la esperanza de vida saludable al nacer.
-$$Dim_{salud} = \frac{esp\;salud-17.41872}{74.75077-17.41872}$$
+
+$$\text{Índice de salud*} = \frac{\text{esp. vida saludable}-17.41872}{74.75077-17.41872}$$
 
 -	Índice económico: multiplicar $1-\frac{GINI}{100}$  por el PNB de cada país y luego convertir la métrica resultante en un índice.
-$$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
-$$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(53377.0398)-\ln(100)}$$
+
+$$PNB_{Gini} = PNB \times \left(1-\frac{GINI}{100}\right)$$
+
+$$\text{Índice del ingreso*}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(53377.0398)-\ln(100)}$$
 
 -	Índice de Conocimiento: permanece sin modificaciones.
 
 -	Índice de Libertad: Se toma en consideración a la totalidad de las preguntas realizadas en el índice de libertad “Freedom in the World” del año 2019 (ACLARAR EL AÑO TAMBIEN ARRIBA QUE NO ESTA), publicado por la organización Freedom House.
 
-$$Dim_{Libertad} = Puntaje/100$$
+$$\text{Índice de libertad } = Puntaje/100$$
 
 Una vez obtenido los índices de cada dimensión, se decide calcular dos nuevos índices de Desarrollo Humano, uno sin incluir a la nueva rama de Libertad y otro que la incluya. Se toma esta decisión para observar cómo las modificaciones a las ramas ya existentes del IDH alteran los resultados y, por otro lado, evaluar si la inclusión de esta nueva dimensión cambia las conclusiones, sugiriendo que hasta ahora podría haberse estado ignorando un aspecto crucial del desarrollo humano.
 Los nuevos IDH modificados se calculan mediante una media geométrica de los respectivos índices obtenidos, de igual forma que en el IDH original.
 
 Índice sin Libertad:
-$$IDH_{sin \ Libertad} = (Índice_{Salud \ modificado}*Índice_{Educación}*Índice_{Ingresos \ modificado})^{1/3}$$
+$$IDH_\text{sin libertad} = (\text{Índice de salud*}\times\text{Índice de educación}\times\text{Índice del ingreso*})^{1/3}$$
 
 Índice con Libertad:
-$$IDH_{con \ Libertad} = (Índice_{Salud \ modificado}*Índice_{Educación}*Índice_{Ingresos \ modificado}*Índice_{Libertad})^{1/4}$$
+$$IDH_\text{sin libertad} = (\text{Índice de salud*}\times\text{Índice de educación}\times\text{Índice del ingreso*}\times\text{Índice de libertad})^{1/3}$$
 
 Cabe aclarar que los países que presentan al menos un valor faltante de las variables consideradas en el estudio fueron descartadas del mismo. Al recolectar todos los datos para el año 2019 finalmente se cuenta con 151 países de un total de 195 para los cuales fue calculado el IDH original en el Informe de Desarrollo Humano del mismo año. 
 
