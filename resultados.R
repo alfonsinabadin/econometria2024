@@ -72,7 +72,7 @@ graf_IDH2 <- ggplot(map_data, aes(x = long, y = lat, group = group, fill = IDH2)
     na.value = "grey50",
     limits = c(0, 1), 
   ) +
-  labs(fill = "IDH") +
+  labs(fill = "IDH2") +
   theme_minimal() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
@@ -89,7 +89,7 @@ graf_IDH3 <- ggplot(map_data, aes(x = long, y = lat, group = group, fill = IDH3)
     na.value = "grey50",
     limits = c(0, 1), 
   ) +
-  labs(fill = "IDH") +
+  labs(fill = "IDH3") +
   theme_minimal() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),

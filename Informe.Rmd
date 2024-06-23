@@ -144,6 +144,8 @@ En segundo lugar, se menciona que no se toma por sentado que el crecimiento econ
 
 Por otro lado, la definición de desarrollo humano menciona que este consiste en ofrecer oportunidades a las personas, no de insistir en que las aprovechen. Es decir, que las personas tengan la libertad de llevar a cabo la vida que ellos elijan sin imponerles cómo vivirla. Esto no se tiene en cuenta actualmente en el indice ya que no se calcula una dimensión de libertad. Se considera que podría ser una propuesta adecuada incluir una cuarta dimensión al índice de desarrollo humano que tenga en cuenta cuestiones relacionadas con la libertad y los derechos de las personas en su día a día.
 
+\pagebreak
+
 # Propuestas y modificaciones 
 
 En esta sección se explica cada una de las modificaciones propuestas para este nuevo índice, acompañado del razonamiento realizado. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o descartadas del presente informe por diversas razones. 
@@ -198,7 +200,7 @@ De igual manera, se calcula el objetivo aspiracional para la esperanza de vida s
 
 $$\text{Índice de salud*} = \frac{\text{esp. salud}-\min(\text{esp. salud})}{\max(\text{esp. salud})-\min(\text{esp. salud})}$$
 
-```{r Figura1, fig.cap="Índice de salud obtenido con la metodología original y la opción 1", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+```{r Figura1, echo=FALSE, fig.cap="Índice de salud obtenido con la metodología original y la opción 1", fig.height=2, message=FALSE, warning=FALSE}
 library(ggplot2)
 bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_1.rds")
 bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 1")
@@ -217,16 +219,21 @@ ggplot(bbddescrip_nuevo) +
   coord_flip()
 ```
 
-En la Figura \ref{fig:Figura1} se puede identificar que los resultados del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto. Sin embargo, los datos centrales se posicionan en el mismo rango y el máximo valor parecería mantenerse.
+En la Figura 1 se puede identificar que los resultados del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto. Sin embargo, los datos centrales se posicionan en el mismo rango y el máximo valor parecería mantenerse.
 
 2. Tomar ambas variables y promediarlas. Una vez obtenido el promedio se calcula el índice de este eligiendo el cero natural y el objetivo aspiracional con el criterio utilizado anteriormente. 
 
 $$\text{Promedio}=\frac{\text{esp. vida}+\text{esp salud}}{2} \quad \text{Índice de salud*} = \frac{\text{Promedio}-\min}{\max-\min}$$
 
-```{r Figura2, fig.cap="Índice de salud obtenido con la metodología original y la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_2.rds")
 bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 2")
+```
+
+
+```{r Figura2, fig.cap="Índice de salud obtenido con la metodología original y la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
+
 
 ggplot(bbddescrip_nuevo) +
   geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
@@ -242,7 +249,7 @@ ggplot(bbddescrip_nuevo) +
   coord_flip()
 ```
 
-En la Figura \ref{fig:Figura2} se puede identificar que, nuevamente, el cálculo no parece cambiar notablemente los resultados, disminuyendo el mínimo del índice de salud respecto al original y manteniendo datos centrales y el máximo.
+En la Figura 2 se puede identificar que, nuevamente, el cálculo no parece cambiar notablemente los resultados, disminuyendo el mínimo del índice de salud respecto al original y manteniendo datos centrales y el máximo.
 
 3. Penalizar la esperanza de vida al nacer. Esta opción se lleva a cabo transformando la esperanza de vida al nacer y la esperanza de vida saludable al nacer en índices y después multiplicándolos. Como era de esperarse, esto causa que se penalice mucho el valor de la dimensión salud, tal como puede observarse en la Figura 3. Podrían pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Sin embargo, para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
 
@@ -439,10 +446,6 @@ Esta modificación del cálculo, en comparación con el original, devuelve valor
 
 2. Una segunda opción considerada fue calcular el índice de PNB y luego multiplicarlo por $1-\frac{GINI}{100}$. Esta opción disminuía demasiado los valores de esta dimensión por lo que también se probó aplicarle la raíz a $1-\frac{GINI}{100}$, logrando que tenga menos peso esta penalización.
 
-$$\text{Índice de ingreso*} = \text{Índice de PNB} \times \sqrt{1-\frac{GINI}{100}}$$
-
-En la Figura 7 se puede observar el cambio abrupto mencionado al no utilizar la raíz en la corrección y cómo la incorporación de la misma diminuye esta penalización. De todas formas, el cambio con esta opción continúa siendo abrupto en comparación con la opción 1. 
-
 ```{r Figura7, fig.cap="Índice de PNB obtenido con la metodología original y los diferentes enfoques de la opción 2", fig.height=3, echo=FALSE, message=FALSE, warning=FALSE}
 bbddescrip_nuevo <- readRDS("Figuras Informe/econ_base_box_2.rds")
 bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice Original","Índice Original",ifelse(bbddescrip_nuevo$tipo_variable == "Indice Opcion 2 sin raiz", "Índice Opción 2 sin raíz", "Índice Opción 2 con raíz"))
@@ -460,6 +463,10 @@ ggplot(bbddescrip_nuevo) +
   ) +
   coord_flip()
 ```
+
+$$\text{Índice de ingreso*} = \text{Índice de PNB} \times \sqrt{1-\frac{GINI}{100}}$$
+
+En la Figura 7 se puede observar el cambio abrupto mencionado al no utilizar la raíz en la corrección y cómo la incorporación de la misma diminuye esta penalización. De todas formas, el cambio con esta opción continúa siendo abrupto en comparación con la opción 1. 
 
 Después de analizar ambas opciones, se consideró mejor la multiplicación del coeficiente de Gini previo al cálculo del índice, es decir la opción 1. Puesto que los valores de la segunda opción resultan ser considerablemente menores. Además, otro factor importante es que se intenta que los índices de cada dimensión puedan tomar un valor cercano 1 y esta alternativa no permite esta opción por la naturaleza de su cálculo.  
 
@@ -613,23 +620,27 @@ knitr::include_graphics("Resultados/mapa_IDH1.jpg")
 
 Inicialmente, en cuanto al IDH original, se puede observar que en América la mayoría de los países toman valores altos de desarrollo humano, principalmente Estados Unidos, Canadá y el Cono Sur. Europa también toma valores altos de este índice en casi todos sus países, siendo el continente con más países con alto grado de desarrollo humano. En Asia, a pesar de que la gran mayoría tome valores altos destacan principalmente Japón y Corea del Sur y también se encuentran países que toman valores intermedios. En Oceanía, se tiene únicamente información sobre Australia el cual toma un valor alto del IDH. Por último, África es el continente donde hay más variabilidad del índice de IDH, presentando valores bajos, medios y altos.
 
+\pagebreak
+
 ```{r mapa2, echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado sin Libertad por país"}
 knitr::include_graphics("Resultados/mapa_IDH2.jpg")
 ```
-
-Al calcular el IDH modificado sin considerar la dimensión de libertad, no se observa una diferencia muy grande en cuanto a los valores de IDH de cada país. Se puede notar una leve disminución general de este índice en casi todos los países del mundo.
 
 ```{r mapa3, echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado con Libertad por país"}
 knitr::include_graphics("Resultados/mapa_IDH3.jpg")
 ```
 
+Al calcular el IDH modificado sin considerar la dimensión de libertad, no se observa una diferencia muy grande en cuanto a los valores de IDH de cada país. Se puede notar una leve disminución general de este índice en casi todos los países del mundo.
+
 Por el contrario, al comparar el índice de desarrollo humano que incluye la dimensión de libertad con el original se visualizan cambios más sustanciales. En América hay ciertos países donde se aprecia una leve o moderada disminución del IDH, principalmente países centroamericanos y Estados Unidos. En Europa se mantienen valores altos para la mayoría de los países, excepto para Rusia y Bielorusia, que bajan notablemente. En Asia parece haber una importante disminución general de los puntajes, excepto para países como Corea del Sur, Japón, India e Indonesia. En África se observa algo similar que en Asia y se destaca a Sudán del Sur por su muy bajo puntaje.
 
 La dimensión de Libertad parece afectar principalmente en las regiones africanas y asiáticas. Podría decirse que el mundo no occidental fue altamente penalizado por posibles cuestiones culturales, principalmente por presentar discrepancias con los pilares ideológicos estadounidenses, que responden a un pensamiento occidental en materia política y social, en los cuales se basa el índice de Libertad implementado.
 
+\pagebreak
+
 La correlación entre los índices es una medida para analizar la diferencia entre los distintos valores de un mismo país. La correlación entre el primer IDH modificado (sin libertad) con el original fue de `r round(cor(res$IDH,res$IDH2),3)`, lo cual refleja la leve diferencia entre estos dos indicadores. Por otro lado, el IDH modificado que incluye a la nueva dimensión tiene una correlación con el IDH original de `r round(cor(res$IDH,res$IDH3),3)`. Si bien esta correlación es considerada muy alta, se puede diferenciar de la anterior, dando cuenta de que los cambios fueron más notorios al utilizar esta rama. 
 
-```{r dispIDH, echo=FALSE, fig.align='center', fig.cap="Comparación entre el IDH original vs IDH modif. sin libertad (Izq.) y el IDH modif. con libertad (Der.)", out.width='100%'}
+```{r dispIDH, echo=FALSE, fig.align='center', fig.cap="Comparación entre el IDH original vs IDH modif. sin libertad (Izq.) y el IDH modif. con libertad (Der.)", out.width='100%', fig.width=5, fig.height=3}
 library(patchwork)
 
 graf.a <- ggplot(res)+
@@ -695,7 +706,7 @@ El p-value obtenido para el test sobre la primera tabla fue de `r round(p_value,
 
 A lo largo del trabajo se propusieron cambios al Índice de Desarrollo Humano con respecto a las dimensiones que lo integran. Además se propuso un cambio un poco más profundo con respecto a sus componentes, agregando una dimensión completamente nueva, que se considera importante para el desarrollo de un país. Si bien se tuvo en cuenta una calificación quizás "sesgada" para su incorporación, se plantearon sobre la mesa las cuestiones a tener en cuenta al interpretar los puntajes y resultados finales del agregado de esta nueva componente. En los resultados se ven estos "sesgos", sobre todo al visualizar los cambios en los mapas graficados; en regiones orientales, asiáticas y africanas; y no teniendo gran impacto en regiones occidentales como en Europa, Estados Unidos, Australia y algunos países sudamericanos. 
 
-Por otro lado, la incorporación de los cambios en las dimensiones preexistentes muestran algunas modificaciones más leves en los índices. Se ven algunas disminuciones como por ejemplo en Estados Unidos, donde la esperanza de salud es menor que la esperanza de vida y los cambios en la dimensión económica por desigualdad, altera su puntaje. Y luego, con la dimensión de libertad incorporada, su índice modificado final cae un poco más. En general, estas modificaciones llevaron a que los puntajes del índice de los países disminuya. 
+Por otro lado, la incorporación de los cambios en las dimensiones preexistentes muestran algunas modificaciones más leves en los índices. Se ven algunas disminuciones como por ejemplo en Estados Unidos, donde la esperanza de salud es menor que la esperanza de vida y los cambios en la dimensión económica por desigualdad, alteran su puntaje. Y luego, con la dimensión de libertad incorporada, su índice modificado final cae un poco más. En general, estas modificaciones llevaron a que los puntajes del índice de los países disminuyan. 
 
 Los objetivos del trabajo fueron cubiertos. Se propusieron distintas alternativas, analizando exploratoriamente sus efectos en el resultado final, para luego elegir algunas opciones para calcular los índices modificados y poder comparar sus efectos en cada país. Se tocaron diversos tópicos de aspectos sobre la sociedad, desigualdades y discriminación, calidad de vida, derechos y libertades.
 
@@ -730,7 +741,7 @@ Para empezar, los datos de esperanza de vida saludable al nacer fueron obtenidos
 La información del índice de Gini se obtuvo de las bases de datos del Grupo Banco Mundial. De este coeficiente utilizado en la dimensión económica se dispone de pocos datos correspondientes al año 2019, ya que este indicador no se mide de manera uniforme en todos los países. Por ello, se elabora un gráfico a modo exploratorio para observar la variabilidad del índice a lo largo de los años. Si se observa que el índice se mantiene relativamente constante, se podrían utilizar valores de años anteriores para completar los datos y obtener un análisis más completo.
 
 
-```{r message=FALSE, warning=FALSE, echo=FALSE}
+```{r gini, fig.cap="Índice de Gini por país (2010-2023)", message=FALSE, warning=FALSE, echo=FALSE}
 library(readxl)
 library(readr)
 library(ggplot2)
@@ -780,7 +791,6 @@ ggplot(gini_long, aes(x = Año, y = Gini, group = Pais, color = Pais)) +
   geom_point(size = 1) + # Puntos en cada año para cada país
   theme_minimal() +  # Estilo de gráfico limpio y minimalista
   labs(
-    title = "Índice de Gini por país (2010-2023)",
     x = "Año",
     y = "Índice de Gini (%)"
   ) +
@@ -809,6 +819,8 @@ Finalmente, en la nueva dimensión denominada Libertad, los datos utilizados son
 3. Banco Mundial. (2024). GINI Index. World Bank Data. https://datos.bancomundial.org/indicator/SI.POV.GINI (consultado en junio de 2024).
 
 4. Freedom House. (2024). Freedom in the World. https://freedomhouse.org/report/freedom-world (consultado en junio de 2024).
+
+\pagebreak
 
 ## Bibliografía
 
