@@ -55,8 +55,7 @@ graf_IDH <- ggplot(map_data, aes(x = long, y = lat, group = group, fill = IDH)) 
     na.value = "grey50",
     limits = c(0, 1), 
   ) +
-  labs(title = "Índice de Desarrollo Humano (IDH) por país",
-       fill = "IDH") +
+  labs(fill = "IDH") +
   theme_minimal() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
@@ -73,8 +72,7 @@ graf_IDH2 <- ggplot(map_data, aes(x = long, y = lat, group = group, fill = IDH2)
     na.value = "grey50",
     limits = c(0, 1), 
   ) +
-  labs(title = "IDH con modificaciones sin Libertad por país",
-       fill = "IDH") +
+  labs(fill = "IDH") +
   theme_minimal() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
@@ -91,8 +89,7 @@ graf_IDH3 <- ggplot(map_data, aes(x = long, y = lat, group = group, fill = IDH3)
     na.value = "grey50",
     limits = c(0, 1), 
   ) +
-  labs(title = "IDH con modificaciones con Libertad por país",
-       fill = "IDH") +
+  labs(fill = "IDH") +
   theme_minimal() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
@@ -108,16 +105,16 @@ ggsave("Resultados/mapa_IDH3.jpg", plot = graf_IDH3, width = 3840, height = 2160
 
 
 library(magick)
-# Leer las imágenes usando magick
-img1 <- image_read("Resultados/mapa_IDH1.jpg")
-img2 <- image_read("Resultados/mapa_IDH2.jpg")
-img3 <- image_read("Resultados/mapa_IDH3.jpg")
-
-# Crear el GIF
-gif <- image_animate(image_join(img1, img2, img3), fps = 0.5)
-
-# Guardar el GIF
-image_write(gif, "Resultados/mapas.gif")
+# # Leer las imágenes usando magick
+# img1 <- image_read("Resultados/mapa_IDH1.jpg")
+# img2 <- image_read("Resultados/mapa_IDH2.jpg")
+# img3 <- image_read("Resultados/mapa_IDH3.jpg")
+# 
+# # Crear el GIF
+# gif <- image_animate(image_join(img1, img2, img3), fps = 0.5)
+# 
+# # Guardar el GIF
+# image_write(gif, "Resultados/mapas.gif")
 
 
 
@@ -142,6 +139,7 @@ library("openxlsx")
 ### Correlacion de los IDH ------------
 cor(res$IDH, res$IDH2)
 cor(res$IDH, res$IDH3)
+
 
 ggplot(res)+
   geom_point(aes(IDH,IDH2), color="blue")+
@@ -194,7 +192,7 @@ res <- res |> mutate(
 data <- table(factor(c(res$hdicode)), factor(c(res$hdi2code)))
 data2 <- table(factor(c(res$hdicode)), factor(c(res$hdi3code)))
 
-bowker <- 3^2/5+4^2/6+5^2/5
+bowker <- 3^2/5+4^2/6+5
 bowker2 <- 10^2/14+5+8+6+5
 # Calcular valor p
 p_value <- 1 - pchisq(bowker, 6)

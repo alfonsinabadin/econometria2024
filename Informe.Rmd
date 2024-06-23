@@ -33,6 +33,11 @@ lang: "es-ES"
 ```
 \clearpage
 
+```{r include=FALSE}
+source("resultados.R")
+```
+
+
 # Introducción
 
 El desarrollo humano consiste en ampliar la riqueza de la vida humana, en lugar de simplemente la riqueza de la economía en la que viven los seres humanos. Es un enfoque centrado en las personas, en sus oportunidades y opciones[^1].
@@ -45,7 +50,7 @@ En 1990 se calcula por primera vez por el Programa de las Naciones Unidas para e
 
 Para calcularlo, se toman las variables esperanza de vida, años esperados de escolaridad, años promedio de escolaridad y PBN per cápita de cada país. Se propone cuestionar el uso de estas variables o si es necesario incluir nuevas en el cálculo, ya que gracias a la facilidad que internet ofrece, se podrían tener en cuenta nuevas medidas de fácil acceso.
 
-El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que refleje en un sentido más integrado la naturaleza de cada país en relación al desarrollo humano. Dada la definición de desarrollo humano antes mencionada, se propone tener en cuenta para el cálculo del IDH también aspectos sobre la sociedad, la discriminación, los derechos, la calidad de vida, desigualdades y las libertades civiles.
+El objetivo principal de la presente investigación es proponer una modificación para el IDH de forma que refleje en un sentido más integrado la naturaleza de cada país en relación al desarrollo humano. Dada la definición de desarrollo humano antes mencionada, se propone tener en cuenta para el cálculo del IDH también aspectos sobre la sociedad, la discriminación, los derechos, la calidad de vida, desigualdades y las libertades civiles. 
 
 \pagebreak
 
@@ -101,7 +106,7 @@ Sin embargo, a partir del año 2010, para medir el nivel de vida, el producto na
 
 Se define al producto nacional bruto (PNB) per cápita como los ingresos totales de una economía generados por su producción y la propiedad de los factores de producción, menos los ingresos pagados por el uso de factores de producción que son propiedad del resto del mundo, convertidos a dólares internacionales usando las tasas de la PPA, y divididos por la población a mitad del año.
 
-Para comparar el estándar de vida entre los países, los datos deben ajustarse por la paridad del poder adquisitivo (PPA) a fin de eliminar las diferencias en el valor de un dólar entre países. Se entiende por paridad de poder adquisitivo (PPA) al tipo de cambio que refleja las diferencias de precios entre países y permite hacer comparaciones internacionales del producto e ingreso reales. En la tasa de PPA en US\$ (utilizada en este Informe), US\$1 en PPA tiene el mismo poder adquisitivo en la economía de cualquier país que US\$1 en los Estados Unidos de América. Para los datos correspondientes al 2019 se utiliza el PPA en US\$ base de 2011 para ajustar los valores de PNB per cápita.
+Para comparar el estándar de vida entre los países, los datos deben ajustarse por la paridad del poder adquisitivo (PPA) a fin de eliminar las diferencias en el valor de un dólar entre países. Se entiende por paridad de poder adquisitivo (PPA) al tipo de cambio que refleja las diferencias de precios entre países y permite hacer comparaciones internacionales del producto e ingreso reales. En la tasa de PPA en US\$ (utilizada en este Informe), US\$1 en PPA tiene el mismo poder adquisitivo en la economía de cualquier país que US\$1 en los Estados Unidos de América. 
 
 Para el cálculo de este índice se considera el logaritmo de los valores ya que el PNB tiene una distribución asimétrica. Además, una vez alcanzado determinado nivel de vida se necesitan grandes cambios en el ingreso para mejorarlo aún más, por lo cual se tiene atenuar el efecto del aumento de ingresos en países más desarrollados.**LEER ESTOOOO**
 
@@ -146,7 +151,9 @@ Por otro lado, la definición de desarrollo humano menciona que este consiste en
 
 # Propuestas y modificaciones 
 
-En esta sección se explica cada una de las modificaciones propuestas para este nuevo índice, acompañado del razonamiento realizado. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o descartadas del presente informe por diversas razones.
+En esta sección se explica cada una de las modificaciones propuestas para este nuevo índice, acompañado del razonamiento realizado. Además, se muestran otras posibles propuestas que se podrían llevar a cabo en investigaciones futuras o descartadas del presente informe por diversas razones. 
+
+Para esta investigación se tomó como regla general buscar los datos del 2019. La justificación de esta elección se encuentra detallada en el apartado de Referencias - Origen de los datos. 
 
 ## Vida larga y saludable
 
@@ -546,7 +553,7 @@ $$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(53377.0398)-\ln(100)}$$
 
 -	Índice de Conocimiento: permanece sin modificaciones.
 
--	Índice de Libertad: Se toma en consideración a la totalidad de las preguntas realizadas en el índice de libertad “Freedom in the World” del año 2019 (ACLARAR EL AÑO TAMBIEN ARRIBA QUE NO ESTA), publicado por la organización Freedom House.
+-	Índice de Libertad: Se toma en consideración a la totalidad de las preguntas realizadas en el índice de libertad “Freedom in the World” del año 2019, publicado por la organización Freedom House.
 
 $$Dim_{Libertad} = Puntaje/100$$
 
@@ -578,30 +585,28 @@ knitr::include_graphics("Resultados/Tabla_IDH1.png")
 
 \pagebreak
 
-```{r tabla2, echo=FALSE, fig.align='center'}
+```{r tabla2, echo=FALSE, fig.align='center', out.width='85%'}
 knitr::include_graphics("Resultados/Tabla_IDH2.png")
 ```
 \pagebreak
 
-```{r tabla3, echo=FALSE, fig.align='center'}
+```{r tabla3, echo=FALSE, fig.align='center', out.width='85%'}
 knitr::include_graphics("Resultados/Tabla_IDH3.png")
 ```
 
 \pagebreak
 
-La escala de color es de gran ayuda para facilitar la visualización de las variaciones en los países. Por ejemplo, en la parte superior del ranking, destacan países como Emiratos Árabes Unidos, donde se observa claramente cómo la incorporación de la dimensión Libertad afecta en gran medida su puntaje. Por otro lado, países como Costa Rica, Uruguay, Chile y España suben su puntaje al agregar esta dimensión. 
+La escala de color es de gran ayuda para facilitar la visualización de las variaciones en los países. Por ejemplo, en la parte superior del ranking, destacan países como Emiratos Árabes Unidos, donde se observa claramente cómo la incorporación de la dimensión Libertad afecta en gran medida su puntaje. Por otro lado, países como Costa Rica, Uruguay y Chile suben su puntaje al agregar esta dimensión. Al lado de cada columna de ranking muestra su cambio en posición con respecto al del IDH original. 
 
 En el Anexo se encuentran las tablas con los países ordenados según estas nuevas propuestas del IDH. 
 
-Luego de calcular y analizar los puntajes obtenidos, es posible realizar una comparación de los índices junto con el desempeño de determinados países respecto a estos.
-
-Además se muestran mapas con los países coloreados según una escala continua del IDH.
+Además se muestran mapas con los países coloreados según una escala continua del IDH, poniendo como mínimo al 0. 
 
 ```{r mapa1, echo=FALSE, fig.align='center', fig.cap="Índice de Desarrollo Humano original por país", out.width='100%' }
 knitr::include_graphics("Resultados/mapa_IDH1.jpg")
 ```
 
-Inicialmente, en cuanto al IDH original, se puede observar que en América la mayoría de los países toman valores altos de desarrollo humano, principalmente Estados Unidos, Canadá y el Cono Sur. Europa también toma valores altos de este índice en casi todos sus países, siendo el continente con más países con alto grado de desarrollo humano. En Asia, a pesar de que la gran mayoría tome valores altos destacan principalmente Japón y Corea del Sur y también se encuentran países que toman valores intermedios. En Oceanía, se tiene únicamente información sobre Australia el cual toma un valor alto del idh. Por último,  África es el continente donde hay más variabilidad del índice de idh, presentando valores bajos, medios y altos.
+Inicialmente, en cuanto al IDH original, se puede observar que en América la mayoría de los países toman valores altos de desarrollo humano, principalmente Estados Unidos, Canadá y el Cono Sur. Europa también toma valores altos de este índice en casi todos sus países, siendo el continente con más países con alto grado de desarrollo humano. En Asia, a pesar de que la gran mayoría tome valores altos destacan principalmente Japón y Corea del Sur y también se encuentran países que toman valores intermedios. En Oceanía, se tiene únicamente información sobre Australia el cual toma un valor alto del IDH. Por último, África es el continente donde hay más variabilidad del índice de IDH, presentando valores bajos, medios y altos.
 
 
 ```{r mapa2, echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado sin Libertad por país"}
@@ -618,32 +623,69 @@ Por el contrario, al comparar el índice de desarrollo humano que incluye la dim
 
 La dimensión de Libertad parece afectar principalmente en las regiones africanas y asiáticas. Podría decirse que el mundo no occidental fue altamente penalizado por posibles cuestiones culturales, principalmente por presentar discrepancias con los pilares ideológicos estadounidenses, que responden a un pensamiento occidental en materia política y social, en los cuales se basa el índice de Libertad implementado.
 
-## Análisis comparativo entre los índices. 
+La correlación entre los índices es una medida para analizar la diferencia entre los distintos valores de un mismo país. La correlación entre el primer IDH modificado (sin libertad) con el original fue de `r round(cor(res$IDH,res$IDH2),3)`, lo cual refleja la leve diferencia entre estos dos indicadores. Por otro lado, el IDH modificado que incluye a la nueva dimensión tiene una correlación con el IDH original de `r round(cor(res$IDH,res$IDH3),3)`. Si bien esta correlación es considerada muy alta, se puede diferenciar de la anterior, dando cuenta de que los cambios fueron más notorios al utilizar esta rama. 
 
-Se calcula la correlación entre los valores de los índices y el de los puestos. Estos se muestran en la siguiente tabla
+```{r dispIDH, echo=FALSE, fig.align='center', fig.cap="Comparación entre el IDH original vs IDH modif. sin libertad (Izq.) y el IDH modif. con libertad (Der.)", out.width='100%'}
+library(patchwork)
 
-- Rankear los países con IDH modificado y comparar (2 gráficos países colores)
+graf.a <- ggplot(res)+
+  geom_point(aes(IDH,IDH2), color="blue")+
+  geom_abline(slope=1, intercept = 0) +
+  xlim(0.25, 1) +
+  ylim(0.15, 1) 
+highlight_points <- res[res$codigo=="ARE" | res$codigo=="SSD",]
+graf.b <- ggplot(res)+
+  geom_point(aes(IDH,IDH3), color="blue")+
+  geom_abline(slope=1, intercept = 0) +
+  geom_point(data = highlight_points, aes(IDH,IDH3), color = "red") +
+  xlim(0.25, 1) +
+  ylim(0.15, 1) 
+graf.a + graf.b
+```
 
-- Corr entre los IDH y el/los modificados
+Estos estadísticos se ven reflejados en los gráficos de dispersión entre los índices. En la figura \ref{fig:dispIDH}, se puede observar que en la comparación con la primera modificación los puntajes por lo general disminuyen (esto es, se encuentran por debajo de la recta identidad), pero no en gran magnitud. Algo distinto sucede con la segunda comparación, donde es fácil identificar que hay algunos países que se ven muy afectados por su puntaje en la dimensión de libertad, disminuyendo drásticamente su puntaje. Se pueden observar los valores atípicos remarcados anteriormente (en rojo en el gráfico). Sudán del Sur es el punto que toca el mínimo puntaje entre los 3 índices, y tambíen se ve por ejemplo la disminución de Emiratos Árabes Unidos, que tiene un puntaje muy alto en el IDH original, el cual disminuye notablemente al considerar la modificación propuesta. Además, a diferencia de la primer modificación, en la que incluye libertad puede notarse que hay varios países que logran aumentar su puntaje de Desarrollo Humano con respecto al original. Dado el poco aumento que se logra en el `IDH2`, se puede concluir que estos aumentos se deben, en gran medida, a la mejora en los puntajes de la encuesta de Libertad.
 
--	Resulta diferente o no al IDH ventajas y desventajas
+## Categorías del Índice de Desarrollo Humano
 
-- Idea mirando las tablas del informe del idh compara la clasificación de IDH con IDH modif por desigualdad viendo la diferencia. Ver si se podría y valdría la pena hacer lo mismo con el nuestro
+En el Informe de Desarrollo Humano del 2014 fue incluída una clasificación de los países según su valor obtenido del IDH. Los puntos de corte se calcularon tomando los cuartiles de la distribución de cada una de sus componentes, y a partir de ellos calculando IDH's de corte. 
+
+| Nivel de Desarrollo Humano         |Rango del IDH |
+|:-------------------------------------:|:----------------:|
+| Muy alto         | 0.800 y superior  |
+| Alto             | 0.700–0.799       |
+| Medio            | 0.550–0.699       |
+| Bajo             | Inferior a 0.550  |
+
+Para las modificaciones propuestas, se calcularon las clasificaciones para cada país siguiendo estos mismos puntos de cortes. Se deja propuesto calcular los puntos de corte para los nuevos índices considerando los cuartiles de las nuevas variables incorporadas. 
+
+Se puede armar una matriz de contingencia para cada comparación, mostrando cómo varían estas clasificaciones en cada caso. 
+
+| IDH / IDH2    | **Bajo** | **Medio** | **Alto** | **Muy alto** |
+|---------------|:-----:|:-------:|:------:|:----------:|
+| **Bajo**      | 28   | 1     | 0    | 0        |
+| **Medio**     | 4    | 27    | 1    | 0        |
+| **Alto**      | 0    | 5     | 31   | 0        |
+| **Muy alto**  | 0    | 0     | 5    | 49       |
+
+| IDH / IDH3    | **Bajo** | **Medio** | **Alto** | **Muy alto** |
+|---------------|:-----:|:-------:|:------:|:----------:|
+| **Bajo**      | 27   | 2     | 0    | 0        |
+| **Medio**     | 12   | 20    | 0    | 0        |
+| **Alto**      | 5    | 8     | 23   | 0        |
+| **Muy alto**  | 0    | 6     | 5    | 43       |
+
+Estas tablas muestran la cantidad de países que modificaron su clasificación. En el triángulo inferior se muestra como bajan de categoría, y en el superior cuando mejoran. Por ejemplo, hay 4 países que pasaron de tener una clasificación media en el IDH original a tener una clasificación baja en el primer IDH modificado, y solo un pais que paso de categoría media a alta. 
+
+En la comparación con el IDH modificado más libertad, se observa cómo hay más países que empeoran su clasificación. Incluso se presentan 11 casos en los que la clasificación baja 2 categorías. 
+
+Para completar este análisis se concluye con un test no paramétrico de Bowker, el cual permite comparar las distribuciones de las categorías en un índice y el otro. La hipótesis nula es $H_0) \ \ p_{i,j} = p_{j,i} \ \ \forall \ \ i<j$, y la hipótesis alternativa es $H_1) \text{Al menos 1 par } p_{i,j} \neq p_{j,i}\ \ \forall \ \ i<j$, siendo $p_{i,j}$ la proporción de países clasificados en la i-ésima categoría en el IDH original y en la j-ésima categoría en el IDH modificado. 
+
+El p-value obtenido para el test sobre la primera tabla fue de `r round(p_value,3)`, lo cual implica el no rechazo de $H_0)$, es decir, que no podemos afirmar que esta modificación cause que las categorías empeoren o mejoren. En contraste a esto, el p-value obtenido para el test sobre la segunda tabla fue $<0.001$, por lo que en este caso sí podemos afirmar que las modificaciones del IDH causaron un efecto en la clasificación de los países, y por lo descripto anteriormente, se ve que es más probable que los países desciendan de categoría al ser clasificados con el IDH que incluye la dimensión Libertad. 
+
 
 # Cosas que quedan propuestas
 
 # Conclusión 
-
-# Categorías según desarrollo humano
-
-![](agregar1.png)
-
-Aggregate HDI values for country groups (by human development category, region and the like) are calculated by applying
-the HDI formula to the weighted group averages of component
-indicators. Life expectancy and GNI per capita are weighted
-by total population, expected years of schooling is weighted by
-population ages 5–24 and mean years of schooling is weighted
-by population ages 25 and older.
 
 \pagebreak
 
