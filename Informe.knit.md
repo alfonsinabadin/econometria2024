@@ -197,24 +197,7 @@ De igual manera, se calcula el objetivo aspiracional para la esperanza de vida s
 $$\text{Índice de dimensión}_{\text{salud}} = \frac{\text{esp. salud}-\min(\text{esp. salud})}{\max(\text{esp. salud})-\min(\text{esp. salud})}$$
 En la Figura 1 se puede identificar que los resultados del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto, sin embargo, los datos centrales se posicionan en el mismo rango y el máximo valor parecería mantenerse.
 
-```{r Figura1, fig.cap="Índice de salud obtenido con la metodología original y la opción 1", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
-library(ggplot2)
-bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_1.rds")
-bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 1")
-
-ggplot(bbddescrip_nuevo) +
-  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
-  labs(x = " ", y = "Valor") + 
-  scale_fill_manual(values = c("#d4dff0", "#543786")) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "serif"),
-    axis.title.x = element_text(margin = margin(t = 10)),
-    axis.title.y = element_text(margin = margin(r = 10)),
-    legend.position = "none"
-  ) +
-  coord_flip()
-```
+![Índice de salud obtenido con la metodología original y la opción 1](Informe_files/figure-latex/Figura1-1.pdf) 
 
 En la figura \ref{fig:Figura1} se puede identificar que los resultados del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto. Sin embargo, los datos centrales se posicionan en el mismo rango y el máximo valor parecería mantenerse.
 
@@ -224,47 +207,13 @@ $$\text{Promedio}=\frac{\text{esp. vida}+\text{esp salud}}{2} \quad \text{Índic
 
 En la Figura 2 se puede identificar que, nuevamente, el cálculo no parece cambiar notablemente los resultados, disminuyendo el mínimo del índice de salud respecto al original y manteniendo datos centrales y el máximo.
 
-```{r Figura2, fig.cap="Índice de salud obtenido con la metodología original y la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
-library(ggplot2)
-bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_2.rds")
-bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 2")
-
-ggplot(bbddescrip_nuevo) +
-  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
-  labs(x = " ", y = "Valor") + 
-  scale_fill_manual(values = c("#d4dff0", "#543786")) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "serif"),
-    axis.title.x = element_text(margin = margin(t = 10)),
-    axis.title.y = element_text(margin = margin(r = 10)),
-    legend.position = "none"
-  ) +
-  coord_flip()
-```
+![Índice de salud obtenido con la metodología original y la opción 2](Informe_files/figure-latex/Figura2-1.pdf) 
 
 3. Penalizar la esperanza de vida al nacer. Esta opción se lleva a cabo transformando la esperanza de vida al nacer y la esperanza de vida saludable al nacer en índices y después multiplicándolos. Como era de esperarse, esto causa que se penalice mucho el valor de la dimensión salud, tal como puede observarse en la Figura 3. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Sin embargo, para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
 
 $$\text{Índice de dimensión}_\text{salud}=\text{Índice de esp. vida}\times\text{Índice de esp. salud}$$
 
-```{r Figura3, fig.cap="Índice de salud obtenido con la metodología original y la opción 3", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
-library(ggplot2)
-bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_3.rds")
-bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 3")
-
-ggplot(bbddescrip_nuevo) +
-  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
-  labs(x = " ", y = "Valor") + 
-  scale_fill_manual(values = c("#d4dff0", "#543786")) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "serif"),
-    axis.title.x = element_text(margin = margin(t = 10)),
-    axis.title.y = element_text(margin = margin(r = 10)),
-    legend.position = "none"
-  ) +
-  coord_flip()
-```
+![Índice de salud obtenido con la metodología original y la opción 3](Informe_files/figure-latex/Figura3-1.pdf) 
 
 4. Otra alternativa resulta al tomar los índices de esperanza de vida al nacer y esperanza de vida saludable al nacer, ya calculados con sus respectivos mínimos y máximos, y promediarlos.
 
@@ -272,24 +221,7 @@ $$\text{Índice de dimensión}_\text{salud}=\frac{\text{Índice de esp. vida}+\t
 
 En la Figura 4 es evidente que la distribución casi no presenta cambios. Estos son aún más pequeños que en los casos anteriores dado que se está utilizando un promedio de los índices lo cuál aminora el efecto de la nueva variable.
 
-```{r Figura4, fig.cap="Índice de salud obtenido con la metodología original y la opción 4", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
-library(ggplot2)
-bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_4.rds")
-bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice original","Índice Original","Índice Opción 4")
-
-ggplot(bbddescrip_nuevo) +
-  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable), alpha = 0.85) +
-  labs(x = " ", y = "Valor") + 
-  scale_fill_manual(values = c("#d4dff0", "#543786")) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "serif"),
-    axis.title.x = element_text(margin = margin(t = 10)),
-    axis.title.y = element_text(margin = margin(r = 10)),
-    legend.position = "none"
-  ) +
-  coord_flip()
-```
+![Índice de salud obtenido con la metodología original y la opción 4](Informe_files/figure-latex/Figura4-1.pdf) 
 
 5. Se podría pensar incoporar también la diferencia entre esperanza de vida al nacer y la esperanza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se lo vea. Si bien primeramente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente. Dada la complejidad y subjetividad del idea propuesta se decidió no incorporarla pero se deja plasmada la misma para profundizar este análisis en futuras investigaciones.
 
@@ -297,31 +229,26 @@ En base al recorrido realizado, se selecciona a la Opción 1 como la modificaci�
 
 Si bien la distribución de este índice no parece variar demasiado de la original, hay una variación en el puesto de los países según la dimensión salud. Esto se evidencia en el Cuadro 1, donde se pueden visualizar los países con menor esperanza de vida saludable junto al cálculo del Índice Original y el Índice Modificado. La diferencia entre las variables Esperanza de vida y Esperanza de vida saludable ocasionan diferencias en los Índices calculados, que a fin de cuentas generarán el cambio en el cálculo final del IDH para cada país.  
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
-library(dplyr)
-library(kableExtra)
-bbdd_descrip <- readRDS("Figuras Informe/Base_tabla.rds")
+\begin{table}[H]
 
-tabla_resultado <- bbdd_descrip %>%
-  arrange(Salud_nacer) %>%
-  select(Pais, Salud_nacer, Vida_nacer, Dim_Salud, Dim_Salud2) %>%
-  head(5)
-
-tabla_resultado <- tabla_resultado %>%
-  select(Pais, Vida_nacer, Salud_nacer, Dim_Salud, Dim_Salud2) %>%
-  rename(
-    `País` = Pais,
-    `Esp. vida` = Vida_nacer,
-    `Esp. vida saludable` = Salud_nacer,
-    `Índice Original` = Dim_Salud,
-    `Índice Modificado` = Dim_Salud2
-  )
-
-knitr::kable(tabla_resultado,
-      align = "c",
-      caption = "Resultados del Índice modificado") %>%
-  kable_styling(latex_options = "HOLD_position")
-``` 
+\caption{\label{tab:unnamed-chunk-1}Resultados del Índice modificado}
+\centering
+\begin{tabular}[t]{c|c|c|c|c}
+\hline
+País & Esp. vida & Esp. vida saludable & Índice Original & Índice Modificado\\
+\hline
+Lesotho & 50.75 & 44.2 & 0.5257385 & 0.4671258\\
+\hline
+Eswatini & 57.73 & 50.1 & 0.6238308 & 0.5700351\\
+\hline
+Mozambique & 58.14 & 50.4 & 0.6333231 & 0.5752678\\
+\hline
+Chad & 59.63 & 52.0 & 0.5116769 & 0.6031754\\
+\hline
+Guinea-Bissau & 60.22 & 52.6 & 0.6289538 & 0.6136407\\
+\hline
+\end{tabular}
+\end{table}
 
 ## Conocimiento
 
@@ -351,57 +278,14 @@ $$Coef\;Gini=\frac{A}{A+B}$$
 
 Esta gráfica se utiliza a través de dos ejes de coordenadas, para identificar de forma sencilla el porcentaje de ingresos que corresponde a un porcentaje de población.
 
-```{r Figura5, fig.cap= "Índice de Gini en un caso hipotético", fig.align='center', echo=FALSE, message=FALSE, warning=FALSE, fig.height=3}
-library(ggplot2)
-library(dplyr)
-library(ineq)
-par(family = "serif")
+\begin{figure}
 
-set.seed(2024)
+{\centering \includegraphics{Informe_files/figure-latex/Figura5-1} 
 
-# Datos de ejemplo
-renta <- runif(100, min = 1, max = 100)  # Datos de renta
-renta <- renta[order(renta)]
-poblacion <- seq(1, 100) / 100  # Población acumulada
+}
 
-# Cálculo de la curva de Lorenz
-curva_lorenz <- ineq::Lc(renta)$L
-poblacion_acumulada <- ineq::Lc(renta)$p
-
-# Datos para el gráfico
-data <- data.frame(poblacion = c(0, poblacion_acumulada*100), renta = c(0, curva_lorenz*100))
-
-# Crear el gráfico
-ggplot(data, aes(x = poblacion, y = renta)) +
-  geom_ribbon(aes(ymin = renta, ymax = poblacion), fill = "#d4dff0", alpha = 0.7) +  # Área de desigualdad
-  geom_line(color = "#543786", size = 1.0) +  # Curva de Lorenz
-  geom_abline(intercept = 0, slope = 1, color = "#7bb8c0", linetype = "dashed", size = 1.0) +  # Recta de igualdad
-  labs(title = "", x = "Población (%)", y = "Renta (%)") +
-  geom_segment(aes(x = 80, xend = 60, y = 80, yend =80), color = "#7bb8c0") +
-  geom_label(aes(x = 55,y=80,label="Recta de igualdad"), 
-             family = "serif",fill = "#7bb8c0", color = "white",
-             label.size = 0)+
-  geom_segment(aes(x = 60, xend =40, y = 55, yend = 55), color = "#d4dff0") +
-  geom_label(aes(x = 35, y = 55, label ="Desigualdad"),
-             family = "serif",fill = "#d4dff0", color = "white",
-             label.size = 0) +
-  geom_segment(aes(x = 50, xend =60, y = 25, yend = 25), color = "#543786") +
-  geom_label(aes(x = 70, y = 25, label ="Curva de Lorenz"),
-             family = "serif",fill = "#543786", color = "white",
-             label.size = 0) +
-  geom_label(aes(x = 43, y = 30, label ="Área A"),
-             family = "serif",fill = "#d4dff0", color = "black",
-             label.size = 0) +
-  geom_label(aes(x = 90, y = 45, label ="Área B"),
-             family = "serif", color = "black",
-             label.size = 0) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "serif"),
-    axis.title.x = element_text(margin = margin(t = 10)),
-    axis.title.y = element_text(margin = margin(r = 10))
-  )
-```
+\caption{Índice de Gini en un caso hipotético}\label{fig:Figura5}
+\end{figure}
 
 Para comprender la lógica, se puede observar en la Figura 5 que el 50% de la población alcanza un 25% del ingreso mientras que un 75% de la población llega a más del 50% del ingreso, es decir, el ingreso que logra el 50% de la población lo alcanza el 25% contiguo, lo cual indica desigualdad ya que el ingreso no estaría equitativamente distribuido.
 
@@ -417,23 +301,7 @@ $$PNB_{Gini} = PNB * \left(1-\frac{GINI}{100}\right)$$
 
 $$\text{Índice de dimensión}_\text{Ingreso}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(\max(PNB_{Gini}))-\ln(100)}$$
 
-```{r Figura6, fig.cap="Índice de PNB obtenido con la metodología original y la opción 1", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
-bbddescrip_nuevo <- readRDS("Figuras Informe/econ_base_box_1.rds")
-bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice Original","Índice Original","Índice Opción 1")
-
-ggplot(bbddescrip_nuevo) +
-  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
-  labs(x = "Indice", y = "Valor") + 
-  scale_fill_manual(values = c("#d4dff0", "#543786")) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "serif"),
-    axis.title.x = element_text(margin = margin(t = 10)),
-    axis.title.y = element_text(margin = margin(r = 10)),
-    legend.position = "none"
-  ) +
-  coord_flip()
-```
+![Índice de PNB obtenido con la metodología original y la opción 1](Informe_files/figure-latex/Figura6-1.pdf) 
 
 Esta modificación del cálculo, en comparación con el original, devuelve valores menores y cambian sus medidas descriptivas de posición, como la mediana, lo cual da indicio de que la posición de los países podría cambiar. Esto se puede observar en la Figura 6.
 
@@ -443,54 +311,32 @@ $$\text{Índice de dimensión}_\text{Ingreso} = \text{Índice de PNB} \times \sq
 
 En la Figura 7 se puede observar el cambio abrupto mencionado al no utilizar la raíz en la corrección y cómo la incorporación de la misma diminuir esta penalización. De todas formas, el cambio con esta opción continúa siendo abrupto en comparación con la opción 1. 
 
-```{r Figura7, fig.cap="Índice de PNB obtenido con la metodología original y los diferentes enfoques de la opción 2", fig.height=3, echo=FALSE, message=FALSE, warning=FALSE}
-bbddescrip_nuevo <- readRDS("Figuras Informe/econ_base_box_2.rds")
-bbddescrip_nuevo$tipo_variable <- ifelse(bbddescrip_nuevo$tipo_variable == "Indice Original","Índice Original",ifelse(bbddescrip_nuevo$tipo_variable == "Indice Opcion 2 sin raiz", "Índice Opción 2 sin raíz", "Índice Opción 2 con raíz"))
-
-ggplot(bbddescrip_nuevo) +
-  geom_boxplot(aes(x = tipo_variable, y = valor, fill = tipo_variable)) +
-  labs(x = "Indice", y = "Valor") +
-  scale_fill_manual(values = c("#d4dff0", "#543786", "#543786")) +
-  theme_minimal() +
-  theme(
-    text = element_text(family = "serif"),
-    axis.title.x = element_text(margin = margin(t = 10)),
-    axis.title.y = element_text(margin = margin(r = 10)),
-    legend.position = "none"
-  ) +
-  coord_flip()
-```
+![Índice de PNB obtenido con la metodología original y los diferentes enfoques de la opción 2](Informe_files/figure-latex/Figura7-1.pdf) 
 
 Después de analizar ambas opciones, se consideró mejor la multiplicación del coeficiente de Gini previo al cálculo del índice, es decir la opción 1. Puesto que los valores de la segunda opción resultan ser considerablemente menores. Además, otro factor importante es que se intenta que los índices de cada dimensión puedan tomar un valor cercano 1 y esta alternativa no permite esta opción por la naturaleza de su cálculo.  
 
 En el Cuadro 2 donde se muestran los 5 países con menor PNB ajustado por Gini, puede visualizarse que hay una variación en el puesto de los países al comparar el Índice Original y el Modificado. Los cambio con el índice modificado generará una especie de penalización en elcálculo del IDH a aquellos países que no reparten equitativamente sus ingresos.
 
-```{r echo=FALSE, warning=FALSE, message=FALSE}
-library(dplyr)
-library(kableExtra)
-library(readxl)
-bbdd_descrip <- read_xlsx("bbdd_descrip.xlsx")
+\begin{table}[H]
 
-tabla_resultado <- bbdd_descrip %>%
-  arrange(GNIPCA) %>%
-  select(Pais, GNIPC, GNIPCA, Dim_Econ, Dim_Econ1) %>%
-  head(5)
-
-tabla_resultado <- tabla_resultado %>%
-select(Pais, GNIPC, GNIPCA, Dim_Econ, Dim_Econ1) %>%
-  rename(
-    `País` = Pais,
-    `PNB` = GNIPC,
-    `PNB ajustado Gini` = GNIPCA,
-    `Índice Original` = Dim_Econ,
-    `Índice Modificado` = Dim_Econ1
-  )
-
-knitr::kable(tabla_resultado,
-      align = "c",
-      caption = "Resultados del Índice modificado") %>%
-  kable_styling(latex_options = "HOLD_position")
-``` 
+\caption{\label{tab:unnamed-chunk-2}Resultados del Índice modificado}
+\centering
+\begin{tabular}[t]{c|c|c|c|c}
+\hline
+País & PNB & PNB ajustado Gini & Índice Original & Índice Modificado\\
+\hline
+South Sudan & 784.4744 & 438.5212 & 0.3111512 & 0.2353895\\
+\hline
+Burundi & 732.0426 & 449.4742 & 0.3007019 & 0.2393179\\
+\hline
+Democratic Republic of the Congo & 998.1225 & 577.9129 & 0.3475348 & 0.2793412\\
+\hline
+Mozambique & 1265.0711 & 626.2102 & 0.3833362 & 0.2921220\\
+\hline
+Yemen & 1165.0907 & 737.5024 & 0.3708998 & 0.3181704\\
+\hline
+\end{tabular}
+\end{table}
 
 ## Una nueva rama para el IDH: Libertad, derechos políticos y libertades civiles
 
@@ -582,20 +428,17 @@ Los resultados obtenidos se muestran en la siguiente tabla, donde los países se
 
 Tabla 1: Índices de Desarrollo Humano por país
 
-```{r tabla1, echo=FALSE, fig.align='center', out.width='75%'}
-knitr::include_graphics("Resultados/Tabla_IDH1.png")
-```
+
+\begin{center}\includegraphics[width=0.75\linewidth]{Resultados/Tabla_IDH1} \end{center}
 
 \pagebreak
 
-```{r tabla2, echo=FALSE, fig.align='center'}
-knitr::include_graphics("Resultados/Tabla_IDH2.png")
-```
+
+\begin{center}\includegraphics[width=14.92in]{Resultados/Tabla_IDH2} \end{center}
 \pagebreak
 
-```{r tabla3, echo=FALSE, fig.align='center'}
-knitr::include_graphics("Resultados/Tabla_IDH3.png")
-```
+
+\begin{center}\includegraphics[width=14.92in]{Resultados/Tabla_IDH3} \end{center}
 
 \pagebreak
 
@@ -607,22 +450,37 @@ Luego de calcular y analizar los puntajes obtenidos, es posible realizar una com
 
 Además se muestran mapas con los países coloreados según una escala continua del IDH.
 
-```{r mapa1, echo=FALSE, fig.align='center', fig.cap="Índice de Desarrollo Humano original por país", out.width='100%' }
-knitr::include_graphics("Resultados/mapa_IDH1.jpg")
-```
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Resultados/mapa_IDH1} 
+
+}
+
+\caption{Índice de Desarrollo Humano original por país}\label{fig:mapa1}
+\end{figure}
 
 Inicialmente, en cuanto al IDH original, se puede observar que en América la mayoría de los países toman valores altos de desarrollo humano, principalmente Estados Unidos, Canadá y el Cono Sur. Europa también toma valores altos de este índice en casi todos sus países, siendo el continente con más países con alto grado de desarrollo humano. En Asia, a pesar de que la gran mayoría tome valores altos destacan principalmente Japón y Corea del Sur y también se encuentran países que toman valores intermedios. En Oceanía, se tiene únicamente información sobre Australia el cual toma un valor alto del idh. Por último,  África es el continente donde hay más variabilidad del índice de idh, presentando valores bajos, medios y altos.
 
 
-```{r mapa2, echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado sin Libertad por país"}
-knitr::include_graphics("Resultados/mapa_IDH2.jpg")
-```
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Resultados/mapa_IDH2} 
+
+}
+
+\caption{Índice de Desarrollo Humano modificado sin Libertad por país}\label{fig:mapa2}
+\end{figure}
 
 Al calcular el IDH modificado sin considerar la dimensión de libertad, no se observa una diferencia muy grande en cuanto a los valores de IDH de cada país. Se puede notar una leve disminución general de este índice en casi todos los países del mundo.
 
-```{r mapa3, echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado con Libertad por país"}
-knitr::include_graphics("Resultados/mapa_IDH3.jpg")
-```
+\begin{figure}
+
+{\centering \includegraphics[width=1\linewidth]{Resultados/mapa_IDH3} 
+
+}
+
+\caption{Índice de Desarrollo Humano modificado con Libertad por país}\label{fig:mapa3}
+\end{figure}
 
 Por el contrario, al comparar el índice de desarrollo humano que incluye la dimensión de libertad con el original se visualizan cambios sustanciales. En América hay ciertos países que se aprecia una leve o moderada disminución del IDH, principalmente países centroamericanos y Estados Unidos. En Europa se mantienen valores altos para la mayoría de los países, excepto para Rusia y Bielorusia, que bajan notablemente. En Asia parece haber una importante disminución general de los puntajes, excepto para países como Corea del Sur, Japón, India e Indonesia. En África se observa algo similar que en Asia y se destaca a Sudán del Sur por su muy bajo puntaje.
 
@@ -684,70 +542,7 @@ Para empezar, los datos de esperanza de salud fueron obtenidos desde la página 
 La información del índice de Gini se obtuvo de las bases de datos del Grupo Banco Mundial. De este coeficiente utilizado en la dimensión económica se dispone de pocos datos correspondientes al año 2019, ya que este indicador no se mide de manera uniforme en todos los países. Por ello, se elabora un gráfico a modo exploratorio para observar la variabilidad del índice a lo largo de los años. Si se observa que el índice se mantiene relativamente constante, se podrían utilizar valores de años anteriores para completar los datos y obtener un análisis más completo.
 
 
-```{r message=FALSE, warning=FALSE, echo=FALSE}
-library(readxl)
-library(readr)
-library(ggplot2)
-library(dplyr)
-library(tidyr)
-
-gini_sucia <- read_excel("Bases/Indice de GINI por país.xls", 
-                         sheet = "Data", skip = 3)
-esperanza_de_vida <- read_csv("Bases/Esperanza de vida.csv")
-
-names(gini_sucia)[names(gini_sucia) == "Country Name"] <- "Pais"
-names(gini_sucia)[names(gini_sucia) == "Country Code"] <- "Codigo"
-
-# Creo tabla de paises y codigos y le agrego una indicadora q vale 1
-paises <- read_csv("Bases/HDR23-24_Composite_indices_complete_time_series.csv")
-
-paises <- paises %>% select(1)
-
-paises <- paises %>% slice(1:195)
-
-names(paises)[names(paises) == "iso3"] <- "Codigo"
-
-paises <- paises %>% mutate(indicadora = 1)
-
-# Junto ambas tablas para dejar solo los paises
-
-gini <- left_join(gini_sucia, paises, by = "Codigo")
-
-gini <- gini[!is.na(gini$indicadora), ]
-
-#sum(esperanza_de_vida$`Location type`!= "Country")
-codigo_paises <- esperanza_de_vida$SpatialDimValueCode
-
-#grafico de series por pais para demostrar por que tomar el valor de 2019 o mas reciente
-#hasta 2010
-
-
-# Transformar los datos de formato ancho a formato largo
-gini_long <- gini_sucia %>% pivot_longer(
-  cols = starts_with("20"), # Selecciona las columnas que representan los años
-  names_to = "Año",         # Nuevo nombre para las columnas
-  values_to = "Gini"        # Nuevo nombre para los valores
-)
-
-ggplot(gini_long, aes(x = Año, y = Gini, group = Pais, color = Pais)) +
-  geom_line(size = 0.5) +  # Línea para cada serie temporal de cada país
-  geom_point(size = 1) + # Puntos en cada año para cada país
-  theme_minimal() +  # Estilo de gráfico limpio y minimalista
-  labs(
-    title = "Índice de Gini por país (2010-2023)",
-    x = "Año",
-    y = "Índice de Gini (%)"
-  ) +
-  theme(legend.position = "none")
-
-
-# library(joineR)
-# vgm <- variogram(gini_long$Codigo, as.numeric(gini_long$Año), gini_long$Gini)
-# # id, medida repetida y residuo o variable respuesta que estoy analizando
-# 
-# plot(vgm, smooth=TRUE)
-# title("Variograma muestral. peso")
-```
+![](Informe_files/figure-latex/unnamed-chunk-3-1.pdf)<!-- --> 
 
 Se observa una notable estabilidad en los valores del índice de Gini desde el año 2010 hasta el 2019, con algunos cambios más importantes identificados en el año 2020. También realizando un análisis longitudinal exploratorio, la variabilidad entre países es la dominante, con muy poca variabilidad intra. Esto se puede ver en el gráfico de perfiles individuales con las lineas de cada país prácticamente constantes. Cabe destacar que se tienen pocos datos en los años posteriores a la pandemia. Por lo tanto, se decide utilizar el dato de Gini de 2019 o el más reciente disponible de cada país, hasta el año 2010 como máximo, para garantizar que todos los datos sean lo más actualizados posibles, anulando el efecto de la pandemia y la poca cantidad de observaciones de los años más recientes 2022 y 2023.
 
