@@ -197,9 +197,6 @@ De igual manera, se calcula el objetivo aspiracional para la esperanza de vida s
 $$Dim_{salud} = \frac{esp\;salud-min_{esp\;salud}}{max_{esp\;salud}-min_{esp\;salud}}$$
 En la figura \ref{fig:Figura1} se puede identificar que los resultados del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto. Sin embargo, los datos centrales se posicionan en el mismo rango y el máximo valor parecería mantenerse.
 
-
-\pagebreak
-
 ```{r Figura1, fig.cap="Índice de salud obtenido con la metodología original y la opción 1", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_1.rds")
@@ -218,11 +215,11 @@ ggplot(bbddescrip_nuevo) +
   coord_flip()
 ```
 
+En la figura \ref{fig:Figura1} se puede identificar que los resultados del índice de salud para los países en estudio con ambas metodologías no presentan grandes cambios. Se observa que el mínimo del Índice de salud disminuye con el cálculo propuesto. Sin embargo, los datos centrales se posicionan en el mismo rango y el máximo valor parecería mantenerse.
+
 2. Tomar ambas variables y promediarlas. Una vez obtenido el promedio se calcula el índice de este eligiendo el cero natural y el objetivo aspiracional con el criterio utilizado anteriormente. 
 
 $$prom=\frac{esp\;vida+esp\;salud}{2} \quad Dim_{salud} = \frac{prom-min}{max-min}$$
-
-En la figura \ref{fig:Figura2} se puede identificar que, nuevamente, el cálculo no parece cambiar notablemente los resultados, disminuyendo el mínimo del índice de salud respecto al original y manteniendo datos centrales y el máximo.
 
 ```{r Figura2, fig.cap="Índice de salud obtenido con la metodología original y la opción 2", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
@@ -241,6 +238,8 @@ ggplot(bbddescrip_nuevo) +
   ) +
   coord_flip()
 ```
+En la figura \ref{fig:Figura2} se puede identificar que, nuevamente, el cálculo no parece cambiar notablemente los resultados, disminuyendo el mínimo del índice de salud respecto al original y manteniendo datos centrales y el máximo.
+
 3. Penalizar la esperanza de vida al nacer. Esta opción se lleva a cabo transformando la esperanza de vida al nacer y la esperanza de vida saludable al nacer en índices y después multiplicándolos. Como era de esperarse, esto causa que se penalice mucho el valor de la dimensión salud, tal como puede observarse en la figura \ref{fig:Figura3}. Podría pensarse distintas ponderaciones para aminorar el peso de la esperanza de vida saludable en el cálculo de la dimensión. Sin embargo, para llevarlo a cabo se debería contar con un mayor conocimiento sobre la construcción de índices y el área de salud, por lo cual se decide no utilizar esta opción en el presente informe.
 
 $$Dim_{salud}=Índice_{esp\;vida}*Índice_{esp\;salud}$$
@@ -267,10 +266,6 @@ ggplot(bbddescrip_nuevo) +
 
 $$Dim_{salud}=\frac{Índice_{esp\;vida}+Índice_{esp\;salud}}{2}$$
 
-En la figura \ref{fig:Figura4} es evidente que la distribución casi no presenta cambios. Estos son aún más pequeños que en los casos anteriores dado que se está utilizando un promedio de los índices lo cuál aminora el efecto de la nueva variable.
-
-\pagebreak
-
 ```{r Figura4, fig.cap="Índice de salud obtenido con la metodología original y la opción 4", fig.height=2, echo=FALSE, message=FALSE, warning=FALSE}
 library(ggplot2)
 bbddescrip_nuevo <- readRDS("Figuras Informe/salud_base_box_4.rds")
@@ -288,6 +283,8 @@ ggplot(bbddescrip_nuevo) +
   ) +
   coord_flip()
 ```
+En la figura \ref{fig:Figura4} es evidente que la distribución casi no presenta cambios. Estos son aún más pequeños que en los casos anteriores dado que se está utilizando un promedio de los índices lo cuál aminora el efecto de la nueva variable.
+
 
 5. Se podría pensar incoporar también la diferencia entre esperanza de vida al nacer y la esperanza de vida saludable al nacer de alguna manera. Sin embargo, esta idea es más subjetiva ya que valores grandes de esta diferencia se pueden considerar como positivos o negativos dependiendo de que lado se lo vea. Si bien primeramente se pensó que una gran diferencia significaba un país con menor desarrollo ya que simbolizaba que muchos de los años vividos eran en mala salud, luego se pensó que también esta gran diferencia podía simbolizar que el país en cuestión contaba con una gran tecnología y una avanzada medicina que hacía que los pacientes vivan más años a pesar de sus condiciones de salud. Si el desarrollo se plantea por el lado de avances en la humanidad entonces si la diferencia es grande se podría considerar como un mayor índice de desarrollo, por lo dicho anteriormente. Dada la complejidad y subjetividad del idea propuesta se decidió no incorporarla pero se deja plasmada la misma para profundizar este análisis en futuras investigaciones.
 
@@ -554,6 +551,7 @@ $$Dim_{Ing}=\frac{\ln(PNB_{Gini})-\ln(100)}{\ln(53377.0398)-\ln(100)}$$
 $$Dim_{Libertad} = Puntaje/100$$
 
 Una vez obtenido los índices de cada dimensión, se decide calcular dos nuevos índices de Desarrollo Humano, uno sin incluir a la nueva rama de Libertad y otro que la incluya. Se toma esta decisión para observar cómo las modificaciones a las ramas ya existentes del IDH alteran los resultados y, por otro lado, evaluar si la inclusión de esta nueva dimensión cambia las conclusiones, sugiriendo que hasta ahora podría haberse estado ignorando un aspecto crucial del desarrollo humano.
+
 Los nuevos IDH modificados se calculan mediante una media geométrica de los respectivos índices obtenidos, de igual forma que en el IDH original.
 
 Índice sin Libertad:
@@ -574,18 +572,18 @@ Los resultados obtenidos se muestran en la siguiente tabla, donde los países se
 
 Tabla 1: Índices de Desarrollo Humano por país
 
-```{r mapa1, echo=FALSE, fig.align='center', out.width='75%'}
+```{r tabla1, echo=FALSE, fig.align='center', out.width='75%'}
 knitr::include_graphics("Resultados/Tabla_IDH1.png")
 ```
 
 \pagebreak
 
-```{r mapa2, echo=FALSE, fig.align='center'}
+```{r tabla2, echo=FALSE, fig.align='center'}
 knitr::include_graphics("Resultados/Tabla_IDH2.png")
 ```
 \pagebreak
 
-```{r mapa3, echo=FALSE, fig.align='center'}
+```{r tabla3, echo=FALSE, fig.align='center'}
 knitr::include_graphics("Resultados/Tabla_IDH3.png")
 ```
 
@@ -599,20 +597,20 @@ Luego de calcular y analizar los puntajes obtenidos, es posible realizar una com
 
 Además se muestran mapas con los países coloreados según una escala continua del IDH.
 
-```{r echo=FALSE, fig.align='center', fig.cap="Índice de Desarrollo Humano original por país", out.width='100%' }
+```{r mapa1, echo=FALSE, fig.align='center', fig.cap="Índice de Desarrollo Humano original por país", out.width='100%' }
 knitr::include_graphics("Resultados/mapa_IDH1.jpg")
 ```
 
 Inicialmente, en cuanto al IDH original, se puede observar que en América la mayoría de los países toman valores altos de desarrollo humano, principalmente Estados Unidos, Canadá y el Cono Sur. Europa también toma valores altos de este índice en casi todos sus países, siendo el continente con más países con alto grado de desarrollo humano. En Asia, a pesar de que la gran mayoría tome valores altos destacan principalmente Japón y Corea del Sur y también se encuentran países que toman valores intermedios. En Oceanía, se tiene únicamente información sobre Australia el cual toma un valor alto del idh. Por último,  África es el continente donde hay más variabilidad del índice de idh, presentando valores bajos, medios y altos.
 
 
-```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado sin Libertad por país"}
+```{r mapa2, echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado sin Libertad por país"}
 knitr::include_graphics("Resultados/mapa_IDH2.jpg")
 ```
 
 Al calcular el IDH modificado sin considerar la dimensión de libertad, no se observa una diferencia muy grande en cuanto a los valores de IDH de cada país. Se puede notar una leve disminución general de este índice en casi todos los países del mundo.
 
-```{r echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado con Libertad por país"}
+```{r mapa3, echo=FALSE, fig.align='center', out.width='100%', fig.cap="Índice de Desarrollo Humano modificado con Libertad por país"}
 knitr::include_graphics("Resultados/mapa_IDH3.jpg")
 ```
 
@@ -624,7 +622,7 @@ La dimensión de Libertad parece afectar principalmente en las regiones africana
 
 Se calcula la correlación entre los valores de los índices y el de los puestos. Estos se muestran en la siguiente tabla
 
-- Rankear los países con IDH modificado y comparar (2 graficos países colores)
+- Rankear los países con IDH modificado y comparar (2 gráficos países colores)
 
 - Corr entre los IDH y el/los modificados
 
@@ -649,7 +647,6 @@ by population ages 25 and older.
 
 \pagebreak
 
-
 # Referencias
 
 ## Origen de los datos
@@ -668,7 +665,7 @@ En la base final se tiene de esta fuente las siguientes variables:
 
 * Ingreso Nacional Bruto ajustado por paridad de poder adquisitivo (constante 2011)
 
-* El Indice de Desarrollo Humano original
+* El Índice de Desarrollo Humano original
 
 Con estos datos se logró replicar el índice original, lo cual habla de que se entendió la metodología utilizada, y se logró reproducir los resultados oficiales. Por otro lado, los datos de las modificaciones fueron importados de distintas fuentes.
 
