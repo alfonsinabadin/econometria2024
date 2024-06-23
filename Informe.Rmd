@@ -824,3 +824,17 @@ Finalmente, en la nueva dimensión denominada Libertad, los datos utilizados son
 11. World Health Organization. (2020). Healthy Life Expectancy (HALE) Metadata. https://cdn.who.int/media/docs/default-source/gho-documents/metadata/hale-metadata.pdf?sfvrsn=4f47fd43_1&download=true
 
 12. World Health Organization. (2020). Life Expectancy and Healthy Life Expectancy. WHO. https://www.who.int/data/gho/data/themes/topics/indicator-groups/indicator-group-details/GHO/life-expectancy-and-healthy-life-expectancy
+
+
+\pagebreak
+
+```{r tablaanexo1, echo=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics("Resultados/TablaAnexo1.png")
+```
+
+\pagebreak
+
+```{r tablaanexo2, echo=FALSE, fig.align='center', out.width='100%'}
+knitr::include_graphics("Resultados/TablaAnexo2.png")
+```
+
