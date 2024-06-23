@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.17)  23 JUN 2024 11:43
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.6.17)  23 JUN 2024 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,21 +831,21 @@ File: logo_fceye.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 140.
+(Font)              scaled to size 7.0pt on input line 143.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 140.
+(Font)              scaled to size 5.0pt on input line 143.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00092pt on input line 140.
+(Font)              scaled to size 10.00092pt on input line 143.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00064pt on input line 140.
+(Font)              scaled to size 7.00064pt on input line 143.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00046pt on input line 140.
+(Font)              scaled to size 5.00046pt on input line 143.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 140.
+(Font)              scaled to size 9.99893pt on input line 143.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 140.
+(Font)              scaled to size 6.99925pt on input line 143.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 140.
+(Font)              scaled to size 4.99947pt on input line 143.
 
 
 [2
@@ -860,17 +860,14 @@ File: diagrama1.png Graphic file (type bmp)
 [4]
 
 [5]
-Missing character: There is no Í ("CD) in font lmmi10!
-
 
 [6]
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 327.
+(Font)              scaled to size 14.4pt on input line 328.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 14.4013pt on input line 327.
+(Font)              scaled to size 14.4013pt on input line 328.
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 14.39845pt on input line 327.
-Missing character: There is no ε (U+03B5) in font [lmroman10-regular]:mapping=tex-text;!
+(Font)              scaled to size 14.39845pt on input line 328.
 
 
 [7]
@@ -880,49 +877,23 @@ Missing character: There is no ε (U+03B5) in font [lmroman10-regular]:mapping=t
 [9]
 
 [10]
-
-LaTeX Warning: Reference `fig:Figura1' on page 11 undefined on input line 528.
-
 File: Informe_files/figure-latex/Figura1-1.pdf Graphic file (type pdf)
 <use Informe_files/figure-latex/Figura1-1.pdf>
 
-LaTeX Warning: Reference `fig:Figura1' on page 11 undefined on input line 541.
+LaTeX Warning: Reference `fig:Figura1' on page 11 undefined on input line 542.
 
 File: Informe_files/figure-latex/Figura2-1.pdf Graphic file (type pdf)
 <use Informe_files/figure-latex/Figura2-1.pdf>
 
-LaTeX Warning: Reference `fig:Figura2' on page 11 undefined on input line 560.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 559--564
-[][]
- []
-
-
 
 [11]
-
-LaTeX Warning: Reference `fig:Figura3' on page 12 undefined on input line 574.
-
-Missing character: There is no Í ("CD) in font lmmi10!
-Missing character: There is no Í ("CD) in font lmmi10!
 File: Informe_files/figure-latex/Figura3-1.pdf Graphic file (type pdf)
 <use Informe_files/figure-latex/Figura3-1.pdf>
-Missing character: There is no Í ("CD) in font lmmi10!
-Missing character: There is no Í ("CD) in font lmmi10!
 
 
 [12]
 File: Informe_files/figure-latex/Figura4-1.pdf Graphic file (type pdf)
 <use Informe_files/figure-latex/Figura4-1.pdf>
-
-LaTeX Warning: Reference `fig:Figura4' on page 13 undefined on input line 604.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 603--608
-[][]
- []
-
 
 
 [13]
@@ -935,27 +906,20 @@ File: Informe_files/figure-latex/Figura5-1.pdf Graphic file (type pdf)
 [15]
 
 [16]
-
-[17]
 File: Informe_files/figure-latex/Figura6-1.pdf Graphic file (type pdf)
 <use Informe_files/figure-latex/Figura6-1.pdf>
-
-LaTeX Warning: Reference `fig:Figura6' on page 18 undefined on input line 791.
-
-Missing character: There is no Í ("CD) in font lmmi10!
-
-LaTeX Warning: Reference `fig:Figura7' on page 18 undefined on input line 807.
-
 File: Informe_files/figure-latex/Figura7-1.pdf Graphic file (type pdf)
 <use Informe_files/figure-latex/Figura7-1.pdf>
 
 
-[18]
-Overfull \hbox (12.41501pt too wide) in alignment at lines 834--845
+[17]
+Overfull \hbox (12.41501pt too wide) in alignment at lines 844--855
  [] [] [] [] [] 
  []
 
 
+
+[18]
 
 [19]
 
@@ -964,16 +928,6 @@ Overfull \hbox (12.41501pt too wide) in alignment at lines 834--845
 [21]
 
 [22]
-Missing character: There is no Í ("CD) in font lmmi10!
-Missing character: There is no Í ("CD) in font lmmi10!
-Missing character: There is no ó ("F3) in font lmmi7!
-Missing character: There is no Í ("CD) in font lmmi10!
-Missing character: There is no Í ("CD) in font lmmi10!
-Missing character: There is no Í ("CD) in font lmmi10!
-Missing character: There is no ó ("F3) in font lmmi7!
-Missing character: There is no Í ("CD) in font lmmi10!
-Missing character: There is no Í ("CD) in font lmmi10!
-
 
 [23]
 
@@ -1014,54 +968,49 @@ File: Informe_files/figure-latex/dispIDH-1.pdf Graphic file (type pdf)
 [31]
 
 [32]
-File: agregar1.png Graphic file (type bmp)
-<agregar1.png>
-
 
 [33]
 
 [34]
-
-[35]
 File: Informe_files/figure-latex/unnamed-chunk-4-1.pdf Graphic file (type pdf)
 <use Informe_files/figure-latex/unnamed-chunk-4-1.pdf>
 
 
-[36]
-Underfull \hbox (badness 1264) in paragraph at lines 1421--1425
+[35]
+Underfull \hbox (badness 1264) in paragraph at lines 1433--1437
 []\TU/lmr/m/n/10 Eustat. (2023). Índice de Desarrollo Humano por Indicadores según Países 2022. []$[][][][][] [] [] [] [][] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1421--1425
+Underfull \hbox (badness 10000) in paragraph at lines 1433--1437
 $[][][][][][] [] [][][] [] [][][][][][][][][] [] [][][][][][][][][][] [] [][] [] [][][][][][] [][] [][] [][] [][][][][][][][][][] [][] [][][][][][] [][] [][][] [][] [][][][][][][][][][][] [][] [][][][][] [][] [][][][][][] [][]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1428--1432
+Underfull \hbox (badness 10000) in paragraph at lines 1440--1444
 $[] [] [][][] [] [][][] [] [][] [] [][] [] [][][][][][][][][] [] [] [] [][] [] [][][][] [] [][][][][][][][][][] [] [][][][][] [] [][][][][][][][][][][][][][][] [] [][][][][][][][][][][][] []$
  []
 
 
 
-[37]
-Underfull \hbox (badness 1033) in paragraph at lines 1455--1459
+[36]
+Underfull \hbox (badness 1033) in paragraph at lines 1467--1471
 []\TU/lmr/m/n/10 World Health Organization. (2020). Healthy Life Expectancy (HALE) Metadata. []$[][][][][] [] [] [] [][][] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1455--1459
+Underfull \hbox (badness 10000) in paragraph at lines 1467--1471
 $[][][] [] [][][] [] [][][][][] [] [][][][] [] [][][][][][][] [][] [][][][][][] [] [][][] [][] [][][][][][][][][] [] [][][][][][][][] [] [][][][] [][] [][][][][][][][] [] [][][] [] [][][][][][] [] [][][][][][][][] []$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1459--1462
+Underfull \hbox (badness 10000) in paragraph at lines 1471--1474
 $[] [] [][][] [] [][][] [] [][][] [] [][][][] [] [][][] [] [][][][] [] [][][][][][] [] [][][][][][] [] [][][][][][][][][] [][] [][][][][][] [] [][][][][][][][][] [][] [][][][][] [][] [][][][][][][] [] [][][] [] [][][][] [][]$
  []
 
 
 
-[38] (./Informe.aux)
+[37] (./Informe.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 1
 L3 programming layer <2024-05-27>
@@ -1071,12 +1020,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 20098 strings out of 476254
- 371093 string characters out of 5785481
- 1940560 words of memory out of 5000000
- 42319 multiletter control sequences out of 15000+600000
+ 20082 strings out of 476254
+ 370851 string characters out of 5785481
+ 1941560 words of memory out of 5000000
+ 42304 multiletter control sequences out of 15000+600000
  565603 words of font info for 98 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  90i,8n,123p,406b,460s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Informe.pdf (38 pages).
+Output written on Informe.pdf (37 pages).
