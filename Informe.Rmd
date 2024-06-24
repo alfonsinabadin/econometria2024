@@ -108,9 +108,9 @@ Para comparar el estándar de vida entre los países, los datos deben ajustarse 
 
 Para el cálculo de este índice se considera el logaritmo de los valores ya que el PNB tiene una distribución asimétrica. Además, una vez alcanzado determinado nivel de vida se necesitan grandes cambios en el ingreso para mejorarlo aún más, por lo cual se debe atenuar el efecto del aumento de ingresos en países más desarrollados.
 
-En el _IDH_ se calcula el índice de PNB como
+En el _IDH_ se calcula el índice de ingreso como
 
-$$\text{Índice}_{PNB} = \frac{ln(PNB) - ln(100)}{ln(75000)-ln(100)}$$
+$$\text{Índice de ingreso} = \frac{ln(PNB) - ln(100)}{ln(75000)-ln(100)}$$
 
 El bajo valor mínimo para el Producto Nacional Bruto per cápita se considera en los 100 dólares, el uso de este valor se justifica por la considerable cantidad de producción de subsistencia y producción no comercial no medida en economías cercanas al mínimo, que no se captura en los datos oficiales. Por otro lado, el valor máximo se establece en 75000 dólares per cápita. Kahneman y Deaton (2010) han demostrado que prácticamente no hay ganancia en desarrollo humano y bienestar con un ingreso anual per cápita superior a 75000 dólares. Actualmente, solo cuatro países (Brunei Darussalam, Liechtenstein, Qatar y Singapur) superan el techo de ingresos per cápita de 75000 dólares.
 
